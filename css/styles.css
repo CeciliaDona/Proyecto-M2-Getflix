@@ -93,15 +93,15 @@
 /*--- FOOTER TABLET 768 ---*/
 
 @media (min-width: 768px) {
-  .footer__container-contact {
+    .footer__container-contact {
       flex-direction: row;
       justify-content: space-between;
       padding: 30px 0;
     }
 
     .footer__title {
-      letter-spacing: 20px;
-      font-size: 2.5rem;
+      letter-spacing: 12px;
+      font-size: 2.3rem;
     }
 
     .footer__container-logo {
@@ -126,6 +126,7 @@
 
     .footer__contact {
       width: 30%;
+      color: var(--color-fonts);
       font-size: 0.9rem;
       padding: 20px;
       text-align: right;
@@ -134,19 +135,16 @@
     .footer__reserved {
       font-size: 0.7rem;
     }
-  };
+  }
 
 
 /*===================== DESCKTOP RES 1024  =====================*/
-
-/*PONER ACÁ EL CÓDIGO DE USTEDES*/
-
 
 
 /*--- FOOTER DESCKTOP 1024 ---*/
 @media (min-width: 1024px) {
     .footer__title {
-      letter-spacing: 14px;
+      letter-spacing: 15px;
       font-size: 2.5rem;
     }
 
@@ -162,5 +160,5 @@
     .footer__reserved {
       font-size: 0.9rem;
     }
-  };
+  }
 
