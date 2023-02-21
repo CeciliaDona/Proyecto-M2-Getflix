@@ -16,16 +16,149 @@
 
   :root {
     --btn-color: #B0C43A;
-    --backround-pages: #262528;
+    --backround-pages: #201f21;
+    --color-fonts: rgb(255, 254, 245);
     --font-titles: 'Anton', sans-serif;
     --font-paragraph: 'Arimo', sans-serif;
     --font-2-paragraph: 'Montserrat', sans-serif;
   }
-  
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
+
+
+  /*BLOQUE DE PRUEBA*/
   h2 {
     font-family: var(--font-titles);
     color: rgb(226, 73, 43);
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+
+
+/*===================== MOBILE RES 320  =====================*/
+
+
+/*--- FOOTER MOBILE 320 ---*/
+
+.container__footer {
+  background:var(--backround-pages);
+  border-top: solid 4px var(--btn-color);
+}
+
+.footer__container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer__title {
+  font-family: var(--font-titles);
+  font-size: 60px;
+  color: var(--color-fonts);
+  font-weight: bold;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 130px;
+  padding-bottom: 15px;
+}
+
+.footer__icons {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  color: var(--color-fonts);
+}
+
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+.footer__reserved {
+  color: var(--color-fonts);
+  font-size: 0.6rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0;
+};
+
+/*===================== TABLET RES 768  =====================*/
+
+
+/*--- FOOTER TABLET 768 ---*/
+
+@media (min-width: 768px) {
+    .footer__container-contact {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px 0;
+    }
+
+    .footer__title {
+      letter-spacing: 12px;
+      font-size: 2.3rem;
+    }
+
+    .footer__container-logo {
+      width: 30%;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__logo {
+      width: 150px;
+    }
+
+    .footer__icons {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon-redes {
+      margin: 15px;
+    }
+
+    .footer__contact {
+      width: 30%;
+      color: var(--color-fonts);
+      font-size: 0.9rem;
+      padding: 20px;
+      text-align: right;
+    }
+
+    .footer__reserved {
+      font-size: 0.7rem;
+    }
+  }
+
+
+/*===================== DESCKTOP RES 1024  =====================*/
+
+
+/*--- FOOTER DESCKTOP 1024 ---*/
+@media (min-width: 1024px) {
+    .footer__title {
+      letter-spacing: 15px;
+      font-size: 2.5rem;
+    }
+
+    .icon-redes {
+      margin: 40px;
+    }
+
+    .footer__contact {
+      font-size: 1.1rem;
+      padding: 20px;
+    }
+
+    .footer__reserved {
+      font-size: 0.9rem;
+    }
+  }
+
