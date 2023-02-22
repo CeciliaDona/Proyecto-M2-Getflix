@@ -28,7 +28,7 @@
   h2 {
     font-family: var(--font-titles);
     color: rgb(226, 73, 43);
-    font-size: 10px;
+    font-size: 100px;
 }
  /*HASTA ACÁ BLOQUE DE PRUEBA*/
 
@@ -91,7 +91,6 @@
 
 /*===================== TABLET RES 768  =====================*/
 
-
 /*--- FOOTER TABLET 768 ---*/
 
 @media (min-width: 768px) {
@@ -139,9 +138,7 @@
     }
   }
 
-
 /*===================== DESCKTOP RES 1024  =====================*/
-
 
 /*--- FOOTER DESCKTOP 1024 ---*/
 @media (min-width: 1024px) {
