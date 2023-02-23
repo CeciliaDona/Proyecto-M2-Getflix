@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,23 +21,161 @@
     --font-titles: 'Anton', sans-serif;
     --font-paragraph: 'Arimo', sans-serif;
     --font-2-paragraph: 'Montserrat', sans-serif;
+    --line-height-mobile: 1.7; 
+    --line-height-tablet: 1.8;
+    --line-height-descktop: 1.9;
   }
 
+  .body {
+    background-color: var(--backround-pages);
+  }
 
-  /*BLOQUE DE PRUEBA*/
-  h2 {
+  /*===================== MOBILE RES 320  ======================*/
+
+  /*---------- Main - res 320 ----------*/
+  .main__img-mobile {
+    width: 100%;;
+  }
+
+  .main__img-descktop {
+    display: none;
+  }
+
+  .container__main-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__title {
+    color: var(--color-fonts);
     font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
-    font-size: 100px;
-}
- /*HASTA ACÁ BLOQUE DE PRUEBA*/
+    text-align: center;
+  }
 
+  .regular {
+    position: absolute;
+    bottom: 55px;
+    font-size: 45px;
+  }
 
-/*===================== MOBILE RES 320  ======================*/
+  .italic {
+    font-style: italic;
+    font-size: 50px;
+  }
 
+  .main__paragraph {
+    color: var(--color-fonts);
+    font-family: var(--font-paragraph);
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .getflix {
+    font-weight: 700;
+  }
+
+  .container__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-button {
+    padding: 10px;
+    margin: 7px 70px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--btn-color);
+    font-weight: 500;
+  }
+
+  .trial {
+    margin-bottom: 20px;
+  }
+
+  .main__or {
+    color: var(--color-fonts);
+    text-align: center;
+  }
+
+  /*-------- section-one res-320 --------*/
+  .container__section-one {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-bottom: 45px;
+  }
+
+  .section-one__img {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .section-titles, 
+  .section-paragraphs {
+    color: var(--color-fonts);
+    font-size: var(--font-paragraph);
+    text-align: center;
+  }
+
+  .section-titles {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .section-paragraphs {
+   font-size: 14px;
+   line-height: var(--line-height-mobile);
+  }
+
+  /*---------- section-two res-320 ----------*/
+  .container__section-two {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .devices-images {
+    width: 95%;
+  }
+
+  .devices__contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  .device-titles {
+    color: var(--color-fonts);
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .h5-op {
+    color: rgb(167, 165, 165);
+    font-size: 15px;
+  }
+
+ /*--- section-three res-320 ---*/
+
+  .container__section-three {
+    padding-bottom: 60px;
+  }
+
+  .lion-kink-img {
+    width: 100%;
+  }
+
+  .section-three__contain-title--parag {
+    padding: 7px 30px;
+  }
 
 /*--- FOOTER MOBILE 320 ---*/
-
 .container__footer {
   background:var(--backround-pages);
   border-top: solid 4px var(--btn-color);
@@ -87,11 +225,10 @@
   text-align: center;
   padding-bottom: 10px;
   margin: 0;
-};
+}
 
 /*===================== TABLET RES 768  =====================*/
-
-/*--- FOOTER TABLET 768 ---*/
+/*--- FOOTER MOBILE 768 ---*/
 
 @media (min-width: 768px) {
     .footer__container-contact {
@@ -127,7 +264,7 @@
 
     .footer__contact {
       width: 30%;
-      color: var(--color-fonts);
+      color: white;
       font-size: 0.9rem;
       padding: 20px;
       text-align: right;
@@ -138,26 +275,29 @@
     }
   }
 
-/*===================== DESCKTOP RES 1024  =====================*/
-
-/*--- FOOTER DESCKTOP 1024 ---*/
-@media (min-width: 1024px) {
-    .footer__title {
-      letter-spacing: 15px;
-      font-size: 2.5rem;
+  /*===================== DESCKTOP RES 1024  =====================*/
+  
+  /*--- FOOTER DESCKTOP 1024 ---*/
+  @media (min-width: 1024px) {
+      .footer__container-contact {
+      flex-direction: row;
     }
-
-    .icon-redes {
-      margin: 40px;
+    
+      .footer__title {
+        letter-spacing: 14px;
+        font-size: 5rem;
+      }
+    
+      .icon-redes {
+        margin: 40px;
+      }
+    
+      .footer__contact {
+        font-size: 1.1rem;
+        padding: 20px;
+      }
+    
+      .footer__reserved {
+        font-size: 0.9rem;
+      }
     }
-
-    .footer__contact {
-      font-size: 1.1rem;
-      padding: 20px;
-    }
-
-    .footer__reserved {
-      font-size: 0.9rem;
-    }
-  }
-
