@@ -167,8 +167,12 @@
     padding-bottom: 60px;
   }
 
-  .lion-kink-img {
+  .lion-king-mobile-img {
     width: 100%;
+  }
+
+  .lion-king-descktop-img {
+    display: none;
   }
 
   .section-three__contain-title--parag {
