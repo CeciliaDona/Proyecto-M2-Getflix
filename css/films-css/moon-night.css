@@ -29,6 +29,11 @@ h2 {
 	color: rgb(226, 73, 43);
 }
 /* HASTA ACÁ BLOQUE DE PRUEBA */
+.nav-shadow {
+	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+}
 .nav-item-img {
 	width: 30px;
 	height: 30px;
@@ -42,11 +47,19 @@ h2 {
 	width: 130px;
 }
 /*cards*/
+/*cards*/
 .title-cards {
 	color: #fff;
 	font-family: (var(--font-titles));
 }
 .margin-cards {
 	padding-top: 100px;
+}
+.cards-size {
+	height: 600px;
+}
+.cards-video {
+	width: 100%;
+	height: 600px;
 }
 /*cards*/
