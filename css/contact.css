@@ -25,11 +25,230 @@
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
   }
+  .bg-body {
+    background-image: url(../img/cinema-login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+  }
+  .btn-container__contact {
+    background-color: var(--btn-color) !important;
+  }
+  
+  .container__header{
+    width: 70%;
+    height: 490px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  
+  }
+  
+  .open {
+    display: block;
+    position: fixed;
+    left: 20px;
+    top: 22px;
+  }
+  
+  .open__img {
+    width: 30px;
+  }
+  
+  .bi-list{
+    font-size: 2.5rem;
+    color: var(--white);
+  }
   
   
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+  .bi-person-circle{
+    font-size: 2.3rem !important;
+  }
+  
+  ul li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    font-size: 0.9rem;
+  }
+  
+  /*------------- MAIN MOBILE --------------*/
+  
+  .wpp-icon {
+    width: 40px;
+    position: sticky;
+    bottom: 5px;
+    margin-left: 86%;
+    padding-bottom: 10px;
+  }
+  
+  .container__contact {
+    margin: 100px 15px;
+    padding: 40px 20px;
+    background-color:rgb(227, 224, 224);
+    border-radius: 7px;
+    box-shadow: inset ooo 13px var(--btn-color);
+  }
+  
+  .contact__title{
+    color: black;
+    margin-bottom: 15px;
+    border-left: solid 5px white;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  
+  
+  
+  .container__contact-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .contact__adress {
+    width: 100%;
+  }
+  
+  .contact__adress-map {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .contact__adress-text {
+    color: black;
+    font-size: 0.8rem;
+    background-color:var(--btn-color);
+  }
+  
+  
+  @media (min-width: 450px) {
+    .contact__form {
+      width: 50%;
+      justify-content: center;
+    }
+  
+    .contact__title{
+      border-left: none;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    
+    .contact__adress {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .contact__adress-text {
+      font-size: 0.9rem;
+      background-color:var(--btn-color);
+      color: black;
+    }
+  }
+  
+  
+  @media (min-width: 768px) {
+    .close,
+    .open,
+    .nav__mobile-menu {
+      display: none;
+    }
+    .contact__adress {
+      width: 100%;
+      inset-block: 10px;
+    }
+  
+
+    .li__login {
+      margin-top: 36px;
+    }
+  
+  
+    .logo {
+      width: 70px;
+      margin-top: 30px;
+    }
+  
+    .item-contacto {
+      padding-right: 10px;
+    }
+  
+    .wpp-icon {
+          width: 50px;
+          margin-left: 92%;
+        }
+  
+    .container__contact {
+          margin: 120px 80px;
+          padding: 40px 30px;
+          border-radius: 15px;
+        }
+  
+  
+  
+    }
+  
+  @media (min-width: 1024px) {
+  
+    .logo {
+      width: 80px;
+    }
+  
+    .item-contacto {
+      padding-right: 20px;
+    }
+    
+  /*------------- MAIN DESCKTOP --------------*/
+  
+    .wpp-icon {
+      width: 55px;
+      margin-left: 93%;
+    }
+  
+    .container__contact {
+      padding: 2.3% 4%;
+      margin: 10% 10%;
+    }
+  
+    .container__contact-flex {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+  
+    }
+  
+    .contact__title{
+      text-align: left;
+      border-left: solid 7px white;
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      text-align: center;
+      border: 0;
+      text-transform:uppercase;
+    }
+  
+    
+  
+    .contact__form {
+      width: 48%;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+    
+    
+  
+  
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+  
+
