@@ -63,3 +63,17 @@ h2 {
 	height: 600px;
 }
 /*cards*/
+/*comentarios*/
+.img-coments {
+	width: 40px;
+	height: 40px;
+}
+.bg-coments {
+	background-color: var(--btn-color);
+	border-radius: 5px;
+}
+img-coments-logo {
+	width: 50px !important;
+	height: 50px !important;
+}
+/*comentarios*/

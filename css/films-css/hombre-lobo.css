@@ -57,18 +57,17 @@ a {
 	height: 600px;
 }
 /*cards*/
-.media__body--comment,
-.body__textarea {
-	padding: 10px;
-	margin: 0;
-	font-family: var(--open-sans);
-	color: black;
-	font-size: 0.8rem;
-	font-weight: 400;
+/*comentarios*/
+.img-coments {
+	width: 40px;
+	height: 40px;
+}
+.bg-coments {
+	background-color: var(--btn-color);
 	border-radius: 5px;
-	background-color: wheat;
 }
-.media__image,
-.media__img {
-	margin-right: 10px;
+img-coments-logo {
+	width: 50px !important;
+	height: 50px !important;
 }
+/*comentarios*/

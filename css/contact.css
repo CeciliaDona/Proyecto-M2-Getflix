@@ -1,31 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
-  
-  *::selection {
-    background: #afc43a62;
-    color: #fff;
-  }
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
 
-  a {
-    cursor: pointer;
-  }
+*::selection {
+	background: #afc43a62;
+	color: #fff;
+}
 
-  :root {
-    --btn-color: #B0C43A;
-    --backround-pages: #262528;
-    --font-titles: 'Anton', sans-serif;
-    --font-paragraph: 'Arimo', sans-serif;
-    --font-2-paragraph: 'Montserrat', sans-serif;
-  }
-  
-  
+a {
+	cursor: pointer;
+}
+
+:root {
+	--btn-color: #b0c43a;
+	--backround-pages: #262528;
+	--font-titles: 'Anton', sans-serif;
+	--font-paragraph: 'Arimo', sans-serif;
+	--font-2-paragraph: 'Montserrat', sans-serif;
+}
+
 /* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+h2 {
+	font-family: var(--font-titles);
+	color: rgb(226, 73, 43);
 }
 /* HASTA ACÁ BLOQUE DE PRUEBA */
+.nav-shadow {
+	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+}
+.nav-item-img {
+	width: 30px;
+	height: 30px;
+}
+.navbar__img {
+	width: 50px;
+	height: 50px;
+}
+.btn-navbar {
+	background-color: var(--btn-color) !important;
+}
