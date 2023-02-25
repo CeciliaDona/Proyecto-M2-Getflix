@@ -26,10 +26,133 @@
     --line-height-descktop: 1.9;
   }
   
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+  .body{
+    background-color: var(--backround-pages);
+    border: red 10px double;
+  }
+    
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+
+.section__texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section__image-img{
+    width: 250px;
+    border-radius: 40px;
+    border: white 5px dotted;
+
+}
+
+.error{
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--font-2-paragraph);
+    color:#fff;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.number{
+    text-align: center;
+    font-size: 6rem;
+    font-family: var(--font-2-paragraph);
+    color:#fff;
+    font-weight: 800;
+}
+
+
+
+.not__found{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-2-paragraph);
+    color: #fff;
+}
+
+.inicio{
+    padding: 7px 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: var(--font-2-paragraph);
+    color:black;
+    background-color: var(--btn-color);
+    border:black 3px groove;
+    font-weight: 600;
+    transition: 0.5s;
+    position: relative;
+    bottom: 25px;
+}
+
+.inicio:hover{
+    background-color: var(--btn-color);
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+@media(min-width: 768px){
+
+    .section__image-img{
+        width: 450px;
+        overflow: hidden;
+    }
+
+    .section{
+        margin-top: 10px;
+    }
+
+    .error{
+        font-size: 3.5rem;
+    }
+    
+    .number{
+        font-size: 6rem;
+        font-weight: 800;
+    }
+    
+    .not__found{
+        margin-top: 10px;
+    }
+
+    .inicio{
+        padding: 10px 20px;
+        position: relative;
+        bottom: 50px;
+    }
+}
+
+@media(min-width: 1024px){
+    .error{
+        font-size: 5rem;
+    }
+    
+    .number{
+        font-size: 7.5rem;
+    }
+    
+    .not__found{
+        font-size: 1.8rem;
+    }
+    
+    .inicio{
+        font-size: 1.3rem;
+        position: relative;
+        bottom: 70px;
+    }
+    .section__image-img{
+        width: 750px;
+        overflow: hidden;
+    }
+}
