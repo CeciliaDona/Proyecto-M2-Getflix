@@ -24,7 +24,10 @@
     --line-height-mobile: 1.7; 
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
+
   }
+  
+
   .bg-body {
     background-image: url(../images/contact/cinema-login.jpg);
     background-repeat: no-repeat;
@@ -36,7 +39,7 @@
   }
   .btn-container__contact {
     background-color: var(--btn-color) !important;
-  }
+  }    
   
   .container__header{
     width: 70%;
@@ -62,7 +65,7 @@
   
   .bi-list{
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(#fff);
   }
   
   
@@ -99,7 +102,6 @@
   .contact__title{
     color: black;
     margin-bottom: 15px;
-    border-left: solid 5px white;
     padding-left: 10px;
     font-weight: 500;
     font-size: 2.1rem;
@@ -135,7 +137,7 @@
   
   @media (min-width: 450px) {
     .contact__form {
-      width: 50%;
+      width: 100%;
       justify-content: center;
     }
   
@@ -194,6 +196,18 @@
           padding: 40px 30px;
           border-radius: 15px;
         }
+        .contact__title{
+          text-align: left;
+          font-size: 2.6rem;
+          margin-bottom: 40px;
+          text-align: center;
+          border: 0;
+          text-transform:uppercase;
+        }
+      
+        .letter-big {
+          font-size: 2.6rem;
+        }   
   
   
   
@@ -211,40 +225,57 @@
     
   /*------------- MAIN DESCKTOP --------------*/
   
-    .wpp-icon {
-      width: 55px;
-      margin-left: 93%;
-    }
+  .wpp-icon {
+    width: 55px;
+    margin-left: 93%;
+  }
+
+  .container__contact {
+    padding: 2.3% 4%;
+    margin: 10% 10%;
+  }
+
+  .container__contact-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+  }
+
+  .contact__title{
+    text-align: left;
+    font-size: 3.6rem;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 0;
+    text-transform:uppercase;
+  }
+
+  .letter-big {
+    font-size: 3.6rem;
+  }
+
+  .contact__form {
+    width: 100%;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
   
-    .container__contact {
-      padding: 2.3% 4%;
-      margin: 10% 10%;
-    }
-  
-    .container__contact-flex {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-  
-    }
-  
-    .contact__title{
-      text-align: left;
-      border-left: solid 7px white;
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-      text-align: center;
-      border: 0;
-      text-transform:uppercase;
-    }
-  
-    
-  
-    .contact__form {
-      width: 48%;
-      margin-right: 40px;
-      margin-bottom: 0;
-    }
+  .contact__adress {
+    width: 100%;
+  }
+
+  .contact__adress-map {
+    height: 303px;
+  }
+
+  .contact__adress-text {
+    margin-top: 12px;
+    font-size: 0.97rem;
+  }
+
+
+
     
     
   
