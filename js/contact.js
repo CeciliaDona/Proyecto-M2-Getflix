@@ -16,7 +16,7 @@ const regUserphone = /^\d+$/gi;
 const regUsermessage = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 
 const mensajeExito = () => {
-	alert_success.textContent = 'formulario enviado con exito';
+	alert_success.textContent = 'The form has been sent successfully';
 	alert_success.classList.remove('d-none');
 };
 
@@ -39,7 +39,7 @@ form.addEventListener('submit', (e) => {
 		campo_name.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_name,
-			msg: 'formato no valido en el campo nombre, solo letras.',
+			msg: 'Invalid characters,only letters.',
 		});
 	} else {
 		alert_name.classList.add('d-none');
@@ -51,7 +51,7 @@ form.addEventListener('submit', (e) => {
 		campo_email.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_email,
-			msg: 'escriba un email valido.',
+			msg: 'Invalid email.',
 		});
 	} else {
 		alert_email.classList.add('d-none');
@@ -62,7 +62,7 @@ form.addEventListener('submit', (e) => {
 		campo_phone.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_phone,
-			msg: 'formato no valido en el campo phone number, solo numeros.',
+			msg: 'Invalid phone number,only numbers.',
 		});
 	} else {
 		alert_phone.classList.add('d-none');
@@ -73,7 +73,7 @@ form.addEventListener('submit', (e) => {
 		campo_message.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_message,
-			msg: 'formato no valido en el campo message, solo letras.',
+			msg: 'Invalid characters,only letters.',
 		});
 	} else {
 		alert_message.classList.add('d-none');
