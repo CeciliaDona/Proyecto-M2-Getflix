@@ -102,7 +102,7 @@ body {
     margin-bottom: 0;
   }
   
-  .main__title .indicadores button {
+  .main__title .pagination button {
     background: #fff;
     height: 3px;
     width: 10px;
@@ -111,9 +111,9 @@ body {
     margin-right: 2px;
   }
   
-  .main__title .indicadores button:hover,
-  .main__title .indicadores button.activo {
-    background: red;
+  .main__title .pagination button:hover,
+  .main__title .pagination button.activo {
+    background: var(--btn-color);
   }
   
   
@@ -144,7 +144,6 @@ body {
     cursor: pointer;
     z-index: 500;
     transition: .2s ease all;
-    display: none;
   }
   
   .main__container-left-arrow:hover,
@@ -170,19 +169,17 @@ body {
   
   .main__container-carousel-carousel {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
+    flex-wrap: nowrap;
+    margin: 20px;
     width: 100%;
-    overflow: hidden;
     cursor: pointer;
+    gap: 20px;
   }
   
   .main__container-carousel-movie {
-    width: 250px;
+    min-width: 23%;
     transition: all 500ms ease-out;
     position: relative;
-    overflow: hidden;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -234,8 +231,7 @@ body {
   
 
   /* ---- ----- ----- Media Queries ----- ----- ----- */
-  @media screen and (min-width: 700px) {
-   
+  @media(max-width: 800px) {
     .movie__container {
       font-size: 14px;
     }
@@ -244,38 +240,34 @@ body {
       max-width: 100%;
       font-size: 1.3em;
     }
+
     .movie__container-btn {
       font-size: 1.3em;
     }
   
-    .main__container-carousel {
-      overflow: visible;
+    .main__container-carousel  {
+      overflow: hidden;
     }
   
-    .main__container-carousel-carousel {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
     .main__container-carousel-movie {
-      width: 200px;
+      min-width:30%;
     }
-  
-    .indicadores,
+  }
+
+  @media(max-width: 350px) {
     .main__container-left-arrow,
     .main__container-right-arrow {
       display: none;
     }
-  }
 
-  @media screen and (min-width: 1000px) {
+    .main__container-carousel-movie {
+      width: 80%;
+    }
     
     .main__container-carousel-carousel {
-      grid-template-columns: repeat(4, 1fr);
-
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
     }
-    .main__container-carousel-movie {
-      width: 200px;
-    }
+    
   }
