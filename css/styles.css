@@ -31,7 +31,6 @@
   }
 
   /*===================== MOBILE RES 320  ======================*/
-
   /*---------- Main - res 320 ----------*/
   .main__img-mobile {
     width: 100%;;
@@ -56,7 +55,7 @@
   .regular {
     position: absolute;
     bottom: 55px;
-    font-size: 45px;
+    font-size: 47px;
   }
 
   .italic {
@@ -89,7 +88,15 @@
     border: 0;
     border-radius: 7px;
     background: var(--btn-color);
+  }
+
+  .container__buttons a {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(35, 34, 37);
     font-weight: 500;
+    font-family: var(--font-2-paragraph);
+    font-weight: 600;
   }
 
   .trial {
@@ -179,6 +186,78 @@
     padding: 7px 30px;
   }
 
+/*-------- FAQs res-320 --------*/
+.container__faq-questions {
+  color: var(--color-fonts);
+  font-family: var(--font-paragraph);
+  min-height: 100vh;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.faq__main-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: 900;
+}
+
+.faq {
+  max-width: 700px;
+  margin-top:1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-fonts);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question h4 {
+  font-size: 1.2rem;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+
+.answer p {
+  padding-top: 1rem;
+  line-height: var(--line-height-mobile);
+  font-size: 1rem;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+  animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+  transform: rotate(180deg);
+}
+
+svg {
+  transition: transform .5s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /*--- FOOTER MOBILE 320 ---*/
 .container__footer {
   background:var(--backround-pages);
@@ -231,10 +310,131 @@
   margin: 0;
 }
 
-/*===================== TABLET RES 768  =====================*/
-/*--- FOOTER MOBILE 768 ---*/
+/*================ RES 370, 415, 500, 600, 715 ================*/
+/*--- MAIN 370 ---*/
+@media (min-width: 370px) {
+  .regular {
+    bottom: 65px;
+    font-size: 55px;
+  }
 
+  .italic {
+    font-size: 60px;
+  }
+
+  /*--- BUTTONS MAIN 370 ---*/
+   .main-button {
+    padding: 15px;
+    margin: 7px 90px;
+  }
+}
+
+/*--- MAIN 415 ---*/
+@media (min-width: 415px) {
+  .regular {
+    bottom: 77px;
+    font-size: 65px;
+  }
+
+  .italic {
+    font-size: 70px;
+  }
+
+  /*--- BUTTONS MAIN 415 ---*/
+  .main-button {
+    padding: 15px;
+    margin: 7px 115px;
+  }
+
+    /*--- Paragraph 415 ---*/
+  .main__paragraph {
+    padding: 20px 30px;
+    font-size: 16px;
+  }
+}
+
+/*--- MAIN 500 ---*/
+@media (min-width: 500px) {
+  .regular {
+    bottom: 87px;
+    font-size: 75px;
+  }
+
+  .italic {
+    font-size: 80px;
+  }
+
+  /*--- BUTTONS MAIN 500 ---*/
+  .main-button {
+    padding: 18px;
+    margin: 7px 130px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+
+/*------- MAIN 600 -------*/
+@media (min-width: 600px) {
+  .regular {
+    bottom: 95px;
+    font-size: 75px;
+  }
+
+  .italic {
+    font-size: 80px;
+  }
+
+  /*--- BUTTONS MAIN 600 ---*/
+  .main-button {
+    padding: 22px;
+    margin: 7px 170px;
+    font-size: 22px;
+  }
+
+  /*--- Paragraph 600 ---*/
+  .main__paragraph {
+    padding: 30px 60px;
+    font-size: 20px;
+  }
+}
+
+/*--- MAIN 715 ---*/
+@media (min-width: 715px) {
+  .regular {
+    bottom: 110px;
+    font-size: 95px;
+  }
+
+  .italic {
+    font-size: 95px;
+  }
+
+  /*---- BUTTONS MAIN 715 ----*/
+  .main-button {
+    padding: 22px;
+    margin: 7px 230px;
+  }
+}
+
+/*===================== TABLET RES 768  =====================*/
+    /*------- MAIN 768 -------*/
 @media (min-width: 768px) {
+    .regular {
+      bottom: 140px;
+      font-size: 120px;
+    }
+
+    .italic {
+      font-size: 130px;
+    }
+
+     /*--- Paragraph 768 ---*/
+    .main__paragraph {
+      padding: 40px 60px;
+      font-size: 30px;
+    }
+
+    /*--- FOOTER MOBILE 768 ---*/
     .footer__container-contact {
       flex-direction: row;
       justify-content: space-between;
