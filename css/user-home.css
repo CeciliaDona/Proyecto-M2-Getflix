@@ -26,10 +26,256 @@
     --line-height-descktop: 1.9;
   }
   
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+body {
+  background-color: var(--backround-pages); 
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+  
+  /* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+  .movie__container {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/backdrop.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+    padding-top: 200px;
+  }
+  
+  .movie__container-movie {
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 6.25em;
+  }
+  
+  .movie__container-title {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+  }
+  
+  .movie__container-description {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 90%;
+    margin-bottom: 1.25em;
+  }
+  
+  .movie__container-btn {
+    background: rgba(0,0,0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1em;
+  }
+  
+  .movie__container-btn:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  .movie__container-btn i {
+    margin-right: 1.25em;
+  }
+  
+  /* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+
+
+  .main__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .main__title h3 {
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--font-2-paragraph);
+    margin-bottom: 0;
+  }
+  
+  .main__title .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+  }
+  
+  .main__title .indicadores button:hover,
+  .main__title .indicadores button.activo {
+    background: red;
+  }
+  
+  
+  /* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+  .main {
+    margin-bottom: 70px;
+    width: 90%;
+    margin: 5%;
+  }
+  
+  .main__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .main__container-left-arrow,
+  .main__container-right-arrow {
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+    display: none;
+  }
+  
+  .main__container-left-arrow:hover,
+  .main__container-right-arrow:hover {
+    background: rgba(0,0,0, .9);
+  }
+  
+  .main__container-left-arrow {
+    left: 0;
+  }
+  
+  .main__container-right-arrow {
+    right: 0;
+  }
+  
+  /* ---- ----- ----- Carousel ----- ----- ----- */
+  .main__container-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .main__container-carousel-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .main__container-carousel-movie {
+    width: 250px;
+    transition: all 500ms ease-out;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+  }
+
+  .main__container-carousel-movie img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+    transition: all 500ms ease-out;
+    
+  }
+  
+  .bi-star-fill,
+  .bi-star-half,
+  .bi-star{
+    font-size: 1.5rem;
+    color: yellow;
+    margin: 0 2px;
+  }
+
+  .layer {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(0,0,0,0.8);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 20px;
+
+  }
+
+  .main__container-carousel-movie:hover > .layer{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+  }
+
+
+  
+  
+
+  /* ---- ----- ----- Media Queries ----- ----- ----- */
+  @media screen and (min-width: 700px) {
+   
+    .movie__container {
+      font-size: 14px;
+    }
+  
+    .movie__container-description {
+      max-width: 100%;
+      font-size: 1.3em;
+    }
+    .movie__container-btn {
+      font-size: 1.3em;
+    }
+  
+    .main__container-carousel {
+      overflow: visible;
+    }
+  
+    .main__container-carousel-carousel {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .main__container-carousel-movie {
+      width: 200px;
+    }
+  
+    .indicadores,
+    .main__container-left-arrow,
+    .main__container-right-arrow {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    
+    .main__container-carousel-carousel {
+      grid-template-columns: repeat(4, 1fr);
+
+    }
+    .main__container-carousel-movie {
+      width: 200px;
+    }
+  }
