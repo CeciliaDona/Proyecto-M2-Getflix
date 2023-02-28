@@ -56,8 +56,11 @@
     bottom: 55px;
   }
 
+  .italic {
+    font-style: italic;
+  }
+
   .regular, .italic {
-  
     font-size: 47px;
     display: block;
     white-space: nowrap;
@@ -95,7 +98,7 @@
 
   .main-button {
     padding: 10px;
-    margin: 7px 70px;
+    margin: 2px 70px;
     border-radius: 7px;
     background: var(--btn-color);
   }
@@ -104,7 +107,6 @@
     text-decoration: none;
     text-align: center;
     color: rgb(35, 34, 37);
-    font-weight: 500;
     font-family: var(--font-2-paragraph);
     font-weight: 600;
   }
@@ -116,6 +118,7 @@
   .main__or {
     color: var(--color-fonts);
     text-align: center;
+    margin: 0;
   }
 
   /*-------- section-one res-320 --------*/
@@ -150,6 +153,16 @@
 
   /*---------- section-two res-320 ----------*/
   .container__section-two {
+    background-image: url(../images/backgrounds/backround-stars-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+  }
+
+  .container__section-two {
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
@@ -174,11 +187,14 @@
   }
 
   .h5-op {
-    color: rgb(167, 165, 165);
+    color: rgb(211, 209, 209);
     font-size: 15px;
   }
 
- /*--- section-three res-320 ---*/
+ /*------ section-three res-320 ------*/
+  .lion-king-descktop-img {
+    display: none;
+  }
 
   .container__section-three {
     padding-bottom: 60px;
@@ -186,10 +202,6 @@
 
   .lion-king-mobile-img {
     width: 100%;
-  }
-
-  .lion-king-descktop-img {
-    display: none;
   }
 
   .section-three__contain-title--parag {
@@ -201,22 +213,23 @@
   color: var(--color-fonts);
   font-family: var(--font-paragraph);
   min-height: 100vh;
-  width: 85%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .faq__main-title {
   font-size: 1.5rem;
-  margin: 10px 0;
+  margin: 15px 0;
   font-weight: 900;
 }
 
 .faq {
-  max-width: 700px;
+  max-width: 80%;
   margin-top:1rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--color-fonts);
@@ -229,7 +242,7 @@
 }
 
 .question h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .answer {
@@ -241,7 +254,7 @@
 .answer p {
   padding-top: 1rem;
   line-height: var(--line-height-mobile);
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .faq.active .answer {
@@ -425,68 +438,178 @@ svg {
     font-size: 95px;
   }
 
+  .main__paragraph {
+    padding: 30px 70px;
+    font-size: 25px;
+  }
+
   /*---- BUTTONS MAIN 715 ----*/
   .main-button {
     padding: 20px;
-    margin: 7px 20px;
+    margin: 7px 200px;
     font-size: 19px;
   }
 
   .main__or {
     font-size: 20px;
   }
-
-  .main__paragraph {
-    padding: 30px 70px;
-    font-size: 25px;
-  }
 }
 
 /*===================== TABLET RES 768 =====================*/
   /*------- MAIN 768 -------*/
 @media (min-width: 768px) {
-  .container__main {
-    display: grid;
-    grid-template-columns: 42% 58%;
-    width: 100%;
-  }
+    .container__main {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      width: 100%;
+    }
 
-  .container__img-slider .img-slider-descktop {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    object-position: top;
-  }
+    .container__img-slider .img-slider-descktop {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: top;
+    }
 
-  .main__container-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3px;
-    letter-spacing: 1px;
-  }
+    .main__container-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 7px;
+      letter-spacing: 1px;
+      margin-left: 10px;
+    }
 
-  .container__main-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px 0 0 10px;
-  }
+    .container__main-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 40px 0 20px 10px;
+    }
 
-  .main__title {
-    text-align: center;
-    font-size: 47px;
-    position: static;
-  }
+    .main__title {
+      text-align: left;
+      font-size: 55px;
+      position: static;
+    }
 
-  .main__paragraph {
-    padding: 5px 20px;
-    font-size: 18px;
-    line-height: var(--line-height-tablet);
-  }
+    .main__paragraph {
+      padding: 10px 30px;
+      font-size: 18px;
+      line-height: var(--line-height-tablet);
+      text-align: left;
+    }
 
-    /*--- FOOTER MOBILE 768 ---*/
+    .main-button {
+      padding: 15px;
+      margin: 7px 50px;
+      font-size: 16px;
+    }
+
+    /*--- SECTION ONE 768 ---*/
+    .container__section-one {
+      flex-direction: row;
+      padding: 170px 20px;
+      margin-bottom: 0;
+    }
+  
+    .section-one__img {
+      width: 60%;
+      padding: 0 20px;
+    }
+  
+    .section-titles, 
+    .section-paragraphs {
+      padding-top: 30px;
+    }
+  
+    .section-titles {
+      font-size: 35px;
+      padding-bottom: 5px;
+    }
+  
+    .section-paragraphs {
+     font-size: 20px;
+     line-height: var(--line-height-tablet);
+     text-align: left;
+    }
+
+    /*------ SECTION TWO 768 -----*/
+    .container__section-two {
+      padding: 80px 10px;
+      margin-bottom: 0;
+      border: var(--color-fonts) solid 6px;
+    }
+
+    .section-two__container-devices {
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .devices__contain {
+      width: 47%;
+    }
+  
+    .devices-images {
+      width: 100%;
+    }
+  
+    .device-titles {
+      font-size: 25px;
+    }
+  
+    .h5-op {
+      font-size: 18px;
+    }
+
+    /*--- section three 768 ---*/
+    .lion-king-mobile-img {
+      display: none;
+    }
+
+    .lion-king-descktop-img {
+      display: block;
+      width: 100%;
+    }
+      
+    .container__section-three {
+      padding-bottom: 50px;
+      padding-top: 100px;
+      position: relative;
+      margin-top: 0;
+    }
+
+    .section-three__contain-title--parag {
+      width: auto;
+      padding: 7px 10px;
+      position: absolute;
+      bottom: 125px;
+      left: 320px;
+    }
+
+    /*--- FAQ 768 ---*/
+    .faq__main-title {
+      font-size: 1.7rem;
+    }
+    
+    .faq {
+      max-width: 85%;
+      margin-top: 1.1rem;
+      padding-bottom: 1.1rem;
+    }
+    
+    .question h4 {
+      font-size: 1.35rem;
+    }
+  
+    .answer p {
+      font-size: 1.2rem;
+    }
+
+    /*--- FOOTER 768 ---*/
     .footer__container-contact {
       flex-direction: row;
       justify-content: space-between;
@@ -528,6 +651,16 @@ svg {
 
     .footer__reserved {
       font-size: 0.7rem;
+    }
+  }
+
+/*===========================  RES 860  ==========================*/
+  /*--- section three 860 ---*/
+  @media (min-width: 860px) {
+    .section-three__contain-title--parag {
+      padding: 7px 30px;
+      bottom: 250px;
+      left: 320px;
     }
   }
 
