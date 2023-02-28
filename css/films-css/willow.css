@@ -70,9 +70,11 @@ h2 {
 .bg-coments {
 	background-color: var(--btn-color);
 	border-radius: 5px;
+	margin-bottom: 50px;
 }
-img-coments-logo {
-	width: 50px !important;
-	height: 50px !important;
+.form-size {
+	width: 400px !important;
+	border-radius: 5px;
+	resize: none;
 }
 /*comentarios*/
