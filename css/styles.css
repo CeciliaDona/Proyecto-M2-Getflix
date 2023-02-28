@@ -54,13 +54,25 @@
   .regular {
     position: absolute;
     bottom: 55px;
-    font-size: 47px;
   }
 
-  .italic {
-    font-style: italic;
-    font-size: 50px;
+  .regular, .italic {
+  
+    font-size: 47px;
+    display: block;
+    white-space: nowrap;
+    animation: typing 4s steps(12), blink .4s step-end alternate;
+    overflow:hidden;
+    border-right: 4px solid;
+    width: 12ch;
   }
+
+    @keyFrames typing {
+    from { width: 0}
+    }
+    @keyFrames blink {
+    50% { border-color: transparent}
+    }
 
   .main__paragraph {
     color: var(--color-fonts);
@@ -84,7 +96,6 @@
   .main-button {
     padding: 10px;
     margin: 7px 70px;
-    border: 0;
     border-radius: 7px;
     background: var(--btn-color);
   }
@@ -314,10 +325,9 @@ svg {
 @media (min-width: 370px) {
   .regular {
     bottom: 65px;
-    font-size: 55px;
   }
 
-  .italic {
+  .main__title {
     font-size: 60px;
   }
 
@@ -345,7 +355,7 @@ svg {
     margin: 7px 115px;
   }
 
-    /*--- Paragraph 415 ---*/
+  /*--- Paragraph 415 ---*/
   .main__paragraph {
     padding: 20px 30px;
     font-size: 16px;
@@ -365,6 +375,10 @@ svg {
 
   .italic {
     font-size: 80px;
+  }
+
+  .main__paragraph {
+    font-size: 18px;
   }
 
   /*--- BUTTONS MAIN 500 ---*/
@@ -397,58 +411,80 @@ svg {
   /*--- Paragraph 600 ---*/
   .main__paragraph {
     padding: 30px 60px;
-    font-size: 20px;
+    font-size: 23px;
   }
 }
 
 /*--- MAIN 715 ---*/
 @media (min-width: 715px) {
   .regular {
-    bottom: 110px;
-    font-size: 95px;
+    bottom: 95px;
   }
 
-  .italic {
+  .main__title {
     font-size: 95px;
   }
 
   /*---- BUTTONS MAIN 715 ----*/
   .main-button {
-    padding: 22px;
-    margin: 7px 230px;
+    padding: 20px;
+    margin: 7px 20px;
+    font-size: 19px;
+  }
+
+  .main__or {
+    font-size: 20px;
+  }
+
+  .main__paragraph {
+    padding: 30px 70px;
+    font-size: 25px;
   }
 }
 
-/*===================== TABLET RES 768  =====================*/
-    /*------- MAIN 768 -------*/
+/*===================== TABLET RES 768 =====================*/
+  /*------- MAIN 768 -------*/
 @media (min-width: 768px) {
   .container__main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    width: 100%;
   }
 
   .container__img-slider .img-slider-descktop {
-    width: 70%;
-    height: 50vh;
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
     object-position: top;
   }
-  /*===================== CORREGIR ESTA PARTE DE ARRIBA =====================*/
 
-    .regular {
-      bottom: 140px;
-      font-size: 120px;
-    }
+  .main__container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    letter-spacing: 1px;
+  }
 
-    .italic {
-      font-size: 130px;
-    }
+  .container__main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 0 10px;
+  }
 
-     /*--- Paragraph 768 ---*/
-    .main__paragraph {
-      padding: 40px 60px;
-      font-size: 30px;
-    }
+  .main__title {
+    text-align: center;
+    font-size: 47px;
+    position: static;
+  }
+
+  .main__paragraph {
+    padding: 5px 20px;
+    font-size: 18px;
+    line-height: var(--line-height-tablet);
+  }
 
     /*--- FOOTER MOBILE 768 ---*/
     .footer__container-contact {
