@@ -182,7 +182,6 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 
   }
 
@@ -212,12 +211,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: rgb(0,0,0,0.8);
+    background: var(--backround-pages);
     transition: all 500ms ease-out;
     opacity: 0;
     visibility: hidden;
-    border-radius: 20px;
-
+    margin: 10px;
+    overflow: hidden;
   }
 
   .main__container-carousel-movie:hover > .layer{
@@ -225,10 +224,6 @@ body {
     visibility: visible;
     transform: scale(1.2);
   }
-
-
-  
-  
 
   /* ---- ----- ----- Media Queries ----- ----- ----- */
   @media(max-width: 800px) {
