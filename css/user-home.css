@@ -215,8 +215,10 @@ body {
     transition: all 500ms ease-out;
     opacity: 0;
     visibility: hidden;
-    margin: 10px;
-    overflow: hidden;
+  }
+
+  .layer p{
+    margin: 0 25px 0 25px;
   }
 
   .main__container-carousel-movie:hover > .layer{
