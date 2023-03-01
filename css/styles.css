@@ -163,7 +163,7 @@
   }
 
   .container__section-two {
-    padding: 20px 30px;
+    padding: 100px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,7 +182,7 @@
 
   .device-titles {
     color: var(--color-fonts);
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 25px;
   }
 
