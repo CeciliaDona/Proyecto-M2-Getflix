@@ -153,7 +153,7 @@
 
   /*---------- section-two res-320 ----------*/
   .container__section-two {
-    background-image: url(../images/backgrounds/backround-stars-4.jpg);
+    background-image: url(../images/backgrounds/stars-background-4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -456,7 +456,7 @@ svg {
 }
 
 /*===================== TABLET RES 768 =====================*/
-  /*------- MAIN 768 -------*/
+/*------- MAIN 768 -------*/
 @media (min-width: 768px) {
     .container__main {
       display: grid;
@@ -475,27 +475,29 @@ svg {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 7px;
-      letter-spacing: 1px;
-      margin-left: 10px;
+      align-items: flex-start;
+      padding: 150px 15% 20px 15%;
+      background-image: url(../images/backgrounds/stars-background-3.jpg);
+      height: 100vh;
     }
 
     .container__main-title {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      margin: 40px 0 20px 10px;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 40px 20px 20px 0;
     }
 
     .main__title {
       text-align: left;
-      font-size: 55px;
+      font-size: 50px;
       position: static;
+      letter-spacing: 1px;
     }
 
     .main__paragraph {
-      padding: 10px 30px;
+      padding: 10px 0;
       font-size: 18px;
       line-height: var(--line-height-tablet);
       text-align: left;
@@ -503,11 +505,11 @@ svg {
 
     .main-button {
       padding: 15px;
-      margin: 7px 50px;
+      margin: 7px 30px;
       font-size: 16px;
     }
 
-    /*--- SECTION ONE 768 ---*/
+    /*------ SECTION ONE 768 ------*/
     .container__section-one {
       flex-direction: row;
       padding: 170px 20px;
@@ -539,7 +541,8 @@ svg {
     .container__section-two {
       padding: 80px 10px;
       margin-bottom: 0;
-      border: var(--color-fonts) solid 6px;
+      border-top: var(--color-fonts) solid 6px;
+      border-bottom: var(--color-fonts) solid 6px;
     }
 
     .section-two__container-devices {
@@ -565,7 +568,7 @@ svg {
       font-size: 18px;
     }
 
-    /*--- section three 768 ---*/
+    /*------- section three 768 -------*/
     .lion-king-mobile-img {
       display: none;
     }
@@ -584,10 +587,10 @@ svg {
 
     .section-three__contain-title--parag {
       width: auto;
-      padding: 7px 10px;
+      padding: 7px 40px;
       position: absolute;
       bottom: 125px;
-      left: 320px;
+      left: 45%;
     }
 
     /*--- FAQ 768 ---*/
@@ -654,20 +657,113 @@ svg {
     }
   }
 
-/*===========================  RES 860  ==========================*/
-  /*--- section three 860 ---*/
-  @media (min-width: 860px) {
-    .section-three__contain-title--parag {
-      padding: 7px 30px;
-      bottom: 250px;
-      left: 320px;
-    }
+  /*===================== DESCKTOP RES 1024  =====================*/
+  @media (min-width: 1024px) {
+  /*--- MAIN DESCKTOP 1024 ---*/
+  .main__container-text {
+    padding: 100px 15% 20px 15%;
   }
 
-  /*===================== DESCKTOP RES 1024  =====================*/
-  
+    .container__main-title {
+      margin: 0 20px 30px 0;
+    }
+
+    .main__title {
+      font-size: 60px;
+    }
+
+    .main__paragraph {
+      padding: 10px 10% 20px 0;
+      font-size: 22px;
+    }
+
+    .main-button {
+      padding: 15px;
+      margin: 7px 0;
+      font-size: 16px;
+    }
+
+    /*--- section-one 1024 ---*/
+    .container__section-one {
+      padding: 170px 30px; 
+    }
+
+    .section-one__img {
+      width: 60%;
+      padding: 0 40px;
+    }
+
+    .section-one__contain-title--parag {
+      margin-top: 30px;
+    }
+
+    .section-titles, 
+    .section-paragraphs {
+      padding-top: 30px;
+    }
+
+    .section-titles {
+      font-size: 40px;
+    }
+
+    .section-paragraphs {
+    font-size: 25px;
+    }
+
+    /*--- section-two 1024 ---*/
+    .container__section-two {
+      padding: 152px 10px;  
+    }
+
+    .section-two__container-devices {
+      padding-top: 100px;
+    }
+
+    .devices__contain {
+      width: 25%;
+    }
+
+    .device-titles {
+      font-size: 28px;
+    }
+
+    .h5-op {
+      font-size: 20px;
+    }
+
+    /*--- section-three 1024 ---*/ 
+    .container__section-three {
+      padding-bottom: 70px;
+      padding-top: 150px;
+    }
+
+    .section-three__contain-title--parag {
+      width: 60%;
+      padding: 7px 10px;
+      bottom: 300px;
+      left: 40%;
+    }
+
+    /*------- FAQ 1024 -------*/
+    .faq__main-title {
+      font-size: 2rem;
+    }
+    
+    .faq {
+      max-width: 80%;
+      margin-top: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
+    
+    .question h4 {
+      font-size: 1.9rem;
+    }
+
+    .answer p {
+      font-size: 1.5rem;
+    }
+
   /*--- FOOTER DESCKTOP 1024 ---*/
-  @media (min-width: 1024px) {
       .footer__container-contact {
       flex-direction: row;
     }
