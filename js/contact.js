@@ -1,4 +1,4 @@
-const form = document.querySelector('#form');
+const form = document.querySelector('#formulario');
 const campo_email = document.querySelector('#User-email');
 const campo_phone = document.querySelector('#User-phone');
 const campo_name = document.querySelector('#User-name');
@@ -18,19 +18,19 @@ const regUsermessage = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 const mensajeExito = () => {
 	alert_success.textContent = 'The form has been sent successfully';
 	alert_success.classList.remove('d-none');
-};
-
+}
 
 const pintarMensajeError = (errores) => {
 	errores.forEach((item) => {
 		item.tipo.classList.remove('d-none');
 		item.tipo.textContent = item.msg;
 	});
-};
+}
 
-form.addEventListener('submit', (e) => {
+
+
+formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-	console.log('form enviado');
 	alert_success.classList.add('d-none');
 
 	const errores = [];
@@ -85,9 +85,15 @@ form.addEventListener('submit', (e) => {
 		pintarMensajeError(errores);
 		return;
 	}
-
+	
 	mensajeExito();
 });
+
+	
+
+	
+	
+
 
 
 
