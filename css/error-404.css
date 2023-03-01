@@ -29,6 +29,7 @@
   .body{
     background-color: var(--backround-pages);
     border: red 10px double;
+    height: 100vh;
   }
     
 .section{
