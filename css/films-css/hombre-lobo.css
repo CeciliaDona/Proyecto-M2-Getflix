@@ -22,7 +22,7 @@ a {
 	--font-2-paragraph: 'Montserrat', sans-serif;
 }
 
-/* navbar*/
+/*navbar*/
 .nav-shadow {
 	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
@@ -40,7 +40,16 @@ a {
 	background-color: var(--btn-color) !important;
 	width: 130px;
 }
-/* navbar*/
+.form__position {
+	position: relative;
+	padding-left: 30px !important;
+	background-color: var(--backround-pages) !important;
+	border-radius: 20px !important;
+}
+.form__position-search {
+	position: absolute;
+}
+/*navbar*/
 /*cards*/
 .title-cards {
 	color: #fff;

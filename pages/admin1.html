@@ -22,8 +22,8 @@
 </head>
 
 <body>
- <!-- navbar -->
- <nav class="navbar navbar-dark bg-dark fixed-top nav-shadow">
+   <!-- navbar -->
+   <nav class="navbar navbar-dark bg-dark fixed-top nav-shadow">
 	<div class="d-none d-md-block">
 		<img class="navbar__img ms-3" src="/images/icons/logo.png" alt="logo">
 	</div>
@@ -80,11 +80,14 @@
 			</div>
 		</div>
 	</div>
-	<form class=" d-none d-md-flex d-flex align-items-center" role="search">
-		<a class="nav-link text-light me-3 text-decoration-underline" href="#">ADMIN</a>
-		<input class="form-control me-2 form-size" type="search"  aria-label="Search">
-		<button class="btn btn-navbar me-4" type="submit">Sign Out</button>
-	  </form>
+	<div class="d-none d-md-flex"">
+		<a class="nav-link text-light  pt-1 me-3 text-decoration-underline" href="#">ADMIN</a>
+		<form class=" d-none d-md-flex" role="search">
+			<input class="form__position form-control me-2 text-light" type="search"  aria-label="Search">
+			<i class="form__position-search fs-5 text-light mt-1 ps-2 bi bi-search"></i>
+			<button class="btn btn-navbar me-4" type="submit">Sign Out</button>
+		  </form>
+		</div>
 </nav>
 <!-- navbar -->
  

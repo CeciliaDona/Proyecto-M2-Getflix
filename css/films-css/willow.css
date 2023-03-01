@@ -28,12 +28,12 @@ h2 {
 	color: rgb(226, 73, 43);
 }
 /* HASTA ACÁ BLOQUE DE PRUEBA */
+/*navbar*/
 .nav-shadow {
 	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 	-moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 }
-
 .nav-item-img {
 	width: 30px;
 	height: 30px;
@@ -46,6 +46,16 @@ h2 {
 	background-color: var(--btn-color) !important;
 	width: 130px;
 }
+.form__position {
+	position: relative;
+	padding-left: 30px !important;
+	background-color: var(--backround-pages) !important;
+	border-radius: 20px !important;
+}
+.form__position-search {
+	position: absolute;
+}
+/*navbar*/
 /*cards*/
 .title-cards {
 	color: #fff;

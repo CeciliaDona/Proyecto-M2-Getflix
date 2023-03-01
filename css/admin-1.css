@@ -28,7 +28,7 @@ h2 {
 	color: rgb(226, 73, 43);
 }
 /* HASTA ACÁ BLOQUE DE PRUEBA */
-/* navbar*/
+/*navbar*/
 .nav-shadow {
 	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
@@ -44,9 +44,16 @@ h2 {
 }
 .btn-navbar {
 	background-color: var(--btn-color) !important;
-	width: 90px;
+	width: 130px;
 }
-.form-size {
-	width: 130px !important;
+.form__position {
+	position: relative;
+	padding-left: 30px !important;
+	background-color: var(--backround-pages) !important;
+	border-radius: 20px !important;
 }
+.form__position-search {
+	position: absolute;
+}
+/*navbar*/
 /* navbar*/
