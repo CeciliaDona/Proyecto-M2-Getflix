@@ -2,18 +2,17 @@ const form = document.querySelector('#form');
 const campo_email = document.querySelector('#User-email');
 const campo_phone = document.querySelector('#User-phone');
 const campo_name = document.querySelector('#User-name');
-const campo_message = document.querySelector('#User-message');
 
 const alert_name = document.querySelector('#alert-name');
 const alert_email = document.querySelector('#alert-email');
 const alert_success = document.querySelector('#alert-success');
 const alert_phone = document.querySelector('#alert-phone');
-const alert_message = document.querySelector('#alert-message');
+
 
 const regUsername = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 const regUseremail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 const regUserphone = /^\d+$/gi;
-const regUsermessage = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+
 
 const mensajeExito = () => {
 	alert_success.textContent = 'formulario enviado con exito';
@@ -69,17 +68,7 @@ form.addEventListener('submit', (e) => {
 		campo_phone.classList.add('is-valid');
 		campo_phone.classList.remove('is-invalid');
 	}
-    if (!regUsermessage.test(campo_message.value) || !campo_message.value.trim()) {
-		campo_message.classList.add('is-invalid');
-		errores.push({
-			tipo: alert_message,
-			msg: 'formato no valido en el campo message, solo letras.',
-		});
-	} else {
-		alert_message.classList.add('d-none');
-		campo_message.classList.add('is-valid');
-		campo_message.classList.remove('is-invalid');
-	}
+    
 
 	if (errores.length !== 0) {
 		pintarMensajeError(errores);
