@@ -1,479 +1,482 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+*::selection {
+  background: #afc43a62;
+  color: #fff;
+}
+
+a {
+  cursor: pointer;
+}
+
+:root {
+  --btn-color: #B0C43A;
+  --backround-pages: #201f21;
+  --color-fonts: rgb(255, 254, 245);
+  --font-titles: 'Anton', sans-serif;
+  --font-paragraph: 'Arimo', sans-serif;
+  --font-2-paragraph: 'Montserrat', sans-serif;
+  --line-height-mobile: 1.7; 
+  --line-height-tablet: 1.8;
+  --line-height-descktop: 1.9;
+}
+
+.container__header {
+  background-image: url(../img/desarrollador-about-us.jpeg);
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.open {
+  display: block;
+  position: fixed;
+  left: 20px;
+  top: 18px;
+}
+
+.open__img {
+  width: 30px;
+}
+
+.bi-list{
+  font-size: 2.5rem;
+  color: var(--color-fonts);
+}
+
+.login-icon {
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  color: var(--color-fonts);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.close img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.bi-person-circle{
+  font-size: 2.3rem !important;
+}
+
+ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+}
+
+
+/*------------- MAIN MOBILE --------------*/
+
+
+.container__header {
+  background-image: url(../images/backgrounds/backround-stars.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+}
+
+.container__title {
+  padding-top: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main-title {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 30px 75px 30px;
+
+}
+
+.header__arrow-img {
+  width: 90px;
+  animation-name: arrow-grow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow-grow {
+  0%  {transform: translate(0); width: 100px;}
+  50% { transform: translateY(20px); width: 110px;}
+  100% {transform: translate(0); width: 100px;}
+}
+
+.main__container {
+  background-image: url(../images/backgrounds/backround-stars.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 90px;
+}
+
+.container__about-us {
+  padding: 30px 0;
+}
+
+.about-us__part-1,
+.about-us__part-3, 
+.p,
+.h2 {
+  background: var(--backround-pages);
+  font-size: 0.84rem;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding: 2.6em 2.1em;
+  border-top: solid 4px var(--btn-color);
+  border-bottom: solid 4px var(--btn-color);
+  margin: 40px 0 60px 0;
+  text-align: left;
+  position: relative;
+}
+
+.letter-big {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.about-us__part-1 ,
+.about-us__part-3 {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about__us-title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-us__p {
+  text-align: center;
+  line-height: 1.55rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-bottom: 30px;
+}
+
+/*MEMBERS MOBILE*/
+
+.container__main-members {
+  background: rgba(27, 5, 31, 0.864);
+  padding: 40px 20px;
+  border-top: solid 4px var(--btn-color);
+  border-bottom: solid 4px var(--btn-color);
+}
+
+.main-members__title {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 10px;
+  color:#fff;
+}
+
+.container__main-members-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main__members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.members__img {
+  width: 70px;
+  height: 70px;
+  border: solid 3px white;
+  border-radius: 50%;
+  margin-bottom: 5px;
   
-  *::selection {
-    background: #afc43a62;
-    color: #fff;
+}
+
+.members__name {
+  text-align: center;
+  font-weight: 500;
+}
+
+
+@media (min-width: 445px) {
+    .container__title {
+      padding-top: 40%;
+    }
+    
+    .main-title {
+      font-size: 45px;
+      padding: 0 40px 75px 40px;
+    }
+
+    .container__about-us {
+      padding: 30px 20px;
+    }
+    
+    .about-us__part-1,
+    .about-us__part-2,
+    .about-us__part-3  {
+      border-radius: 10px;
+    }
   }
 
-  a {
-    cursor: pointer;
-  }
-
-  :root {
-    --btn-color: #B0C43A;
-    --backround-pages: #201f21;
-    --color-fonts: rgb(255, 254, 245);
-    --font-titles: 'Anton', sans-serif;
-    --font-paragraph: 'Arimo', sans-serif;
-    --font-2-paragraph: 'Montserrat', sans-serif;
-    --line-height-mobile: 1.7; 
-    --line-height-tablet: 1.8;
-    --line-height-descktop: 1.9;
-  }
-  
-  .container__header {
-    background-image: url(../img/desarrollador-about-us.jpeg);
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  
+@media (min-width: 768px) {
+  .close,
   .open {
-    display: block;
-    position: fixed;
-    left: 20px;
-    top: 18px;
+    display: none;
+  }
+  .logo {
+    width: 70px;
+    margin-top: 30px;
+  }
+
+  ul li a,
+    .nav__menu-register, 
+    .nav__menu-login li {
+      font-size: 0.74rem !important;
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      transition: 0.7s;
+    }
+
+
+  .item-contacto {
+    padding-right: 10px;
+  }
+
+      .container__title {
+        padding-top: 30%;
+      }
+      
+      .main-title {
+        font-size: 60px;
+        padding: 0 40px 70px 40px;
+      }
+  
+      .container__about-us {
+        padding: 70px 55px;
+      }
+
+      .about-us__part-1,
+      .about-us__part-2,
+      .about-us__part-3  {
+        font-size: 1.1rem;
+        line-height: 2rem;
+        padding: 2.5em 3em;
+        border-top: solid 5px var(--btn-color);
+        border-bottom: solid 5px var(--btn-color);
+        border-radius: 15px;
+        margin-bottom: 100px;
+      }
+
+      
+      .about-us__p {
+        text-align: center;
+        line-height: 2.15rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-bottom: 30px;
+      }
+
+      /*MEMBERS TABLET*/
+
+      .container__main-members {
+        padding: 40px 10%;
+      }
+
+      .main-members__title {
+        font-size: 2rem;
+        margin-right: 50px;
+      }
+
+
+      .container__main-members-flex {
+        justify-content: center;
+      }
+
+      .main__members {
+        margin-right: 50px;
+      }
+
+      .members__img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .members__name {
+        text-align: center;
+        font-weight: 500;
+        color: #fff;
+      }
+
+
+
+  }
+@media (min-width: 1024px) {
+
+  .logo {
+    width: 80px;
+  }
+
+  ul li a,
+  .nav__menu-register,
+  .nav__menu-login {
+      font-size: 0.9rem !important;
+      font-weight: 600;
+      letter-spacing: 1px;
   }
   
-  .open__img {
-    width: 30px;
-  }
-  
-  .bi-list{
-    font-size: 2.5rem;
-    color: var(--color-fonts);
-  }
-  
-  .login-icon {
-    position: fixed;
-    right: 20px;
-    top: 15px;
-    color: var(--color-fonts);
-  }
-  
-  .close {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-  }
-  
-  .close img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  
-  .bi-person-circle{
-    font-size: 2.3rem !important;
-  }
-  
-  ul li a {
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 0.3px;
-    font-size: 0.9rem;
-  }
-  
-  
-  /*------------- MAIN MOBILE --------------*/
-  
-  
-  .container__header {
-    background-image: url(../images/backgrounds/desarrollador-about-us.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-  }
-  
-  .container__title {
-    padding-top: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .main-title {
-    color: white;
-    font-size: 40px;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    line-height: 50px;
-    text-align: center;
-    padding: 0 30px 75px 30px;
-  
-  }
-  
-  .header__arrow-img {
-    width: 90px;
-    animation-name: arrow-grow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes arrow-grow {
-    0%  {transform: translate(0); width: 100px;}
-    50% { transform: translateY(20px); width: 110px;}
-    100% {transform: translate(0); width: 100px;}
-  }
-  
-  .main__container {
-    background-image: url(../images/backgrounds/desarrollador-about-us.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-    padding-bottom: 90px;
-  }
-  
+
+  .item-contacto {
+    padding-right: 20px;
+  }xz
+
+/*------------- MAIN DESCKTOP --------------*/
+
   .container__about-us {
-    padding: 30px 0;
+    padding: 80px 110px;
   }
-  
+
   .about-us__part-1,
+  .about-us__part-2,
   .about-us__part-3  {
-    background: rgba(41, 3, 38, 0.833);
-    font-size: 0.84rem;
-    letter-spacing: 1px;
-    line-height: 21px;
-    padding: 2.6em 2.1em;
-    border-top: solid 4px var(--btn-color);
-    border-bottom: solid 4px var(--btn-color);
-    margin: 40px 0 60px 0;
-    text-align: left;
-    position: relative;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    padding: 2.5em 4em;
+    margin-bottom: 120px;
   }
-  
-  .letter-big {
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  .about-us__part-1 a,
-  .about-us__part-3 a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
+
   .about__us-title {
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
+    font-size: 2.2rem;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
   
   .about-us__p {
-    text-align: center;
-    line-height: 1.55rem;
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+   
     padding-bottom: 30px;
   }
+
+  .about-us__img-1 {
+    width: 130px;
+  }
   
-  /*MEMBERS MOBILE*/
+  .about-us__img-2 {
+    width: 140px;
+  }
   
+  .about-us__img-3 {
+    width: 120px;
+    bottom: -60px;
+  }
+
+
+  /*MEMBERS DESCKTOP*/
+
   .container__main-members {
-    background: rgba(27, 5, 31, 0.864);
-    padding: 40px 20px;
-    border-top: solid 4px var(--btn-color);
-    border-bottom: solid 4px var(--btn-color);
+    padding: 40px 10%;
   }
-  
+
   .main-members__title {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 10px;
+    font-size: 2rem;
+    margin-right: 50px;
   }
-  
+
+
   .container__main-members-flex {
-    width: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-  
   }
-  
+
   .main__members {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
+    margin-right: 50px;
   }
-  
+
   .members__img {
-    width: 70px;
-    height: 70px;
-    border: solid 3px white;
-    border-radius: 50%;
-    margin-bottom: 5px;
-    
+    width: 100px;
+    height: 100px;
   }
-  
+
   .members__name {
     text-align: center;
     font-weight: 500;
   }
-  
-  
-  @media (min-width: 445px) {
-      .container__title {
-        padding-top: 40%;
-      }
-      
-      .main-title {
-        font-size: 45px;
-        padding: 0 40px 75px 40px;
-      }
-  
-      .container__about-us {
-        padding: 30px 20px;
-      }
-      
-      .about-us__part-1,
-      .about-us__part-2,
-      .about-us__part-3  {
-        border-radius: 10px;
-      }
-    }
-  
-  @media (min-width: 768px) {
-    .close,
-    .open {
-      display: none;
-    }
-    .logo {
-      width: 70px;
-      margin-top: 30px;
-    }
-  
-    ul li a,
-      .nav__menu-register, 
-      .nav__menu-login li {
-        font-size: 0.74rem !important;
-        color: white;
-        font-weight: 500;
-        text-decoration: none;
-        letter-spacing: 0.2px;
-        cursor: pointer;
-        transition: 0.7s;
-      }
-  
-  
-    .item-contacto {
-      padding-right: 10px;
-    }
-  
-        .container__title {
-          padding-top: 30%;
-        }
-        
-        .main-title {
-          font-size: 60px;
-          padding: 0 40px 70px 40px;
-        }
-    
-        .container__about-us {
-          padding: 70px 55px;
-        }
-  
-        .about-us__part-1,
-        .about-us__part-2,
-        .about-us__part-3  {
-          font-size: 1.1rem;
-          line-height: 2rem;
-          padding: 2.5em 3em;
-          border-top: solid 5px var(--btn-color);
-          border-bottom: solid 5px var(--btn-color);
-          border-radius: 15px;
-          margin-bottom: 100px;
-        }
-  
-        
-        .about-us__p {
-          text-align: center;
-          line-height: 2.15rem;
-          font-weight: 400;
-          font-size: 1.2rem;
-          padding-bottom: 30px;
-        }
-  
-        /*MEMBERS TABLET*/
-  
-        .container__main-members {
-          padding: 40px 10%;
-        }
-  
-        .main-members__title {
-          font-size: 2rem;
-          margin-right: 50px;
-        }
-  
-  
-        .container__main-members-flex {
-          justify-content: center;
-        }
-  
-        .main__members {
-          margin-right: 50px;
-        }
-  
-        .members__img {
-          width: 100px;
-          height: 100px;
-        }
-  
-        .members__name {
-          text-align: center;
-          font-weight: 500;
-        }
-  
-  
 
-    }
-  @media (min-width: 1024px) {
-  
-    .logo {
-      width: 80px;
-    }
-  
-    ul li a,
-    .nav__menu-register,
-    .nav__menu-login {
-        font-size: 0.9rem !important;
-        font-weight: 600;
-        letter-spacing: 1px;
-    }
-    
-  
-    .item-contacto {
-      padding-right: 20px;
-    }xz
-  
-  /*------------- MAIN DESCKTOP --------------*/
-  
+
+}
+@media (min-width: 1200px) {
+
+
     .container__about-us {
-      padding: 80px 110px;
+      padding: 80px 20%;
+      margin-bottom: 40px;
     }
   
     .about-us__part-1,
     .about-us__part-2,
     .about-us__part-3  {
-      font-size: 1.2rem;
-      line-height: 2.2rem;
       padding: 2.5em 4em;
-      margin-bottom: 120px;
+      margin-bottom: 150px;
     }
   
     .about__us-title {
       font-size: 2.2rem;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
     }
     
-    .about-us__p {
-      font-size: 1.3rem;
-      line-height: 2.3rem;
-      font-weight: 400;
-     
-      padding-bottom: 30px;
-    }
   
     .about-us__img-1 {
       width: 130px;
+      bottom: -70px;
+      right: 60px
     }
     
     .about-us__img-2 {
-      width: 140px;
-    }
-    
-    .about-us__img-3 {
-      width: 120px;
-      bottom: -60px;
-    }
-  
-  
-    /*MEMBERS DESCKTOP*/
-  
-    .container__main-members {
-      padding: 40px 10%;
-    }
-  
-    .main-members__title {
-      font-size: 2rem;
-      margin-right: 50px;
-    }
-  
-  
-    .container__main-members-flex {
-      justify-content: center;
-    }
-  
-    .main__members {
-      margin-right: 50px;
-    }
-  
-    .members__img {
-      width: 100px;
-      height: 100px;
-    }
-  
-    .members__name {
-      text-align: center;
-      font-weight: 500;
-    }
-  
-  
-}
-  @media (min-width: 1200px) {
-  
-  
-      .container__about-us {
-        padding: 80px 20%;
-        margin-bottom: 40px;
-      }
-    
-      .about-us__part-1,
-      .about-us__part-2,
-      .about-us__part-3  {
-        padding: 2.5em 4em;
-        margin-bottom: 150px;
-      }
-    
-      .about__us-title {
-        font-size: 2.2rem;
-        padding-bottom: 15px;
-      }
-      
-    
-      .about-us__img-1 {
-        width: 130px;
-        bottom: -70px;
-        right: 60px
-      }
-      
-      .about-us__img-2 {
-        width: 160px;
-        bottom: -90px;
-        right: 60px;
-      }
-  
+      width: 160px;
+      bottom: -90px;
+      right: 60px;
     }
 
+  }
