@@ -21,13 +21,12 @@ a {
 	--font-paragraph: 'Arimo', sans-serif;
 	--font-2-paragraph: 'Montserrat', sans-serif;
 }
-
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-h2 {
-	font-family: var(--font-titles);
-	color: rgb(226, 73, 43);
+/*navbar*/
+.nav-shadow {
+	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
 .nav-item-img {
 	width: 30px;
 	height: 30px;
@@ -40,3 +39,45 @@ h2 {
 	background-color: var(--btn-color) !important;
 	width: 130px;
 }
+.form__position {
+	position: relative;
+	padding-left: 30px !important;
+	background-color: var(--backround-pages) !important;
+	border-radius: 20px !important;
+}
+.form__position-search {
+	position: absolute;
+}
+/*navbar*/
+/*cards*/
+.title-cards {
+	color: #fff;
+	font-family: (var(--font-titles));
+}
+.margin-cards {
+	padding-top: 100px;
+}
+.cards-size {
+	height: 600px;
+}
+.cards-video {
+	width: 100%;
+	height: 600px;
+}
+/*cards*/
+/*comentarios*/
+.img-coments {
+	width: 40px;
+	height: 40px;
+}
+.bg-coments {
+	background-color: var(--btn-color);
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+.form-size {
+	width: 400px !important;
+	border-radius: 5px;
+	resize: none;
+}
+/*comentarios*/
