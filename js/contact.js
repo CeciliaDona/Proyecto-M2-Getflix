@@ -8,12 +8,12 @@ const alert_name = document.querySelector('#alert-name');
 const alert_email = document.querySelector('#alert-email');
 const alert_success = document.querySelector('#alert-success');
 const alert_phone = document.querySelector('#alert-phone');
-const alert_message = document.querySelector('#alert-message');
+
 
 const regUsername = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 const regUseremail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 const regUserphone = /^\d+$/gi;
-const regUsermessage = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+
 
 const mensajeExito = () => {
 	alert_success.textContent = 'The form has been sent successfully';
@@ -69,17 +69,7 @@ formulario.addEventListener('submit', (e) => {
 		campo_phone.classList.add('is-valid');
 		campo_phone.classList.remove('is-invalid');
 	}
-    if (!regUsermessage.test(campo_message.value) || !campo_message.value.trim()) {
-		campo_message.classList.add('is-invalid');
-		errores.push({
-			tipo: alert_message,
-			msg: 'Invalid characters,only letters.',
-		});
-	} else {
-		alert_message.classList.add('d-none');
-		campo_message.classList.add('is-valid');
-		campo_message.classList.remove('is-invalid');
-	}
+    
 
 	if (errores.length !== 0) {
 		pintarMensajeError(errores);
