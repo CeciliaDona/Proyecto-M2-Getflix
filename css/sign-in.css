@@ -1,35 +1,594 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
-  
-  *::selection {
-    background: #afc43a62;
-    color: #fff;
-  }
-
-  a {
-    cursor: pointer;
-  }
-
-  :root {
-    --btn-color: #B0C43A;
-    --backround-pages: #201f21;
-    --color-fonts: rgb(255, 254, 245);
-    --font-titles: 'Anton', sans-serif;
-    --font-paragraph: 'Arimo', sans-serif;
-    --font-2-paragraph: 'Montserrat', sans-serif;
-    --line-height-mobile: 1.7; 
-    --line-height-tablet: 1.8;
-    --line-height-descktop: 1.9;
-  }
-  
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+
+*::selection {
+  background: #afc43a62;
+  color: #fff;
+}
+
+a {
+  cursor: pointer;
+}
+
+:root {
+  --btn-color: #B0C43A;
+  --backround-pages: #201f21;
+  --color-fonts: rgb(255, 254, 245);
+  --font-titles: 'Anton', sans-serif;
+  --font-paragraph: 'Arimo', sans-serif;
+  --font-2-paragraph: 'Montserrat', sans-serif;
+  --line-height-mobile: 1.7; 
+  --line-height-tablet: 1.8;
+  --line-height-descktop: 1.9;
+}
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+/*------------------ NAV MOBILE --------------*/
+
+.container__header{
+  width: 70%;
+  height: 490px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.open {
+  display: block;
+  position: fixed;
+  left: 20px;
+  top: 16px;
+}
+
+.open__img {
+  width: 30px;
+}
+
+.bi-list{
+  font-size: 2.5rem;
+  color: var(--white)
+}
+
+.login-icon {
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  color: var(--white);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.close img {
+  width: 20px;
+  height: 20px;
+}
+
+.logo {
+  width: 110px;
+  margin-bottom: 40px;
+}
+
+.bi-person-circle{
+  font-size: 2.3rem !important;
+}
+
+
+
+#nav:target {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.li__login {
+  margin-bottom: 36px;
+}
+
+
+
+ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+}
+
+
+.btn-register {
+  background-color: var(--btn-color) !important;
+}
+
+/*------------- MAIN MOBILE --------------*/
+
+main {
+  background-color:var(--backround-pages);
+}
+
+.wpp-icon {
+  width: 40px;
+  position: sticky;
+  bottom: 5px;
+  margin-left: 86%;
+  padding-bottom: 10px;
+}
+
+.container__login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login__title {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.login__img {
+  width: 100%;
+}
+
+.login__form-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+
+.login__forgot-password {
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.login__forgot-password:hover {
+  font-weight: 500;
+  color: rgb(167, 149, 149);
+}
+
+.login__social-title {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.login__container-icons {
+  margin: 15px;
+}
+
+.login__icons {
+  width: 35px;
+  margin-right: 15px;
+  transition: 0.5s;
+}
+
+.login__icons:hover {
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+img a {
+  text-decoration: none;
+}
+
+.modal-p {
+  font-size: 0.9rem;
+}
+
+/*------------- FOOTER MOBILE --------------*/
+
+.container__footer {
+  background: rgb(26, 26, 26);
+  border-top: solid 4px var(--btn-main);
+}
+
+.footer__container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer__title {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 7px;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+.footer__icons {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footer__contact {
+  color: white;
+  font-size: 0.8rem;
+  padding: 20px;
+}
+
+.footer__reserved {
+  color: white;
+  font-size: 0.5rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+/********************************* TABLET *************************************/
+/*------------- NAV TABLET --------------*/
+
+@media (min-width: 768px) {
+  .close,
+  .open,
+  .nav__mobile-menu {
+    display: none;
+  }
+
+  .nav__container {
+    animation: none;
+  }
+
+  .nav__menu,
+  .logo {
+    display: flex;
+  }
+
+  .nav__menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background: rgba(27, 26, 33, 0.914);
+  }
+
+  .nav__login-register {
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+  }
+
+  .li__login {
+    margin-top: 36px;
+  }
+
+  #nav {
+    background: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0;
+    border: 0;
+  }
+
+  .logo {
+    width: 70px;
+    margin-top: 30px;
+  }
+
+  ul li a,
+    .nav__menu-register, 
+    .nav__menu-login li {
+      font-size: 0.74rem !important;
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      transition: 0.7s;
+    }
+
+    .nav__menu-login {
+      font-size: 0.74rem !important;
+    }
+
+  .nav__menu-login,
+  .nav__menu-register,
+  .nav__menu-items {
+    margin: 0 6px;
+  }
+
+  .item-contacto {
+    padding-right: 10px;
+  }
+
+  .nav__menu-login {
+    padding: 0.45em 0.6em;
+    border-radius: 25px;
+    border: solid 2px white;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .nav__menu-login:hover,
+  .nav__menu-login a:hover  {
+    color: black;
+  }
+
+  .nav__menu-login:hover {
+    background: white;
+  }
+
+  .nav__menu-register {
+    padding: 0.25em 0.55em;
+    border-radius: 25px;
+    background: var(--btn-main);
+    border: solid 2px var(--btn-main);
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .nav__menu-register a:hover {
+    color: white;
+    font-weight: 600;
+  }
+
+  .nav__menu-register:hover {
+    background: rgb(230, 71, 230);
+  }
+
+  /*------------- MAIN TABLET --------------*/
+
+  .wpp-icon {
+    width: 50px;
+    margin-left: 92%;
+  }
+
+  .container__login {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 170px 50px 50px;
+  }
+
+  .login__container-image {
+    width: 54%;
+    padding-left: 50px;
+    margin-top: 35px;
+  }
+
+  .login__img {
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 40px;
+  }
+
+  .login__form-container {
+    width: 44%;
+    margin: 20px;
+    padding: 0 10px;
+  }
+
+  .login__form {
+    padding-bottom: 10px;
+  }
+
+  .login__form-input {
+    margin-bottom: 0;
+  }
+
+  .login__forgot-password {
+    margin-bottom: 15px;
+  }
+
+  .login__container-icons {
+    margin: 5px 16px;
+  }
+
+  .login__icons {
+    width: 40px;
+  }
+
+  /*------------- FOOTER TABLET --------------*/
+
+  .footer__container-contact {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  .footer__title {
+    letter-spacing: 12px;
+    font-size: 2.3rem;
+  }
+
+  .footer__container-logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__logo {
+    width: 150px;
+  }
+
+  .footer__icons {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-redes {
+    margin: 15px;
+  }
+
+  .footer__contact {
+    width: 30%;
+    color: white;
+    font-size: 0.9rem;
+    padding: 20px;
+    text-align: right;
+  }
+
+  .footer__reserved {
+    font-size: 0.7rem;
+  }
+}
+
+/********************************* DESCKTOP *************************************/
+
+/*------------- NAV DESCKTOP --------------*/
+
+@media (min-width: 1024px) {
+  .logo {
+    width: 80px;
+  }
+
+  ul li a,
+  .nav__menu-register,
+  .nav__menu-login {
+      font-size: 0.9rem !important;
+      font-weight: 600;
+      letter-spacing: 1px;
+  }
+  
+      .nav__menu-login,
+      .nav__menu-register,
+      .nav__menu-items {
+      margin: 0 12px;
+  }
+  
+  .nav__menu-login {
+      padding: 0.54em 1.1em;
+  }
+
+  .nav__menu-register {
+    padding: 0.3em 0.55em;
+  }
+
+  .item-contacto {
+    padding-right: 20px;
+  }
+
+  /*------------- MAIN DESCKTOP --------------*/
+
+  .wpp-icon {
+    width: 55px;
+    margin-left: 93%;
+  }
+
+  .container__login {
+    padding: 130px 7% 20px;
+  }
+
+  .login__container-image {
+    width: 50%;
+    margin-right: 60px;
+  }
+
+  .login__img {
+    margin-left: 20px;
+  }
+
+  .login__form-container {
+    width: 45%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .login__title {
+    font-size: 1.3rem;
+  }
+
+  .login__form {
+    padding-bottom: 20px;
+  }
+
+  .login__forgot-password {
+    margin-bottom: 50px;
+  }
+
+  .login__container-icons {
+    margin: 15px 16px;
+  }
+
+  /*------------- FOOTER DESCKTOP --------------*/
+
+  .footer__title {
+    letter-spacing: 14px;
+    font-size: 2.5rem;
+  }
+
+  .icon-redes {
+    margin: 40px;
+  }
+
+  .footer__contact {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  .footer__reserved {
+    font-size: 0.9rem;
+  }
+}
+
+/********************************* RES 1200 *************************************/
+
+/*------------- MAIN RES 1200 --------------*/
+
+@media (min-width: 1200px) {
+  .container__login {
+    padding: 150px 14% 20px;
+  }
+
+  .login__form {
+    padding-bottom: 10px;
+  }
+
+  .login__forgot-password {
+    margin-bottom: 25px;
+  }
+
+  .login__container-icons {
+    margin: 10px 16px;
+  }
+
+  .login__icons {
+    width: 40px;
+  }
+
+}  
