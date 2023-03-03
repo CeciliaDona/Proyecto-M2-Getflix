@@ -10,10 +10,6 @@
   color: #fff;
 }
 
-a {
-  cursor: pointer;
-}
-
 :root {
   --btn-color: #B0C43A;
   --backround-pages: #201f21;
@@ -25,84 +21,15 @@ a {
   --line-height-tablet: 1.8;
   --line-height-descktop: 1.9;
 }
+
+body {
+  background-color:var(--backround-pages);
+}
+
 a {
   cursor: pointer;
-  text-decoration: none !important;
+  text-decoration: none ;
 }
-
-/*------------------ NAV MOBILE --------------*/
-
-.container__header{
-  width: 70%;
-  height: 490px;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-.open {
-  display: block;
-  position: fixed;
-  left: 20px;
-  top: 16px;
-}
-
-.open__img {
-  width: 30px;
-}
-
-.bi-list{
-  font-size: 2.5rem;
-  color: var(--white)
-}
-
-.login-icon {
-  position: fixed;
-  right: 20px;
-  top: 15px;
-  color: var(--white);
-}
-
-.close {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-
-.close img {
-  width: 20px;
-  height: 20px;
-}
-
-.logo {
-  width: 110px;
-  margin-bottom: 40px;
-}
-
-.bi-person-circle{
-  font-size: 2.3rem !important;
-}
-
-
-
-#nav:target {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-.li__login {
-  margin-bottom: 36px;
-}
-
-
 
 ul li a {
   color: white;
@@ -112,24 +39,10 @@ ul li a {
   font-size: 0.9rem;
 }
 
-
-.btn-register {
-  background-color: var(--btn-color) !important;
-}
-
 /*------------- MAIN MOBILE --------------*/
 
-main {
-  background-color:var(--backround-pages);
-}
 
-.wpp-icon {
-  width: 40px;
-  position: sticky;
-  bottom: 5px;
-  margin-left: 86%;
-  padding-bottom: 10px;
-}
+
 
 .container__login {
   width: 100%;
@@ -145,9 +58,6 @@ main {
   font-size: 1rem;
 }
 
-.login__img {
-  width: 100%;
-}
 
 .login__form-container {
   width: 75%;
@@ -161,8 +71,8 @@ main {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  align-items: flex-start;
 }
-
 
 .login__forgot-password {
   margin-bottom: 15px;
@@ -171,8 +81,7 @@ main {
 }
 
 .login__forgot-password:hover {
-  font-weight: 500;
-  color: rgb(167, 149, 149);
+  color: rgb(57, 202, 241);
 }
 
 .login__social-title {
@@ -204,112 +113,11 @@ img a {
   font-size: 0.9rem;
 }
 
-/*------------- FOOTER MOBILE --------------*/
-
-.container__footer {
-  background: rgb(26, 26, 26);
-  border-top: solid 4px var(--btn-main);
-}
-
-.footer__container-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 50px;
-}
-
-.footer__title {
-  color: white;
-  font-weight: bold;
-  letter-spacing: 7px;
-  padding-top: 80px;
-  text-align: center;
-}
-
-.footer__logo {
-  width: 100px;
-  padding-bottom: 20px;
-}
-
-.footer__icons {
-  width: 55%;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.footer__contact {
-  color: white;
-  font-size: 0.8rem;
-  padding: 20px;
-}
-
-.footer__reserved {
-  color: white;
-  font-size: 0.5rem;
-  text-align: center;
-  padding-bottom: 10px;
-  margin: 0;
-}
 
 /********************************* TABLET *************************************/
 /*------------- NAV TABLET --------------*/
 
 @media (min-width: 768px) {
-  .close,
-  .open,
-  .nav__mobile-menu {
-    display: none;
-  }
-
-  .nav__container {
-    animation: none;
-  }
-
-  .nav__menu,
-  .logo {
-    display: flex;
-  }
-
-  .nav__menu {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 70px;
-    background: rgba(27, 26, 33, 0.914);
-  }
-
-  .nav__login-register {
-    display: flex;
-    align-items: center;
-    flex-direction: center;
-  }
-
-  .li__login {
-    margin-top: 36px;
-  }
-
-  #nav {
-    background: none;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    padding: 0;
-    border: 0;
-  }
-
-  .logo {
-    width: 70px;
-    margin-top: 30px;
-  }
-
   ul li a,
     .nav__menu-register, 
     .nav__menu-login li {
@@ -326,11 +134,11 @@ img a {
       font-size: 0.74rem !important;
     }
 
-  .nav__menu-login,
-  .nav__menu-register,
-  .nav__menu-items {
-    margin: 0 6px;
-  }
+    .nav__menu-login,
+    .nav__menu-register,
+    .nav__menu-items {
+      margin: 0 6px;
+    }
 
   .item-contacto {
     padding-right: 10px;
@@ -421,51 +229,6 @@ img a {
   .login__icons {
     width: 40px;
   }
-
-  /*------------- FOOTER TABLET --------------*/
-
-  .footer__container-contact {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 30px 0;
-  }
-
-  .footer__title {
-    letter-spacing: 12px;
-    font-size: 2.3rem;
-  }
-
-  .footer__container-logo {
-    width: 30%;
-    display: flex;
-    align-items: center;
-  }
-
-  .footer__logo {
-    width: 150px;
-  }
-
-  .footer__icons {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .icon-redes {
-    margin: 15px;
-  }
-
-  .footer__contact {
-    width: 30%;
-    color: white;
-    font-size: 0.9rem;
-    padding: 20px;
-    text-align: right;
-  }
-
-  .footer__reserved {
-    font-size: 0.7rem;
-  }
 }
 
 /********************************* DESCKTOP *************************************/
@@ -473,10 +236,6 @@ img a {
 /*------------- NAV DESCKTOP --------------*/
 
 @media (min-width: 1024px) {
-  .logo {
-    width: 80px;
-  }
-
   ul li a,
   .nav__menu-register,
   .nav__menu-login {
@@ -504,11 +263,6 @@ img a {
   }
 
   /*------------- MAIN DESCKTOP --------------*/
-
-  .wpp-icon {
-    width: 55px;
-    margin-left: 93%;
-  }
 
   .container__login {
     padding: 130px 7% 20px;
@@ -543,26 +297,6 @@ img a {
 
   .login__container-icons {
     margin: 15px 16px;
-  }
-
-  /*------------- FOOTER DESCKTOP --------------*/
-
-  .footer__title {
-    letter-spacing: 14px;
-    font-size: 2.5rem;
-  }
-
-  .icon-redes {
-    margin: 40px;
-  }
-
-  .footer__contact {
-    font-size: 1.1rem;
-    padding: 20px;
-  }
-
-  .footer__reserved {
-    font-size: 0.9rem;
   }
 }
 
