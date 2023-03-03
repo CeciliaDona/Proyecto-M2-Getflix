@@ -29,9 +29,12 @@
 body {
   background-color: var(--backround-pages); 
 }
+
   .slider {
-    height: 700px;
+    height: 100vh;
+    width: 100%;
     display: flex;
+    bac
     flex-direction: row;
     position: relative;
     align-items: center;
