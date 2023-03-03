@@ -12,6 +12,7 @@
 
   a {
     cursor: pointer;
+    text-decoration: none;
   }
 
   :root {
@@ -26,10 +27,311 @@
     --line-height-descktop: 1.9;
   }
   
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+body {
+  background-color: var(--backround-pages); 
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+
+/*====================== RES 320 ===================== */
+  .slider {
+    height: 100vh; /*agregué esto*/
+    width: 100%; /*agregué esto*/
+    background-size: cover; /*agregué esto*/
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    color: var(--color-fonts);
+    overflow: hidden;
+  }
+
+  .bi-chevron-left,
+  .bi-chevron-right {
+    z-index: 1000;
+    font-size: 80px;
+    position: absolute;
+    cursor: pointer;
+    }
+
+  .bi-chevron-left {
+    left: 0;
+  }
+  .bi-chevron-right {
+    right: 0;
+  }
+
+  .container__slider {
+    min-width: 100%;
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    padding-top: 200px;
+    display: flex;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .container__slider-movie img {
+    position: relative;
+  }
+
+  .container__slider-2 {
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/totoro.jpg.jpg);
+  }
+
+  .container__slider-3 {
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/titanic.jpg);
+  }
+
+  .container__slider-4 {
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/the-simpsons.webp);
+  }
+  
+  .container__slider-5{
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/avatar-2.jpg);
+  }
+
+  .container__slider-6{
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/disenchanted.jpg);
+  }
+
+  .container__slider-movie {
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 6.25em;
+  }
+
+  .container__slider-body {
+    padding-left: 50px ;
+  }
+  
+  .container__slider-title {
+    font-weight: 600;
+    font-size: 3.5em;
+    margin-bottom: 0.4em;
+  }
+  
+  .container__slider-description {
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.75em;
+    max-width: 90%;
+    margin-bottom: 1.25em;
+  }
+  
+  .container__slider-btn {
+    background: rgba(0,0,0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: var(--color-fonts);
+    margin-right: 1.25em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.3em;
+  }
+  
+  .container__slider-btn:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  .container__slider-btn i {
+    margin-right: 1.25em;
+  }
+
+  .main__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .main__title h3 {
+    color: var(--color-fonts);
+    font-size: 25px;
+    font-family: var(--font-2-paragraph);
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
+  
+  .main {
+    margin-bottom: 70px;
+    width: 90%;
+    margin: 5%;
+  }
+  
+  .main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+ 
+  .main__container-movies {
+    display: grid;
+		grid-template-columns: 85%; /*agregue esto*/
+    justify-content: center; /*agregue esto*/
+		gap: 4em; /*cambié esto, antes decía 20px*/
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .main__container-movie {
+    min-width: 23%;
+    transition: all 500ms ease-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__container-movie img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+    transition: all 500ms ease-out;
+  }
+
+  .bi-star-fill,
+  .bi-star-half,
+  .bi-star{
+    font-size: 1.2rem;
+    color: yellow;
+    margin: 0 2px;
+  }
+
+  /*Agregué este bloque de código*/
+  .see-more {
+    color: var(--color-fonts);
+    font-size: 1.2rem;
+    font-weight:600 ;
+    font-family: var(--font-paragraph);
+  }
+
+  .layer {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column; /*agregué esto*/
+    align-items: center;  /*agregué esto*/
+    justify-content: space-evenly;  /*agregué esto*/
+    flex-wrap: wrap;
+    background: var(--backround-pages); 
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .layer p{
+    margin: 0 25px 0 25px;
+  }
+
+  .main__container-movie:hover > .layer{
+    opacity: 0.9; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
+    visibility: visible;
+    transform: scale(1.2);
+  }
+
+  /*Agregué este bloque de código*/
+  .container__movie-number {
+    position: relative;
+    color: var(--color-fonts);
+  }
+
+  /*Agregué este bloque de código*/
+  .movie-number {
+    position: absolute;
+    top: -25%;
+    left: 5px;
+    font-size: 8.4em;
+    font-family: var(--font-titles);
+    font-weight: bolder;
+    text-shadow: 0 0 40px rgb(14, 165, 246),
+    0 0 50px white;
+  }
+
+  /* ---- ----- ----- Media Queries ----- ----- ----- */
+    /*Los media query que habría que hacer son res 768 para tablet y 1024 para descktop, y después un poco más grande también como para que no se deforme tanto cuando lo veamos en pantalla completa. Y también si queres ir ajustando algunos valores en resoluciones intermedias para algún bloque en particular se puede hacer, pero lo ideal es que esté si o si la 768 y la 1024 después de la 320 como mobile first como todo lo que está acá arriba. Los media query ddeben colocarse de forma ascencente, es decir primero res 320, después 768, 1024 y así hasta la que llegues.*/
+  
+  /*===================== RES 768 (TABLET) ==================== */
+  @media(min-width: 768px) {
+    .main__container-movies {
+      grid-template-columns: 35% 35% 35%; 
+      gap: 2em; 
+      width: 88%;
+    }
+  }
+
+  /*==================== RES 1024 (DESCKTOP) ================== */
+  @media(min-width: 1024px) {
+    .main__container-movies {
+      grid-template-columns: 24% 24% 24% 24%; 
+      gap: 2em; 
+      width: 95%;
+    }
+  }
+
+
+/* ESTAS RESOLUCIONES TE LAS COMENTÉ PORQUE ALGUNAS COSAS NO LAS PODÍA ACOMODAR Y CREO QUE ERA POR ESTO, NO TE LAS BORRO POR SI NECESITAS USARLAS, LAS DESCOMENTAS Y LISTO
+  @media(max-width: 800px) {
+    .bi-chevron-left,
+    .bi-chevron-right{
+      font-size: 60px; 
+    }
+  
+    .main__container-movies {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container__slider {
+      font-size: 14px;
+    }
+
+    .container__slider-body {
+      padding-left: 20px ;
+      padding-right: 15px;
+    }
+  
+    .container__slider-description {
+      max-width: 100%;
+      font-size: 1.3em;
+    }
+
+    .container__slider-btn {
+      font-size: 1.3em;
+    }
+
+    .main__title h3 {
+      font-size: 20px;
+      margin: 15px 0 10px 8px;
+    }
+  }*/
+
+  /*@media(max-width: 350px) {
+    .bi-chevron-left,
+    .bi-chevron-right{
+      font-size: 40px; 
+    }
+
+    .container__slider-body {
+      padding-left: 30px ;
+    }
+
+    .container__slider-title {
+      font-size: 2.5em;
+    }
+
+    .main__title h3 {
+      font-size: 15px;
+      margin: 15px 0 15px 28px;
+    }
+  } */
