@@ -1,35 +1,36 @@
-const form = document.querySelector('#form');
+const form = document.querySelector('#formulario');
 const campo_email = document.querySelector('#User-email');
 const campo_phone = document.querySelector('#User-phone');
 const campo_name = document.querySelector('#User-name');
+const campo_message = document.querySelector('#User-message');
 
 const alert_name = document.querySelector('#alert-name');
 const alert_email = document.querySelector('#alert-email');
 const alert_success = document.querySelector('#alert-success');
 const alert_phone = document.querySelector('#alert-phone');
-
+const alert_message = document.querySelector('#alert-message');
 
 const regUsername = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 const regUseremail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 const regUserphone = /^\d+$/gi;
-
+const regUsermessage = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 
 const mensajeExito = () => {
-	alert_success.textContent = 'formulario enviado con exito';
+	alert_success.textContent = 'The form has been sent successfully';
 	alert_success.classList.remove('d-none');
-};
-
+}
 
 const pintarMensajeError = (errores) => {
 	errores.forEach((item) => {
 		item.tipo.classList.remove('d-none');
 		item.tipo.textContent = item.msg;
 	});
-};
+}
 
-form.addEventListener('submit', (e) => {
+
+
+formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-	console.log('form enviado');
 	alert_success.classList.add('d-none');
 
 	const errores = [];
@@ -38,7 +39,7 @@ form.addEventListener('submit', (e) => {
 		campo_name.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_name,
-			msg: 'formato no valido en el campo nombre, solo letras.',
+			msg: 'Invalid characters,only letters.',
 		});
 	} else {
 		alert_name.classList.add('d-none');
@@ -50,7 +51,7 @@ form.addEventListener('submit', (e) => {
 		campo_email.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_email,
-			msg: 'escriba un email valido.',
+			msg: 'Invalid email.',
 		});
 	} else {
 		alert_email.classList.add('d-none');
@@ -61,22 +62,31 @@ form.addEventListener('submit', (e) => {
 		campo_phone.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_phone,
-			msg: 'formato no valido en el campo phone number, solo numeros.',
+			msg: 'Invalid phone number,only numbers.',
 		});
 	} else {
 		alert_phone.classList.add('d-none');
 		campo_phone.classList.add('is-valid');
 		campo_phone.classList.remove('is-invalid');
 	}
-    
+    if (!regUsermessage.test(campo_message.value) || !campo_message.value.trim()) {
+		campo_message.classList.add('is-invalid');
+		errores.push({
+			tipo: alert_message,
+			msg: 'Invalid characters,only letters.',
+		});
+	} else {
+		alert_message.classList.add('d-none');
+		campo_message.classList.add('is-valid');
+		campo_message.classList.remove('is-invalid');
+	}
 
 	if (errores.length !== 0) {
 		pintarMensajeError(errores);
 		return;
 	}
-
+	
 	mensajeExito();
 });
 
-
-
+	
