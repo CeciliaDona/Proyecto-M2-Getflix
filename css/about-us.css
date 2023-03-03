@@ -26,16 +26,6 @@ a {
   --line-height-descktop: 1.9;
 }
 
-.container__header {
-  background-image: url(../img/desarrollador-about-us.jpeg);
-  background-repeat: no-repeat; 
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-  width: 100%;
-}
-
-
 .open {
   display: block;
   position: fixed;
@@ -84,12 +74,15 @@ ul li a {
   font-size: 0.9rem;
 }
 
-
+div p a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+}
 /*------------- MAIN MOBILE --------------*/
-
-
 .container__header {
-  background-image: url(../images/backgrounds/backround-stars.jpg);
+  background-image: url(../images/backgrounds/backround-stars-4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -106,7 +99,6 @@ ul li a {
   align-items: center;
 }
 
-
 .main-title {
   color: white;
   font-size: 40px;
@@ -115,7 +107,6 @@ ul li a {
   line-height: 50px;
   text-align: center;
   padding: 0 30px 75px 30px;
-
 }
 
 .header__arrow-img {
@@ -132,7 +123,7 @@ ul li a {
 }
 
 .main__container {
-  background-image: url(../images/backgrounds/backround-stars.jpg);
+  background-image: url(../images/backgrounds/backround-stars-4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -143,27 +134,30 @@ ul li a {
 }
 
 .container__about-us {
-  padding: 30px 0;
+  padding: 30px 15px;
 }
 
 .about-us__part-1,
 .about-us__part-3, 
 .p,
 .h2 {
-  background: var(--backround-pages);
+  background: rgba(0, 0, 0, 0.055);
   font-size: 0.84rem;
+  font-family: var(--font-paragraph);
+  font-weight: 300;
   letter-spacing: 1px;
-  line-height: 21px;
-  padding: 2.6em 2.1em;
-  border-top: solid 4px var(--btn-color);
-  border-bottom: solid 4px var(--btn-color);
-  margin: 40px 0 60px 0;
-  text-align: left;
+  line-height: var(--line-height-mobile);
+  padding: 3em 1.5em;
+  border-top: solid 5px var(--btn-color);
+  border-bottom: solid 5px var(--btn-color);
+  border-radius: 90px;
+  margin: 90px 0 60px 0;
+  text-align: center;
   position: relative;
 }
 
 .letter-big {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -171,13 +165,13 @@ ul li a {
 .about-us__part-3 {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .about__us-title {
   margin-bottom: 20px;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -190,19 +184,22 @@ ul li a {
 }
 
 /*MEMBERS MOBILE*/
-
 .container__main-members {
-  background: rgba(27, 5, 31, 0.864);
+  background: rgba(27, 5, 31, 0);
   padding: 40px 20px;
   border-top: solid 4px var(--btn-color);
   border-bottom: solid 4px var(--btn-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-fonts);
 }
 
 .main-members__title {
   text-align: center;
   margin-bottom: 40px;
   padding: 10px;
-  color:#fff;
+  color: var(--color-fonts);
 }
 
 .container__main-members-flex {
@@ -210,7 +207,7 @@ ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .main__members {
