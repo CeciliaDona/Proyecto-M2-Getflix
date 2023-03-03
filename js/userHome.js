@@ -1,60 +1,43 @@
-const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.container__slider')
+let currentSlide = 0;
 
-const flechaIzquierda = document.getElementById('flecha-izquierda');
-const flechaDerecha = document.getElementById('flecha-derecha');
-
-// ? ----- ----- Event Listener para la flecha derecha. ----- -----
-flechaDerecha.addEventListener('click', () => {
-	fila.scrollLeft += fila.offsetWidth;
-
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.nextSibling){
-		indicadorActivo.nextSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
-
-// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-flechaIzquierda.addEventListener('click', () => {
-	fila.scrollLeft -= fila.offsetWidth;
-
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.previousSibling){
-		indicadorActivo.previousSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
-
-// ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
-for(let i = 0; i < numeroPaginas; i++){
-	const indicador = document.createElement('button');
-
-	if(i === 0){
-		indicador.classList.add('activo');
-	}
-
-	document.querySelector('.indicadores').appendChild(indicador);
-	indicador.addEventListener('click', (e) => {
-		fila.scrollLeft = i * fila.offsetWidth;
-
-		document.querySelector('.indicadores .activo').classList.remove('activo');
-		e.target.classList.add('activo');
-	});
+function showSlide() {
+    slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+            slide.style.transform = 'translateX(0)';
+        } else {
+            slide.style.transform = 'translateX(100%)';
+        }
+    });
 }
 
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    showSlide();
+}
 
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});
+function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    showSlide();
+  }
+  
+  setInterval(nextSlide, 10000);
+  
+  slider.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+  });
+  
+  slider.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(nextSlide, 5000);
+  });
+  
+  document.querySelector('#next').addEventListener('click', nextSlide);
+  document.querySelector('#previous').addEventListener('click', prevSlide);
+  
