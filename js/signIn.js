@@ -89,7 +89,7 @@ const btnLogin = document.querySelector(".btn-login");
 
 const emailAdmin = "admin@gmail.com";
 const passwordAdmin = "admin";
-
+btnLogin.addEventListener("click", loginAdmin);
 
 const loginAdmin = () => {
 	if (campusEmailAdmin === emailAdmin && campusPasswordAdmin === passwordAdmin) {
@@ -99,7 +99,7 @@ const loginAdmin = () => {
 	};
 }
 
-btnLogin.addEventListener("click", loginAdmin);
+
 
 
 
