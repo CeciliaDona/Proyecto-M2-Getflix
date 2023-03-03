@@ -26,7 +26,10 @@
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
   }
-  
+html {
+  min-height:100%;
+
+}
 body {
   background-color: var(--backround-pages); 
 }
@@ -47,7 +50,7 @@ body {
   .bi-chevron-left,
   .bi-chevron-right {
     z-index: 1000;
-    font-size: 80px;
+    font-size: 40px;
     position: absolute;
     cursor: pointer;
     }
@@ -60,18 +63,20 @@ body {
   }
 
   .container__slider {
-    min-width: 100%;
+    width: 100%;
     font-size: 16px;
     min-height: 40.62em;
-    color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
-    background-position: center center;
-    background-size: cover;
     margin-bottom: 3.12em;
     padding-top: 200px;
     display: flex;
     position: absolute;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-size: cover;
+  }
+
+  .container__slider-1 {
+      background-position: center center;
+      background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
   }
 
   .container__slider-movie img {
@@ -79,22 +84,27 @@ body {
   }
 
   .container__slider-2 {
+    background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/totoro.jpg.jpg);
   }
 
   .container__slider-3 {
+    background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/titanic.jpg);
   }
 
   .container__slider-4 {
+    background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/the-simpsons.webp);
   }
   
   .container__slider-5{
+    background-position: center center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/avatar-2.jpg);
   }
 
   .container__slider-6{
+    background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/disenchanted.jpg);
   }
 
@@ -110,13 +120,14 @@ body {
   
   .container__slider-title {
     font-weight: 600;
-    font-size: 3.5em;
     margin-bottom: 0.4em;
+    font-size: 2em;
+
   }
   
   .container__slider-description {
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.75em;
     max-width: 90%;
     margin-bottom: 1.25em;
@@ -126,13 +137,13 @@ body {
     background: rgba(0,0,0, 0.5);
     border: none;
     border-radius: 0.31em;
-    padding: 0.93em 1.87em;
+    padding: 0.5em 1.5em;
     color: var(--color-fonts);
     margin-right: 1.25em;
     margin-bottom: 10px;
     cursor: pointer;
     transition: .3s ease all;
-    font-size: 1.3em;
+    font-size: 1em;
   }
   
   .container__slider-btn:hover {
@@ -148,7 +159,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    font-size: 15px;
+    margin: 15px 0 15px 28px;
   }
+
   
   .main__title h3 {
     color: var(--color-fonts);
@@ -269,6 +283,26 @@ body {
       gap: 2em; 
       width: 88%;
     }
+
+    .bi-chevron-left,
+    .bi-chevron-right {
+      font-size: 60px;
+    }
+    
+    .container__slider-title {
+      font-size: 2.5em;
+    }
+
+    .container__slider-description {
+      font-size: 1.5em;
+    }
+
+    .container__slider-btn {
+      padding: 0.93em 1.87em;
+      font-size: 1.3em;
+    }
+
+    
   }
 
   /*==================== RES 1024 (DESCKTOP) ================== */
@@ -278,6 +312,17 @@ body {
       gap: 2em; 
       width: 95%;
     }
+    .bi-chevron-left,
+    .bi-chevron-right {
+      font-size: 80px;
+    }
+
+    .container__slider-title {
+    font-size: 3.5em;
+
+    }
+
+    
   }
 
 
