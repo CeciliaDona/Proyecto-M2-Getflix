@@ -28,9 +28,9 @@ a {
 
 /*navbar*/
 .nav-shadow {
-	box-shadow: -3px 10px 8px 4px rgba(122, 162, 219, 0.674);
-	-webkit-box-shadow: -3px 10px 8px 4px rgba(194, 37, 221, 0.459);
-	-moz-box-shadow: -3px 10px 8px 4px rgba(99, 209, 233, 0.342);
+	box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+	-webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+	-moz-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
 }
 .nav-item-img {
 	width: 30px;
