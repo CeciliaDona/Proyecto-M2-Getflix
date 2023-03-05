@@ -87,17 +87,19 @@ const campusEmailAdmin = document.querySelector(".user-email-admin").value;
 const campusPasswordAdmin = document.querySelector(".user-password-admin").value;
 const btnLogin = document.querySelector(".btn-login");
 
-const emailAdmin = "admin@gmail.com";
-const passwordAdmin = "admin";
-btnLogin.addEventListener("click", loginAdmin);
 
 const loginAdmin = () => {
+
+	const emailAdmin = "admin@gmail.com";
+    const passwordAdmin = "admin";
+
 	if (campusEmailAdmin === emailAdmin && campusPasswordAdmin === passwordAdmin) {
-		console.log("Iniciaste sesión")
+		alert("Iniciaste sesión")
 	} else {
-		console.log("Datos incorrectos")
+		alert("Datos incorrectos")
 	};
 }
+
 
 
 
