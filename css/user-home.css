@@ -35,6 +35,35 @@ body {
 }
 
 /*====================== RES 320 ===================== */
+  /*navbar*/
+  .nav-shadow {
+    box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+    -webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+    -moz-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+  }
+  .nav-item-img {
+    width: 30px;
+    height: 30px;
+  }
+  .navbar__img {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-navbar {
+    background-color: var(--btn-color) !important;
+    width: 130px;
+  }
+  .form__position {
+    position: relative;
+    padding-left: 30px !important;
+    background-color: var(--backround-pages) !important;
+    border-radius: 20px !important;
+  }
+  .form__position-search {
+    position: absolute;
+  }
+
+  /*-----slider-----*/
   .slider {
     height: 100vh; /*agregué esto*/
     width: 100%; /*agregué esto*/
@@ -273,6 +302,57 @@ body {
     0 0 50px white;
   }
 
+  /*--- FOOTER MOBILE 320 ---*/
+.container__footer {
+  background:var(--backround-pages);
+  border-top: solid 4px var(--btn-color);
+}
+
+.footer__container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer__title {
+  font-family: var(--font-titles);
+  font-size: 60px;
+  color: var(--color-fonts);
+  font-weight: bold;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 130px;
+  padding-bottom: 15px;
+}
+
+.footer__icons {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  color: var(--color-fonts);
+}
+
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+.footer__reserved {
+  color: var(--color-fonts);
+  font-size: 0.6rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0;
+}
   /* ---- ----- ----- Media Queries ----- ----- ----- */
     /*Los media query que habría que hacer son res 768 para tablet y 1024 para descktop, y después un poco más grande también como para que no se deforme tanto cuando lo veamos en pantalla completa. Y también si queres ir ajustando algunos valores en resoluciones intermedias para algún bloque en particular se puede hacer, pero lo ideal es que esté si o si la 768 y la 1024 después de la 320 como mobile first como todo lo que está acá arriba. Los media query ddeben colocarse de forma ascencente, es decir primero res 320, después 768, 1024 y así hasta la que llegues.*/
   
@@ -284,6 +364,7 @@ body {
       width: 88%;
     }
 
+<<<<<<< HEAD
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 60px;
@@ -303,6 +384,51 @@ body {
     }
 
     
+=======
+    /*--- FOOTER 768 ---*/
+    .footer__container-contact {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px 0;
+    }
+
+    .footer__title {
+      letter-spacing: 12px;
+      font-size: 2.3rem;
+    }
+
+    .footer__container-logo {
+      width: 30%;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__logo {
+      width: 150px;
+    }
+
+    .footer__icons {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon-redes {
+      margin: 15px;
+    }
+
+    .footer__contact {
+      width: 30%;
+      color: white;
+      font-size: 0.9rem;
+      padding: 20px;
+      text-align: right;
+    }
+
+    .footer__reserved {
+      font-size: 0.7rem;
+    }
+>>>>>>> e53261480ac30c15f84bf9dbbcb812c1e485385e
   }
 
   /*==================== RES 1024 (DESCKTOP) ================== */
@@ -312,6 +438,7 @@ body {
       gap: 2em; 
       width: 95%;
     }
+<<<<<<< HEAD
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 80px;
@@ -323,6 +450,31 @@ body {
     }
 
     
+=======
+
+      /*--- FOOTER DESCKTOP 1024 ---*/
+  .footer__container-contact {
+    flex-direction: row;
+  }
+  
+    .footer__title {
+      letter-spacing: 14px;
+      font-size: 5rem;
+    }
+  
+    .icon-redes {
+      margin: 40px;
+    }
+  
+    .footer__contact {
+      font-size: 1.1rem;
+      padding: 20px;
+    }
+  
+    .footer__reserved {
+      font-size: 0.9rem;
+    }
+>>>>>>> e53261480ac30c15f84bf9dbbcb812c1e485385e
   }
 
 

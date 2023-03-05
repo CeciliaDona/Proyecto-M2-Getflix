@@ -1,20 +1,20 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
-  
-  *::selection {
-    background: #afc43a62;
-    color: #fff;
-  }
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
 
-  a {
-    cursor: pointer;
-  }
+*::selection {
+	background: #afc43a62;
+	color: #fff;
+}
 
-  :root {
+a {
+	cursor: pointer;
+}
+
+:root {
     --btn-color: #B0C43A;
     --backround-pages: #201f21;
     --color-fonts: rgb(255, 254, 245);
@@ -25,11 +25,188 @@
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
   }
-  
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+/*navbar*/
+.nav-shadow {
+	box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+	-webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+	-moz-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+.nav-item-img {
+	width: 30px;
+	height: 30px;
+}
+.navbar__img {
+	width: 50px;
+	height: 50px;
+}
+.btn-navbar {
+	background-color: var(--btn-color) !important;
+	width: 130px;
+}
+.form__position {
+	position: relative;
+	padding-left: 30px !important;
+	background-color: var(--backround-pages) !important;
+	border-radius: 20px !important;
+}
+.form__position-search {
+	position: absolute;
+}
+
+/*cards*/
+.title-cards {
+	color: #fff;
+	font-family: (var(--font-titles));
+}
+.margin-cards {
+	padding-top: 100px;
+}
+.cards-size {
+	height: 600px;
+}
+.cards-video {
+	width: 100%;
+	height: 600px;
+}
+
+/*comentarios*/
+.img-coments {
+	width: 40px;
+	height: 40px;
+}
+.bg-coments {
+	background-color: var(--btn-color);
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+.form-size {
+	width: 400px !important;
+	border-radius: 5px;
+	resize: none;
+}
+
+/*================== RES 320 ==================*/
+/*--- FOOTER MOBILE 320 ---*/
+.container__footer {
+    background:var(--backround-pages);
+    border-top: solid 4px var(--btn-color);
+  }
+  
+  .footer__container-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .footer__title {
+    font-family: var(--font-titles);
+    font-size: 60px;
+    color: var(--color-fonts);
+    font-weight: bold;
+    letter-spacing: 8px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  .footer__logo {
+    width: 130px;
+    padding-bottom: 15px;
+  }
+  
+  .footer__icons {
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    color: var(--color-fonts);
+  }
+  
+  .footer__contact {
+    color: var(--color-fonts);
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+  
+  .footer__reserved {
+    color: var(--color-fonts);
+    font-size: 0.6rem;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
+/*================== RES 768 ==================*/
+@media (min-width: 768px) {
+/*--- FOOTER 768 ---*/
+.footer__container-contact {
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 30px 0;
+  }
+  
+  .footer__title {
+	letter-spacing: 12px;
+	font-size: 2.3rem;
+  }
+  
+  .footer__container-logo {
+	width: 30%;
+	display: flex;
+	align-items: center;
+  }
+  
+  .footer__logo {
+	width: 150px;
+  }
+  
+  .footer__icons {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .icon-redes {
+  margin: 15px;
+  }
+  
+  .footer__contact {
+	width: 30%;
+	color: white;
+	font-size: 0.9rem;
+	padding: 20px;
+	text-align: right;
+  }
+  
+  .footer__reserved {
+	font-size: 0.7rem;
+  }
+}
+
+/*================== RES 1024 ==================*/
+@media (min-width: 1024px) {
+	/*--- FOOTER DESCKTOP 1024 ---*/
+	.footer__container-contact {
+		flex-direction: row;
+	}
+
+	.footer__title {
+	letter-spacing: 14px;
+	font-size: 5rem;
+	}
+
+	.icon-redes {
+	margin: 40px;
+	}
+
+	.footer__contact {
+	font-size: 1.1rem;
+	padding: 20px;
+	}
+
+	.footer__reserved {
+	font-size: 0.9rem;
+	}
+}

@@ -16,10 +16,14 @@ a {
 
 :root {
   --btn-color: #B0C43A;
-  --backround-pages: #262528;
+  --backround-pages: #201f21;
+  --color-fonts: rgb(255, 254, 245);
   --font-titles: 'Anton', sans-serif;
   --font-paragraph: 'Arimo', sans-serif;
   --font-2-paragraph: 'Montserrat', sans-serif;
+  --line-height-mobile: 1.7; 
+  --line-height-tablet: 1.8;
+  --line-height-descktop: 1.9;
 }
   
   /*------------------ NAV MOBILE --------------*/
@@ -43,6 +47,24 @@ a {
     text-decoration: none;
     letter-spacing: 0.3px;
     font-size: 0.9rem;
+  }
+
+  /*navbar*/
+  .nav-shadow {
+    box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+    -webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+    -moz-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+  }
+  .nav-item-img {
+    width: 30px;
+    height: 30px;
+  }
+  .navbar__img {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-navbar {
+    background-color: var(--btn-color) !important;
   }
   
   /*------------- MAIN MOBILE --------------*/
@@ -78,27 +100,80 @@ a {
     font-size: 0.8rem;
     background-color:var(--btn-color);
   }
-  /*============================== RES 450 ==============================*/
-  @media (min-width: 450px) {
-    .contact__title{
-      border-left: none;
-      text-align: center;
-      font-size: 1.3rem;
-    }
-    
-    .contact__adress {
-      width: 100%;
-      justify-content: center;
-    }
-    
-    .contact__adress-text {
-      font-size: 0.9rem;
-      background-color:var(--btn-color);
-      color: black;
-    }
+
+ /*--- FOOTER MOBILE 320 ---*/
+ .container__footer {
+  background:var(--backround-pages);
+  border-top: solid 4px var(--btn-color);
+}
+
+.footer__container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer__title {
+  font-family: var(--font-titles);
+  font-size: 60px;
+  color: var(--color-fonts);
+  font-weight: bold;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 130px;
+  padding-bottom: 15px;
+}
+
+.footer__icons {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  color: var(--color-fonts);
+}
+
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+.footer__reserved {
+  color: var(--color-fonts);
+  font-size: 0.6rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+/*============================== RES 450 ==============================*/
+@media (min-width: 450px) {
+  .contact__title{
+    border-left: none;
+    text-align: center;
+    font-size: 1.3rem;
   }
+  
+  .contact__adress {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .contact__adress-text {
+    font-size: 0.9rem;
+    background-color:var(--btn-color);
+    color: black;
+  }
+}
   /*============================== RES 768 ==============================*/
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .contact__adress {
       width: 100%;
       inset-block: 10px;
@@ -113,28 +188,94 @@ a {
       padding: 40px 30px;
       border-radius: 15px;
       }
-    }
-  /*============================== RES 1024 ==============================*/
-  @media (min-width: 1024px) {
-  /*------------- MAIN DESCKTOP --------------*/
-    .container__contact {
-      padding: 2.3% 4%;
-      margin: 10% 10%;
-    }
-  
-    .container__contact-flex {
+
+    /*--- FOOTER 768 ---*/
+    .footer__container-contact {
       flex-direction: row;
       justify-content: space-between;
-      align-items: flex-start;
+      padding: 30px 0;
     }
-  
-    .contact__title{
-      text-align: left;
-      border-left: solid 7px white;
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-      text-align: center;
-      border: 0;
-      text-transform:uppercase;
+
+    .footer__title {
+      letter-spacing: 12px;
+      font-size: 2.3rem;
     }
+
+    .footer__container-logo {
+      width: 30%;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__logo {
+      width: 150px;
+    }
+
+    .footer__icons {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon-redes {
+      margin: 15px;
+    }
+
+    .footer__contact {
+      width: 30%;
+      color: white;
+      font-size: 0.9rem;
+      padding: 20px;
+      text-align: right;
+    }
+
+    .footer__reserved {
+      font-size: 0.7rem;
+    }
+  }
+  /*============================== RES 1024 ==============================*/
+@media (min-width: 1024px) {
+/*------------- MAIN DESCKTOP --------------*/
+  .container__contact {
+    padding: 2.3% 4%;
+    margin: 10% 10%;
+  }
+
+  .container__contact-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact__title{
+    text-align: left;
+    border-left: solid 7px white;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 0;
+    text-transform:uppercase;
+  }
+ /*--- FOOTER DESCKTOP 1024 ---*/
+  .footer__container-contact {
+    flex-direction: row;
+  }
+
+  .footer__title {
+  letter-spacing: 14px;
+  font-size: 5rem;
+  }
+
+  .icon-redes {
+  margin: 40px;
+  }
+
+  .footer__contact {
+  font-size: 1.1rem;
+  padding: 20px;
+  }
+
+  .footer__reserved {
+  font-size: 0.9rem;
+  }
 }

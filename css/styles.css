@@ -31,6 +31,24 @@
   }
 
   /*===================== MOBILE RES 320  ======================*/
+  /*navbar*/
+  .nav-shadow {
+    box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+    -webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+    -moz-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+  }
+.nav-item-img {
+	width: 30px;
+	height: 30px;
+}
+.navbar__img {
+	width: 50px;
+	height: 50px;
+}
+.btn-navbar {
+	background-color: var(--btn-color) !important;
+}
+
   /*---------- Main - res 320 ----------*/
   .container__img-slider .img-slider-mobile{
     width: 100%;
