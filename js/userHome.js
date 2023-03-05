@@ -28,7 +28,7 @@ function prevSlide() {
     showSlide();
   }
   
-  setInterval(nextSlide, 15000);
+  setInterval(nextSlide, 9000000000);
   
   slider.addEventListener('mouseenter', () => {
     clearInterval(slideInterval);
