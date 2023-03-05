@@ -1,35 +1,157 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
-  
-  *::selection {
-    background: #afc43a62;
-    color: #fff;
-  }
-
-  a {
-    cursor: pointer;
-  }
-
-  :root {
-    --btn-color: #B0C43A;
-    --backround-pages: #201f21;
-    --color-fonts: rgb(255, 254, 245);
-    --font-titles: 'Anton', sans-serif;
-    --font-paragraph: 'Arimo', sans-serif;
-    --font-2-paragraph: 'Montserrat', sans-serif;
-    --line-height-mobile: 1.7; 
-    --line-height-tablet: 1.8;
-    --line-height-descktop: 1.9;
-  }
-  
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+
+*::selection {
+  background: #afc43a62;
+  color: #fff;
+}
+
+a {
+  cursor: pointer;
+}
+
+:root {
+  --btn-color: #B0C43A;
+  --backround-pages: #201f21;
+  --color-fonts: rgb(255, 254, 245);
+  --font-titles: 'Anton', sans-serif;
+  --font-paragraph: 'Arimo', sans-serif;
+  --font-2-paragraph: 'Montserrat', sans-serif;
+  --line-height-mobile: 1.7; 
+  --line-height-tablet: 1.8;
+  --line-height-descktop: 1.9;
+}
+
+.body{
+  background-color: var(--backround-pages);
+  border: red 10px double;
+  height: 100vh;
+}
+  
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__texts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section__image-img{
+  width: 190px;
+  border-radius: 40px;
+  border: white 5px dotted;
+}
+
+.error{
+  text-align: center;
+  font-size: 3.2rem;
+  font-family: var(--font-2-paragraph);
+  color:#fff;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.number{
+  text-align: center;
+  font-size: 6rem;
+  font-family: var(--font-2-paragraph);
+  color:#fff;
+  font-weight: 800;
+}
+
+.not__found{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-2-paragraph);
+  color: #fff;
+}
+
+.back{
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: var(--font-2-paragraph);
+  color:black;
+  background-color: var(--btn-color);
+  border:black 3px groove;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.5s;
+  position: relative;
+  bottom: 25px;
+}
+
+.back:hover{
+  background-color: var(--btn-color);
+  color: #fff;
+  border: 3px solid #fff;
+}
+
+@media(min-width: 768px){
+  .section__image-img{
+      width: 250px;
+      overflow: hidden;
+  }
+
+  .section{
+      margin-top: 10px;
+  }
+
+  .error{
+      font-size: 3.5rem;
+  }
+  
+  .number{
+      font-size: 6.5rem;
+      font-weight: 800;
+  }
+  
+  .not__found{
+      margin-top: 10px;
+      font-size: 1.4rem;
+  }
+
+  .inicio{
+      padding: 10px 20px;
+      position: relative;
+      bottom: 50px;
+  }
+}
+
+@media(min-width: 1024px){
+  .section__image-img{
+      width: 280px;
+      overflow: hidden;
+  }
+
+  .error{
+      font-size: 5rem;
+  }
+  
+  .number{
+      font-size: 7.5rem;
+  }
+  
+  .not__found{
+      font-size: 1.8rem;
+  }
+  
+  .inicio{
+      font-size: 1.3rem;
+      position: relative;
+      bottom: 70px;
+  }
+}
