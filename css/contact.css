@@ -44,6 +44,24 @@ a {
     letter-spacing: 0.3px;
     font-size: 0.9rem;
   }
+
+  /*navbar*/
+  .nav-shadow {
+    box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+    -webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+    -moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+  }
+  .nav-item-img {
+    width: 30px;
+    height: 30px;
+  }
+  .navbar__img {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-navbar {
+    background-color: var(--btn-color) !important;
+  }
   
   /*------------- MAIN MOBILE --------------*/
   .container__contact {

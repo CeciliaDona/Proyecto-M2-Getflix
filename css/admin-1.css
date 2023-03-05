@@ -26,10 +26,31 @@
     --line-height-descktop: 1.9;
   }
   
-  
-/* ESTE BLOQUE ES SOLO PARA PROBAR SI SE ENLAZÓ BIEN HTML CON CSS, Y DE PASO PARA RECORDAR COMO SE USABAN LAS VARIABLES EN CSS. BORRAR DESDE ACÁ:*/
-  h2 {
-    font-family: var(--font-titles);
-    color: rgb(226, 73, 43);
+/*========================== RES 320 ==============================*/
+/*navbar*/
+.nav-shadow {
+	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
 }
-/* HASTA ACÁ BLOQUE DE PRUEBA */
+.nav-item-img {
+	width: 30px;
+	height: 30px;
+}
+.navbar__img {
+	width: 50px;
+	height: 50px;
+}
+.btn-navbar {
+	background-color: var(--btn-color) !important;
+	width: 130px;
+}
+.form__position {
+	position: relative;
+	padding-left: 30px !important;
+	background-color: var(--backround-pages) !important;
+	border-radius: 20px !important;
+}
+.form__position-search {
+	position: absolute;
+}

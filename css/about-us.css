@@ -26,46 +26,6 @@ a {
   --line-height-descktop: 1.9;
 }
 
-.open {
-  display: block;
-  position: fixed;
-  left: 20px;
-  top: 18px;
-}
-
-.open__img {
-  width: 30px;
-}
-
-.bi-list{
-  font-size: 2.5rem;
-  color: var(--color-fonts);
-}
-
-.login-icon {
-  position: fixed;
-  right: 20px;
-  top: 15px;
-  color: var(--color-fonts);
-}
-
-.close {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-}
-
-.close img {
-  width: 20px;
-  height: 20px;
-}
-
-
-.bi-person-circle{
-  font-size: 2.3rem !important;
-}
-
 ul li a {
   color: white;
   font-weight: 600;
@@ -80,6 +40,25 @@ div p a {
   letter-spacing: 0.3px;
   font-size: 0.9rem;
 }
+
+/*navbar*/
+.nav-shadow {
+	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-webkit-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+	-moz-box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
+}
+.nav-item-img {
+	width: 30px;
+	height: 30px;
+}
+.navbar__img {
+	width: 50px;
+	height: 50px;
+}
+.btn-navbar {
+	background-color: var(--btn-color) !important;
+}
+
 /*------------- MAIN MOBILE --------------*/
 .container__header {
   background-image: url(../images/backgrounds/backround-stars-4.jpg);
@@ -224,14 +203,12 @@ div p a {
   border: solid 3px white;
   border-radius: 50%;
   margin-bottom: 5px;
-  
 }
 
 .members__name {
   text-align: center;
   font-weight: 500;
 }
-
 
 @media (min-width: 445px) {
     .container__title {
@@ -255,32 +232,6 @@ div p a {
   }
 
 @media (min-width: 768px) {
-  .close,
-  .open {
-    display: none;
-  }
-  .logo {
-    width: 70px;
-    margin-top: 30px;
-  }
-
-  ul li a,
-    .nav__menu-register, 
-    .nav__menu-login li {
-      font-size: 0.74rem !important;
-      color: white;
-      font-weight: 500;
-      text-decoration: none;
-      letter-spacing: 0.2px;
-      cursor: pointer;
-      transition: 0.7s;
-    }
-
-
-  .item-contacto {
-    padding-right: 10px;
-  }
-
       .container__title {
         padding-top: 30%;
       }
@@ -306,7 +257,6 @@ div p a {
         margin-bottom: 100px;
       }
 
-      
       .about-us__p {
         text-align: center;
         line-height: 2.15rem;
@@ -316,7 +266,6 @@ div p a {
       }
 
       /*MEMBERS TABLET*/
-
       .container__main-members {
         padding: 40px 10%;
       }
@@ -325,7 +274,6 @@ div p a {
         font-size: 2rem;
         margin-right: 50px;
       }
-
 
       .container__main-members-flex {
         justify-content: center;
@@ -350,26 +298,11 @@ div p a {
 
   }
 @media (min-width: 1024px) {
-
-  .logo {
-    width: 80px;
-  }
-
-  ul li a,
-  .nav__menu-register,
-  .nav__menu-login {
-      font-size: 0.9rem !important;
-      font-weight: 600;
-      letter-spacing: 1px;
-  }
-  
-
   .item-contacto {
     padding-right: 20px;
   }xz
 
-/*------------- MAIN DESCKTOP --------------*/
-
+/*------------ MAIN DESCKTOP --------------*/
   .container__about-us {
     padding: 80px 110px;
   }
@@ -410,9 +343,7 @@ div p a {
     bottom: -60px;
   }
 
-
   /*MEMBERS DESCKTOP*/
-
   .container__main-members {
     padding: 40px 10%;
   }
@@ -421,7 +352,6 @@ div p a {
     font-size: 2rem;
     margin-right: 50px;
   }
-
 
   .container__main-members-flex {
     justify-content: center;
@@ -440,12 +370,9 @@ div p a {
     text-align: center;
     font-weight: 500;
   }
-
-
 }
+
 @media (min-width: 1200px) {
-
-
     .container__about-us {
       padding: 80px 20%;
       margin-bottom: 40px;
@@ -462,7 +389,6 @@ div p a {
       font-size: 2.2rem;
       padding-bottom: 15px;
     }
-    
   
     .about-us__img-1 {
       width: 130px;
