@@ -25,7 +25,24 @@
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
   }
-  
+
+body {
+  background-color:var(--backround-pages);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none ;
+}
+
+ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+}
+
 /*navbar*/
 .nav-shadow {
 	box-shadow: -3px 10px 8px 4px rgba(148, 132, 132, 0.74);
@@ -43,3 +60,302 @@
 .btn-navbar {
 	background-color: var(--btn-color) !important;
 }
+
+/* DE ACÁ PARA ABAJO CHEQUEAR TODO EL CÓDIGO PORQUE ERA DE POCHOCLITOS Y MUCHAS CLASES ACÁ NO VAN!!! (MENOS EL FOOTER QUE ESTÁ BIEN) */
+/*------------- MAIN MOBILE --------------*/
+.container__login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login__title {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.login__form-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.login__forgot-password {
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.login__forgot-password:hover {
+  color: rgb(57, 202, 241);
+}
+
+.login__social-title {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.login__container-icons {
+  margin: 15px;
+}
+
+.login__icons {
+  width: 35px;
+  margin-right: 15px;
+  transition: 0.5s;
+}
+
+.login__icons:hover {
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+img a {
+  text-decoration: none;
+}
+
+.modal-p {
+  font-size: 0.9rem;
+}
+
+/*--- FOOTER MOBILE 320 ---*/
+.container__footer {
+  background:var(--backround-pages);
+  border-top: solid 4px var(--btn-color);
+}
+
+.footer__container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer__title {
+  font-family: var(--font-titles);
+  font-size: 60px;
+  color: var(--color-fonts);
+  font-weight: bold;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer__logo {
+  width: 130px;
+  padding-bottom: 15px;
+}
+
+.footer__icons {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  color: var(--color-fonts);
+}
+
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+.footer__reserved {
+  color: var(--color-fonts);
+  font-size: 0.6rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+
+/********************************* TABLET *************************************/
+@media (min-width: 768px) {
+  /*------------- MAIN TABLET --------------*/
+  .container__login {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 170px 50px 50px;
+  }
+
+  .login__container-image {
+    width: 54%;
+    padding-left: 50px;
+    margin-top: 35px;
+  }
+
+  .login__img {
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 40px;
+  }
+
+  .login__form-container {
+    width: 44%;
+    margin: 20px;
+    padding: 0 10px;
+  }
+
+  .login__form {
+    padding-bottom: 10px;
+  }
+
+  .login__form-input {
+    margin-bottom: 0;
+  }
+
+  .login__forgot-password {
+    margin-bottom: 15px;
+  }
+
+  .login__container-icons {
+    margin: 5px 16px;
+  }
+
+  .login__icons {
+    width: 40px;
+  }
+   /*--- FOOTER 768 ---*/
+   .footer__container-contact {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+
+  .footer__title {
+    letter-spacing: 12px;
+    font-size: 2.3rem;
+  }
+
+  .footer__container-logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer__logo {
+    width: 150px;
+  }
+
+  .footer__icons {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-redes {
+    margin: 15px;
+  }
+
+  .footer__contact {
+    width: 30%;
+    color: white;
+    font-size: 0.9rem;
+    padding: 20px;
+    text-align: right;
+  }
+
+  .footer__reserved {
+    font-size: 0.7rem;
+  }
+}
+
+/********************************* DESCKTOP *************************************/
+@media (min-width: 1024px) {
+  /*------------- MAIN DESCKTOP --------------*/
+  .container__login {
+    padding: 130px 7% 20px;
+  }
+
+  .login__container-image {
+    width: 50%;
+    margin-right: 60px;
+  }
+
+  .login__img {
+    margin-left: 20px;
+  }
+
+  .login__form-container {
+    width: 45%;
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .login__title {
+    font-size: 1.3rem;
+  }
+
+  .login__form {
+    padding-bottom: 20px;
+  }
+
+  .login__forgot-password {
+    margin-bottom: 50px;
+  }
+
+  .login__container-icons {
+    margin: 15px 16px;
+  }
+  /*--- FOOTER DESCKTOP 1024 ---*/
+  .footer__container-contact {
+    flex-direction: row;
+    }
+    
+  .footer__title {
+      letter-spacing: 14px;
+      font-size: 5rem;
+  }
+  
+  .icon-redes {
+      margin: 40px;
+  }
+  
+  .footer__contact {
+      font-size: 1.1rem;
+      padding: 20px;
+  }
+  
+  .footer__reserved {
+      font-size: 0.9rem;
+  }
+}
+/********************************* RES 1200 *************************************/
+/*------------- MAIN RES 1200 --------------*/
+
+@media (min-width: 1200px) {
+  .container__login {
+    padding: 150px 14% 20px;
+  }
+
+  .login__form {
+    padding-bottom: 10px;
+  }
+
+  .login__forgot-password {
+    margin-bottom: 25px;
+  }
+
+  .login__container-icons {
+    margin: 10px 16px;
+  }
+
+  .login__icons {
+    width: 40px;
+  }
+}  

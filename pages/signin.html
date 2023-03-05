@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-AR">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="blog, films, cinema, movies, cine, tv shows, tv, streaming, trends, cast, reparto, críticas, classic, disney, hbo max, netflix, amazone prime, star plus, flow, paramount plus, crunchyroll, Action, Documental, Drama, Musical, Thriller, anime">
-    <meta name="description"
-        content="Enjoy exclusive Getflix as well as popular movies and TV shows. GETFLIX, The big screen experience on your TV, or watch on your tablet, laptop, phone and more. You can watch an ever-growing selection of titles in 4K.">
-    <meta name="author" content="Getflix">
-    <link rel="icon" href="./images/icons/logo.png">
-    <title>GETFLIX/Sign in</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@100;200;400;500;600;700;800&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/sign-in.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="blog, films, cinema, movies, cine, tv shows, tv, streaming, trends, cast, reparto, críticas, classic, disney, hbo max, netflix, amazone prime, star plus, flow, paramount plus, crunchyroll, Action, Documental, Drama, Musical, Thriller, anime"
+    />
+    <meta
+      name="description"
+      content="Enjoy exclusive Getflix as well as popular movies and TV shows. GETFLIX, The big screen experience on your TV, or watch on your tablet, laptop, phone and more. You can watch an ever-growing selection of titles in 4K."
+    />
+    <meta name="author" content="Getflix" />
+    <link rel="icon" href="./images/icons/logo.png" />
+    <title>GETFLIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@100;200;400;500;600;700;800&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/sign-in.css" />
+  </head>
 
 <body>
     <!-- navbar -->
@@ -88,7 +103,290 @@
             </form>
         </div>
     </nav>
+    <main>
+        <div class="container__login">
+            <div class="login__form-container">
+                <h3 class="login__title" _msttexthash="197041" _msthash="21">
+                SIGN IN
+                </h3>
+                <form class="login__form" id="form3">
+                    <div class="row mb-3 mb-lg-4">
+                        <input
+                          type="text"
+                          class="user-email-admin form-control bg-light login__form-input border-0 py-xl-2"
+                          id="User-email3"
+                          placeholder="E-mail Address"
+                          name="Useremail3"
+                          _mstplaceholder="385671"
+                          _msthash="22"
+                          autocomplete="off"
+                          value=""
+                          
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-email3"></p>
+                    </div>
+                    <div class="row mb-3 mb-md-4">
+                        <input
+                          type="text"
+                          class="user-password-admin form-control bg-light login__form-input border-0 py-xl-2"
+                          id="User-Password2"
+                          placeholder="Password"
+                          name="UserPassword2"
+                          _mstplaceholder="182013"
+                          _msthash="23"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-Password2"></p>
+                    </div>
+                    <div class="mb-3">
+                        <button
+                         
+                          class="btn btn-login login__btn text-white rounded-pill fw-semibold py-1 px-3 py-xl-2 px-xl-4"
+                          _msttexthash="114478"
+                          _msthash="24"
+                          onclick="loginAdmin()"
+                        >
+                          Sign in
+                        </button>
+                    </div>
+                    <div class="alert alert-success mt-4 d-none" id="alert-success">
+                      The form has been sent successfully
+                    </div>
+                </form>
+              <a
+                class="login__forgot-password"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                _msttexthash="575419"
+                _msthash="25"
+                >FORGOT YOUR PASSWORD?</a
+              >
+              <h6 class="login__social-title" _msttexthash="369278" _msthash="26">
+                Sign in with:
+              </h6>
+              <div class="login__container-icons">
+                  <a href="https://www.facebook.com/" target="_blank">
+                      <img
+                      class="login__icons"
+                      src="../images/login/facebook-icon.png"
+                      alt="Facebook (en inglés)"
+                      _mstalt="110734"
+                      _msthash="27"
+                      />
+                  </a>
+                  <a href="https://accounts.google.com/v3/signin/identifier?dsh=S403298787%3A1666647323560212&amp;continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;rip=1&amp;sacu=1&amp;service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;ifkv=AQDHYWp8LSuC5ZeWi9N3Izu17ETDNmamWM8_h17JdBp7Ns87kyElWsrzfM7mpRYv0Vrckcm82N9X6A"
+                  target="_blank">
+                    <img
+                    class="login__icons"
+                    src="../images/login/gmail-icon.png"
+                    alt="G-mail"
+                    _mstalt="68367"
+                    _msthash="28"
+                    />
+                </a>
+                </div>
+                <p>New to Getflix?</p>
+              <!-- Button trigger modal SIGN UP-->
+              <button type="button" class="btn-register btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignUp">
+                SIGN UP
+              </button>
 
+              <!-- Modal -->
+              <div class="modal fade" id="modalSignUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-7 pt-3" id="staticBackdropLabel">
+                        Sign Up
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="form2">
+                        <input
+                          type="text"
+                          class="register-name form-control mb-3 bg-secondary bg-opacity-25"
+                          id="User-name1"
+                          placeholder="Name"
+                          aria-label="First name"
+                          name="Username1"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-name1"></p>
+        
+                        <input
+                          type="text"
+                          class="register-user form-control mb-3 bg-secondary bg-opacity-25"
+                          placeholder="User Name"
+                          id="User-name2"
+                          aria-label="First name"
+                          name="Username2"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-name2"></p>
+                        
+                        <!-- Le cambié el nombre al id user-email por user-email-1 para que no se repitan IDs -->
+                        <input
+                          type="email"
+                          class="register-email form-control mb-3 bg-secondary bg-opacity-25"
+                          id="User-email-1" 
+                          placeholder="E-mail"
+                          name="Useremail-1"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-email-1"></p>
+        
+                        <input
+                          type="password"
+                          class="register-password form-control mb-3 bg-secondary bg-opacity-25"
+                          id="User-Password3"
+                          placeholder="Password"
+                          name="Userpassword3"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-Password3"></p>
+        
+                        <input
+                          type="password"
+                          class="register-password-2 form-control mb-3 bg-secondary bg-opacity-25"
+                          id="User-Password3"
+                          placeholder="Repeat password"
+                          name="User-Password3"
+                          autocomplete="off"
+                          value=""
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-Password3"></p>
+        
+                        <div class="row mb-3">
+                          <div class="col-12">
+                            <div class="form-chec custom-control custom-checkbox">
+                              <input
+                                class="form-check-input custom-control-input"
+                                type="checkbox"
+                                id="gridCheck"
+                                name="check-box_newsletter"
+                              />
+                              <label
+                                class="form-check-label custom-control-label"
+                                for="gridCheck"
+                              >
+                                Newsletter
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-register text-black fw-normal"
+                        >
+                          Sign Up
+                        </button>
+                      </form>
+                      <div class="alert alert-success mt-4 d-none" id="alert-success">
+                        The form has been sent successfully
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Modal Forgot password-->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          _msthidden="6"
+        >
+          <div class="modal-dialog" _msthidden="6">
+            <div class="modal-content" _msthidden="6">
+              <div class="modal-header" _msthidden="2">
+                <h5
+                  class="modal-title text-dark"
+                  id="exampleModalLabel"
+                  _msttexthash="515736"
+                  _msthidden="1"
+                  _msthash="29">
+                  Forgot your Password?
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  _msthidden="A"
+                  _mstaria-label="59709"
+                  _msthash="30"
+                ></button>
+              </div>
+              <div class="modal-body p2-2" _msthidden="2">
+                <p
+                  class="modal-p text-dark"
+                  _msttexthash="8076146"
+                  _msthidden="1"
+                  _msthash="31"
+                >
+                  Enter the email address associated with your Getflix account.
+                </p>
+                <div class="col-11" _msthidden="1">
+                  <input
+                    type="text"
+                    class="form-control bg-secondary bg-opacity-25"
+                    id="User-email2"
+                    placeholder="E-mail address"
+                    name="Useremail2"
+                    autocomplete="off"
+                    value=""
+                    _msthidden="A"
+                    _mstplaceholder="385671"
+                    _msthash="32"
+                  />
+                  <p class="text-danger mb-3 d-none" id="alert-email2"></p>
+                </div>
+              </div>
+              <div class="modal-footer" _msthidden="2">
+                <button
+                  type="button"
+                  class="btn btn-secondary border-0"
+                  data-bs-dismiss="modal"
+                  _msttexthash="76414"
+                  _msthidden="1"
+                  _msthash="33"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-register border-0"
+                  _msttexthash="76830"
+                  _msthidden="1"
+                  _msthash="34"
+                >
+                  Send
+                </button>
+              </div>
+              <div class="alert alert-success mt-4 d-none" id="alert-success">
+                The form has been sent successfully
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
         <div class="footer__container-contact">
@@ -108,7 +406,13 @@
         </div>
         <p class="footer__reserved">All rights reserved - 2023</p>
     </footer>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+    ></script>
     <script src="../js/signIn.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</body>
+    <script src="../js/signUp.js"></script>
+    <script ></script>
+  </body>
 </html>
