@@ -231,7 +231,8 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .main__container-movie img {
@@ -250,12 +251,36 @@ body {
     margin: 0 2px;
   }
 
-  /*Agregué este bloque de código*/
-  .see-more {
+  .container__see-more--add {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  /*Agregué estos bloques de código*/
+  .see-more, .add-list, .remove {
     color: var(--color-fonts);
-    font-size: 1.2rem;
-    font-weight:600 ;
+    font-size: 1rem;
+    font-weight:600;
     font-family: var(--font-paragraph);
+    border: solid 2px rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 5px;
+    border: solid 2px rgba(255, 255, 255, 0);
+    margin-bottom: 7px;
+  }
+
+  .see-more:hover, .add-list:hover, .remove:hover {
+    color: rgb(184, 225, 249);
+    transition: 0.7s;
+    border: solid 2px var(--color-fonts);
+    border-radius: 10px;
+  }
+
+  .bi-plus-circle-fill, .bi-x-circle-fill{
+    margin-left: 10px;
   }
 
   .layer {
@@ -303,58 +328,58 @@ body {
   }
 
   /*--- FOOTER MOBILE 320 ---*/
-.container__footer {
-  background:var(--backround-pages);
-  border-top: solid 4px var(--btn-color);
-}
+  /*--- FOOTER MOBILE 320 ---*/
+  .container__footer {
+    background:var(--backround-pages);
+    border-top: solid 4px var(--btn-color);
+  }
 
-.footer__container-contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 50px;
-}
+  .footer__container-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
 
-.footer__title {
-  font-family: var(--font-titles);
-  font-size: 60px;
-  color: var(--color-fonts);
-  font-weight: bold;
-  letter-spacing: 8px;
-  padding-top: 20px;
-  text-align: center;
-}
+  .footer__title {
+    font-family: var(--font-titles);
+    font-size: 60px;
+    color: var(--color-fonts);
+    font-weight: bold;
+    letter-spacing: 8px;
+    padding-top: 20px;
+    text-align: center;
+  }
 
-.footer__logo {
-  width: 130px;
-  padding-bottom: 15px;
-}
+  .footer__logo {
+    width: 130px;
+    padding-bottom: 15px;
+  }
 
-.footer__icons {
-  width: 55%;
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  color: var(--color-fonts);
-}
+  .footer__icons {
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    color: var(--color-fonts);
+  }
 
-.footer__contact {
-  color: var(--color-fonts);
-  font-size: 0.8rem;
-  padding: 10px;
-}
+  .footer__contact {
+    color: var(--color-fonts);
+    font-size: 0.8rem;
+    padding: 10px;
+  }
 
-.footer__reserved {
-  color: var(--color-fonts);
-  font-size: 0.6rem;
-  text-align: center;
-  padding-bottom: 10px;
-  margin: 0;
-}
-  /* ---- ----- ----- Media Queries ----- ----- ----- */
-    /*Los media query que habría que hacer son res 768 para tablet y 1024 para descktop, y después un poco más grande también como para que no se deforme tanto cuando lo veamos en pantalla completa. Y también si queres ir ajustando algunos valores en resoluciones intermedias para algún bloque en particular se puede hacer, pero lo ideal es que esté si o si la 768 y la 1024 después de la 320 como mobile first como todo lo que está acá arriba. Los media query ddeben colocarse de forma ascencente, es decir primero res 320, después 768, 1024 y así hasta la que llegues.*/
+  .footer__reserved {
+    color: var(--color-fonts);
+    font-size: 0.6rem;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 0;
+  }
+    /*Los media query que habría que hacer son res 768 para tablet y 1024 para descktop, y después un poco más grande también como para que no se deforme tanto cuando lo veamos en pantalla completa. Y también si queres ir ajustando algunos valores en resoluciones intermedias para algún bloque en particular se puede hacer, pero lo ideal es que esté si o si la 768 y la 1024 después de la 320 como mobile first como todo lo que está acá arriba. Los media query ddeben colocarse de forma ascencente, es decir primero res 320, después 768, 1024 y así hasta la que llegues. AGREGO 768 Y 1024 ACÁ ABAJO*/
   
   /*===================== RES 768 (TABLET) ==================== */
   @media(min-width: 768px) {
@@ -364,7 +389,6 @@ body {
       width: 88%;
     }
 
-<<<<<<< HEAD
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 60px;
@@ -383,8 +407,6 @@ body {
       font-size: 1.3em;
     }
 
-    
-=======
     /*--- FOOTER 768 ---*/
     .footer__container-contact {
       flex-direction: row;
@@ -428,9 +450,7 @@ body {
     .footer__reserved {
       font-size: 0.7rem;
     }
->>>>>>> e53261480ac30c15f84bf9dbbcb812c1e485385e
   }
-
   /*==================== RES 1024 (DESCKTOP) ================== */
   @media(min-width: 1024px) {
     .main__container-movies {
@@ -438,7 +458,6 @@ body {
       gap: 2em; 
       width: 95%;
     }
-<<<<<<< HEAD
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 80px;
@@ -446,16 +465,12 @@ body {
 
     .container__slider-title {
     font-size: 3.5em;
-
     }
 
-    
-=======
-
-      /*--- FOOTER DESCKTOP 1024 ---*/
-  .footer__container-contact {
-    flex-direction: row;
-  }
+    /*--- FOOTER DESCKTOP 1024 ---*/
+    .footer__container-contact {
+      flex-direction: row;
+    }
   
     .footer__title {
       letter-spacing: 14px;
@@ -474,11 +489,9 @@ body {
     .footer__reserved {
       font-size: 0.9rem;
     }
->>>>>>> e53261480ac30c15f84bf9dbbcb812c1e485385e
   }
 
-
-/* ESTAS RESOLUCIONES TE LAS COMENTÉ PORQUE ALGUNAS COSAS NO LAS PODÍA ACOMODAR Y CREO QUE ERA POR ESTO, NO TE LAS BORRO POR SI NECESITAS USARLAS, LAS DESCOMENTAS Y LISTO
+/* ESTAS RESOLUCIONES TE LAS COMENTÉ PORQUE ALGUNAS COSAS NO LAS PODÍA ACOMODAR Y CREO QUE ERA POR ESTO, NO TE LAS BORRO POR SI NECESITAS USARLAS, CUALQUIER COSA DESCOMENTALAS
   @media(max-width: 800px) {
     .bi-chevron-left,
     .bi-chevron-right{
