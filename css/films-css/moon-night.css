@@ -25,6 +25,7 @@ a {
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
   }
+
 /*navbar*/
 .nav-shadow {
 	box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
@@ -116,12 +117,34 @@ a {
     padding-bottom: 15px;
   }
   
-  .footer__icons {
+.footer__icons {
     width: 55%;
     display: flex;
     justify-content: space-around;
-    padding: 15px;
+    padding: 50px 0 50px 0;
+  }
+
+  .icon-redes {
+    padding: 3px 8px 3px 8px;
     color: var(--color-fonts);
+    border: solid 0.1px rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transition: 0.6s;
+    font-size: 35px;
+  }
+
+  .icon-redes:hover {
+    background-color: var(--color-fonts);
+    color: var(--backround-pages) !important;
+    box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
+    -webkit-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
+    -moz-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
+  }
+
+  .footer__contact {
+    color: var(--color-fonts);
+    font-size: 0.8rem;
+    padding: 10px;
   }
   
   .footer__contact {

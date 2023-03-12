@@ -59,6 +59,8 @@ function prevSlide() {
 
       clone.querySelector(".img-films").src = item.img;
       clone.querySelector(".img-films").alt = item.alt;
+      clone.querySelector(".movie-title").textContent = item.title;
+      clone.querySelector(".add-list").dataset.film= item.title;
 
       fragment.appendChild(clone);
     })
@@ -78,6 +80,8 @@ function prevSlide() {
 
       clone.querySelector(".img-films").src = item.img;
       clone.querySelector(".img-films").alt = item.alt;
+      clone.querySelector(".movie-title").textContent = item.title;
+      clone.querySelector(".add-list").dataset.film= item.title;
 
       fragment.appendChild(clone);
     })
@@ -98,6 +102,9 @@ function prevSlide() {
 
       clone.querySelector(".img-films").src = item.img;
       clone.querySelector(".img-films").alt = item.alt;
+      clone.querySelector(".movie-title").textContent = item.title;
+      clone.querySelector(".add-list").dataset.film= item.title;
+
 
       fragment.appendChild(clone);
     })
@@ -120,6 +127,8 @@ function prevSlide() {
       clone.querySelector(".img-films").src = item.img;
       clone.querySelector(".img-films").alt = item.alt;
       clone.querySelector(".movie-number").textContent = item.top;
+      clone.querySelector(".movie-title").textContent = item.title;
+      clone.querySelector(".add-list").dataset.film= item.title;
 
       fragment.appendChild(clone);
     })
@@ -127,3 +136,42 @@ function prevSlide() {
     topTenContainer.appendChild(fragment);
   }
   showTopTen();
+
+  ////////////////////////////////////////////////////////////////////////////
+
+  const myListContainer = document.querySelector(".container__fav-list");
+  const btnRemove = document.querySelector(".remove");
+
+
+  // debería pintar en consola el "título" solo cuando el target esté en "add to list"
+  
+  const myListSection = films.filter((item) => item.title === films.title);
+
+  document.addEventListener("click", (e) => {
+    
+    if (e.target.dataset.title === justAddedSection.title) {
+      console.log("titulo") 
+      //addToFavoriteList();
+     }
+
+     if (e.target.dataset.title === trendsSection.title) {
+      console.log("titulo")   
+      //addToFavoriteList();
+     }
+
+     if (e.target.dataset.title === continueSection.title) {
+      console.log("titulo") 
+      //addToFavoriteList();  
+     }
+
+     if (e.target.dataset.title === topTenSection.title) {
+      console.log("titulo")  
+      //addToFavoriteList(); 
+     }
+
+  });
+
+  // const addToFavoriteList = (e) => {
+  // const myListSection = films.filter((item) => item.title === films.title)
+  //};
+

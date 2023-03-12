@@ -92,10 +92,8 @@ body {
   }
 
   .container__slider {
-    width: 100%;
     font-size: 16px;
     min-height: 40.62em;
-    margin-bottom: 3.12em;
     padding-top: 200px;
     display: flex;
     position: absolute;
@@ -109,7 +107,7 @@ body {
   }
 
   .container__slider-movie img {
-    position: relative;
+    position: 0relative;
   }
 
   .container__slider-2 {
@@ -151,7 +149,6 @@ body {
     font-weight: 600;
     margin-bottom: 0.4em;
     font-size: 2em;
-
   }
   
   .container__slider-description {
@@ -184,22 +181,28 @@ body {
     margin-right: 1.25em;
   }
 
-  .main__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    font-size: 15px;
-    margin: 15px 0 15px 28px;
+  .main {
+    padding-top: 25px;
   }
 
-  
+  .main__title {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
   .main__title h3 {
     color: var(--color-fonts);
     font-size: 25px;
-    font-family: var(--font-2-paragraph);
-    margin-bottom: 20px;
+    font-family: var(--font-paragraph);
+    margin-bottom: 10px;
     font-weight: bolder;
   }
+
+  .no-added-movies-msg {
+    font-size: 15px;
+    color: var(--color-fonts);
+    font-family: var(--font-paragraph);
+    }
   
   .main {
     margin-bottom: 70px;
@@ -243,6 +246,12 @@ body {
     transition: all 500ms ease-out;
   }
 
+  .movie-title {
+    color: rgb(208, 208, 221);
+    font-size: 1rem;
+    font-family: var(--font-paragraph);
+  }
+
   .bi-star-fill,
   .bi-star-half,
   .bi-star{
@@ -262,21 +271,21 @@ body {
   /*Agregué estos bloques de código*/
   .see-more, .add-list, .remove {
     color: var(--color-fonts);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight:600;
     font-family: var(--font-paragraph);
     border: solid 2px rgba(255, 255, 255, 0);
     text-align: center;
-    padding: 5px;
+    padding: 4px;
     border: solid 2px rgba(255, 255, 255, 0);
-    margin-bottom: 7px;
+    width: 125px;
   }
 
   .see-more:hover, .add-list:hover, .remove:hover {
-    color: rgb(184, 225, 249);
+    color: rgb(171, 185, 194);
     transition: 0.7s;
-    border: solid 2px var(--color-fonts);
-    border-radius: 10px;
+    border: solid 2px rgb(171, 185, 194);
+    border-radius: 12px;
   }
 
   .bi-plus-circle-fill, .bi-x-circle-fill{
@@ -304,7 +313,8 @@ body {
   }
 
   .main__container-movie:hover > .layer{
-    opacity: 0.9; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
+    padding-top: 15px;
+    opacity: 0.95; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
     visibility: visible;
     transform: scale(1.2);
   }
@@ -327,7 +337,6 @@ body {
     0 0 50px white;
   }
 
-  /*--- FOOTER MOBILE 320 ---*/
   /*--- FOOTER MOBILE 320 ---*/
   .container__footer {
     background:var(--backround-pages);
@@ -362,8 +371,24 @@ body {
     width: 55%;
     display: flex;
     justify-content: space-around;
-    padding: 15px;
+    padding: 50px 0 50px 0;
+  }
+
+  .icon-redes {
+    padding: 3px 8px 3px 8px;
     color: var(--color-fonts);
+    border: solid 0.1px rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transition: 0.6s;
+    font-size: 35px;
+  }
+
+  .icon-redes:hover {
+    background-color: var(--color-fonts);
+    color: var(--backround-pages) !important;
+    box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
+    -webkit-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
+    -moz-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
   }
 
   .footer__contact {
@@ -383,12 +408,6 @@ body {
   
   /*===================== RES 768 (TABLET) ==================== */
   @media(min-width: 768px) {
-    .main__container-movies {
-      grid-template-columns: 35% 35% 35%; 
-      gap: 2em; 
-      width: 88%;
-    }
-
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 60px;
@@ -405,6 +424,16 @@ body {
     .container__slider-btn {
       padding: 0.93em 1.87em;
       font-size: 1.3em;
+    }
+
+    .main {
+      padding-top: 10px;
+    }
+
+    .main__container-movies {
+      grid-template-columns: 35% 35% 35%; 
+      gap: 2em; 
+      width: 88%;
     }
 
     /*--- FOOTER 768 ---*/
@@ -458,6 +487,7 @@ body {
       gap: 2em; 
       width: 95%;
     }
+
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 80px;

@@ -166,13 +166,7 @@
         
         <div class="main">
 			<div class="main__title">
-				<h3 class="section__title just-added__title" data-title="Just added">Just added 
-                    <span>
-                        <svg width="15" height="10" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                </h3>        
+				<h3 class="section__title just-added__title" data-title="Just added">Just added</h3>        
 			</div>
 			<div class="main__container">
                 <div class="main__container-movies container__just-added"> 
@@ -182,13 +176,7 @@
         </div>
         <div class="main">
 			<div class="main__title">
-				<h3 class="section__title trends__title" data-title="Trends">Trends 
-                    <span>
-                        <svg width="15" height="10" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                </h3>
+				<h3 class="section__title trends__title" data-title="Trends">Trends</h3>
 			</div>
 			<div class="main__container">
                 <div class="main__container-movies container__trends"> 
@@ -198,13 +186,7 @@
         </div>
         <div class="main">
 			<div class="main__title">
-				<h3 class="section__title just-added__title" data-title="Continue watching">Continue watching 
-                    <span>
-                        <svg width="15" height="10" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                </h3>
+				<h3 class="section__title just-added__title" data-title="Continue watching">Continue watching</h3>
 			</div>
 			<div class="main__container">
                 <div class="main__container-movies container__continue"> 
@@ -214,13 +196,7 @@
         </div>
         <div class="main">
 			<div class="main__title">
-				<h3 class="section__title just-added__title" data-title="Top 10">Top 10 
-                    <span>
-                        <svg width="15" height="10" viewBox="0 0 42 25">
-                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                </h3>  
+				<h3 class="section__title just-added__title" data-title="Top 10">Top 10</h3>  
 			</div>
 			<div class="main__container">
                 <div class="main__container-movies container__top-10">
@@ -231,6 +207,7 @@
         <div class="main">
             <div class="main__title">
                 <h3 class="section__title my-list__title" data-title="My favorite list">My list</h3>
+                <p class="no-added-movies-msg">No movie has been added to your favorites list. Click on "Add to list" of each movie to add them.</p>
             </div>
             <div id="my-list" class="main__container">
                 <div class="main__container-movies container__fav-list">
@@ -241,6 +218,7 @@
 
         <template id="template-categories"> 
             <div class="main__container-movie">
+                <h2 class="movie-title"></h2>
                 <img class="img-films" data-img="" src="" alt="">
                 <div class="layer">
                     <div class="container__bi-stars">
@@ -251,8 +229,14 @@
                         <i class="bi bi-star-half"></i>
                     </div>
                     <div class="container__see-more--add">
-                            <p class="see-more">See more</p>                 
-                        <p class="add-list">Add to List<i class="bi bi-plus-circle-fill"></i></p>
+                        <p class="see-more remove">See more</p>                 
+                        <p 
+                        class="add-list" 
+                        data-img=""
+                        data-title="">
+                        Add to List
+                            <i class="bi bi-plus-circle-fill"></i>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -260,6 +244,7 @@
 
         <template id="template-top-ten">    
             <div class="main__container-movie">
+                <h2 class="movie-title"></h2>
                 <a class="container__movie-number" href="#">
                     <img class="img-films" src="" alt="" data-img="">
                     <p class="movie-number">N</p>
@@ -273,19 +258,19 @@
                         <i class="bi bi-star-half"></i>
                     </div>
                     <div class="container__see-more--add">
-                            <p class="see-more">See more</p>                            
+                        <p class="see-more">See more</p>                            
                         <p 
                         class="add-list" 
                         data-img=""
-                        data-film="">
+                        data-title=""
+                        >
                         Add to List
-                        <i class="bi bi-plus-circle-fill"></i>
+                            <i class="bi bi-plus-circle-fill"></i>
                         </p>
                     </div>
                 </div>
             </div>
-        </template>
-          
+        </template>     
 	</main>
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
@@ -294,9 +279,9 @@
                 <img class="footer__logo" src="../images/icons/logo.png" alt="Logo">
             </div>
             <div class="footer__icons">
-                <a href="https://twitter.com/?lang=es"><i class="icon-redes bi bi-twitter text-white fs-1"></i></a>
-                <a href="https://www.instagram.com/"><i class="icon-redes bi bi-instagram text-white fs-1"></i></a>
-                <a href="https://www.facebook.com/"><i class="icon-redes bi bi-facebook text-white fs-1"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="icon-redes bi bi-twitter text-white"></i></a>
+                <a href="https://www.instagram.com/"><i class="icon-redes bi bi-instagram text-white "></i></a>
+                <a href="https://www.facebook.com/"><i class="icon-redes bi bi-facebook text-white "></i></a>
             </div>
             <div class="footer__contact">
                 <p>e-mail: movies@getflix.com</p>
