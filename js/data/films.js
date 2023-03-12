@@ -50,7 +50,7 @@ export const films = [
         sectionThree: ""
     },
     {
-        title: "Dragon Ball super: Super Hero",
+        title: "DBS: Super Hero",
         id: 5,
         year: 2023,
         Genres: "Anime",
