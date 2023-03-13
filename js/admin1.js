@@ -1,3 +1,4 @@
+
 const open = document.querySelectorAll('#open');
 const close = document.querySelector('#btn-close');
 const modal = document.querySelector('.modal__container');
@@ -8,7 +9,20 @@ const back = document.querySelector('#back');
 const addMovie = document.querySelector('.modal__modification');
 const table = document.querySelector('.modal__table');
 
-let moviesArray = Array.from(document.querySelectorAll('.modal__table-titles'));
+let moviesArray = [document.querySelectorAll('.modal__table-titles')];
+console.log(moviesArray)
+
+document.addEventListener('click', (e) => {
+    let clickedElement = e.target;
+    let position = Array.from(moviesArray).indexOf(clickedElement);
+    let moviesArray = Array.from(moviesArray.children);
+    moviesArray.splice(position, 1);
+    moviesArray.innerHTML = '';
+    moviesArray.forEach(function(item) {
+        moviesArray.appenChild(item);
+    });
+});
+
 
 open.forEach((item) => {
     item.addEventListener('click', function() {
@@ -33,4 +47,6 @@ back.addEventListener('click', function(){
     add.style.display = 'flex';
     addMovie.style.display = 'none';
 });
+
+
 
