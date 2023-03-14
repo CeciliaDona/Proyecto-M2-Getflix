@@ -32,7 +32,7 @@ formulario.addEventListener('submit', (e) => {
 		campo_name.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_name,
-			msg: 'Invalid characters,only letters.',
+			msg: 'Invalid characters, only letters.',
 		});
 	} else {
 		alert_name.classList.add('d-none');
@@ -54,7 +54,7 @@ formulario.addEventListener('submit', (e) => {
 		campo_phone.classList.add('is-invalid');
 		errores.push({
 			tipo: alert_phone,
-			msg: 'Invalid phone number,only numbers.',
+			msg: 'Invalid phone number, only numbers.',
 		});
 	} else {
 		alert_phone.classList.add('d-none');

@@ -137,41 +137,91 @@ function prevSlide() {
   }
   showTopTen();
 
-  ////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////
+  // const myFavoriteContainer = document.querySelector(".container__fav-list");
+  // const add = document.querySelector(".add-list");
 
-  const myListContainer = document.querySelector(".container__fav-list");
-  const btnRemove = document.querySelector(".remove");
 
+  // let myFavoriteSection = [];
 
-  // debería pintar en consola el "título" solo cuando el target esté en "add to list"
-  
-  const myListSection = films.filter((item) => item.title === films.title);
+  // document.addEventListener("click", (e) => {
+  //   if (e.target.dataset.title === justAddedSection.title) {
+  //     console.log("titulo") 
+  //     addToFavoriteList();
+  //   }
 
-  document.addEventListener("click", (e) => {
-    
-    if (e.target.dataset.title === justAddedSection.title) {
-      console.log("titulo") 
-      //addToFavoriteList();
-     }
+  //   if (e.target.dataset.title === trendsSection.title) {
+  //     console.log("titulo")   
+  //     addToFavoriteList();
+  //   }
 
-     if (e.target.dataset.title === trendsSection.title) {
-      console.log("titulo")   
-      //addToFavoriteList();
-     }
+  //   if (e.target.dataset.title === continueSection.title) {
+  //     console.log("titulo") 
+  //     addToFavoriteList();  
+  //   }
 
-     if (e.target.dataset.title === continueSection.title) {
-      console.log("titulo") 
-      //addToFavoriteList();  
-     }
-
-     if (e.target.dataset.title === topTenSection.title) {
-      console.log("titulo")  
-      //addToFavoriteList(); 
-     }
-
-  });
+  //   if (e.target.dataset.title === topTenSection.title) {
+  //     console.log("titulo")  
+  //     addToFavoriteList(); 
+  //   }
+  // });
 
   // const addToFavoriteList = (e) => {
-  // const myListSection = films.filter((item) => item.title === films.title)
-  //};
+  //   const position = myFavoriteSection.findIndex(item => item.title === films.title);
+
+  //   if (position === -1) {
+  //     myFavoriteSection.push(films)
+  //   }
+  //   console.log(myFavoriteSection)
+  // }
+
+  ////////////////////////////////////////////////////////////////
+
+  function addToFavoriteList(title) {
+    // Obtener la lista de favoritos del usuario (o crearla si no existe)
+    var favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  
+    // Verificar si la película ya está en la lista de favoritos
+    if (favorites.includes(title)) {
+      alert("La película ya está en tus favoritos");
+    } else {
+      // Agregar la película a la lista de favoritos
+      favorites.push(title);
+  
+      // Almacenar la lista de favoritos en el almacenamiento local
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+  
+      alert("Película agregada a favoritos");
+    }
+  }
+
+  const myListContainer = document.querySelector(".container__fav-list");
+const btnRemove = document.querySelector(".remove");
+
+// debería pintar en consola el "título" solo cuando el target esté en "add to list"
+document.addEventListener("click", (e) => {
+  const clickedFilm = e.target.dataset.film;
+  const ifMovie = films.some((item) => item.title === clickedFilm);
+  if (ifMovie) addToFavoriteList(clickedFilm);
+});
+
+const ShowFav = () => {
+  const favoritesContainer = document.querySelector(".container__fav-list");
+  const favorites = JSON.parse(localStorage.getItem("favorites"));
+  if (favorites && favorites.length > 0) {
+    favorites.forEach((movie) => {
+      console.log(movie);
+      const movieElement = document.createElement("div");
+      movieElement.innerHTML = `
+        <p style="color:white">${movie}</p>
+      `;
+      favoritesContainer.appendChild(movieElement);
+    });
+  }
+};
+ShowFav();
+
+
+
+
 

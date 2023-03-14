@@ -22,7 +22,8 @@ export const films = [
         synopsis: "The Jedi Master contends with the consequences of his greatest defeat -- the downfall and corruption of his one-time friend and apprentice, Anakin Skywalker, who turned to the dark side as evil Sith Lord Darth Vader.",
         section: "Just added",
         sectionTwo: "Continue watching",
-        sectionThree: ""
+        sectionThree: "",
+        top: ""
     },
     {
         title: "Willow",
@@ -47,7 +48,8 @@ export const films = [
         synopsis: "On a dark and sombre night, a secret cabal of monster hunters emerge from the shadows and gather at the Bloodstone Temple following the death of their leader; the attendees are thrust into a mysterious and deadly competition for a powerful relic.",
         section: "Just added",
         sectionTwo: "Trends",
-        sectionThree: ""
+        sectionThree: "",
+        top: ""
     },
     {
         title: "DBS: Super Hero",
@@ -85,7 +87,8 @@ export const films = [
         synopsis: "Years after her happily ever after, Giselle, Robert and Morgan move to a new community and Andalasia and the real world are thrown off-balance.",
         section: "Just added",
         sectionTwo: "Trends",
-        sectionThree: ""
+        sectionThree: "",
+        top: ""
     },
     {
         title: "The Right Stuff",
@@ -110,7 +113,8 @@ export const films = [
         synopsis: "The Kardashians is an American reality television series which focuses on the personal lives of the Kardashian–Jenner family. The new show comes off the heels of their last show called Keeping Up with the Kardashians",
         section: "Trends",
         sectionTwo: "Just added",
-        sectionThree: "Continue watching"
+        sectionThree: "Continue watching",
+        top: ""
     },
     {
         title: "Miraculous",
@@ -122,7 +126,8 @@ export const films = [
         synopsis: "Teenager Marinette changes into Ladybug, her clandestine superhero persona, while her classmate and crush Adrien transforms into Cat Noir, his secret superhero persona, to shield Paris from evil.",
         section: "Trends",
         sectionTwo: "Continue Watching",
-        sectionThree: "Just added"
+        sectionThree: "Just added",
+        top: ""
     },
     {
         title: "The Santa Clause",
@@ -198,7 +203,10 @@ export const films = [
         alt: "The protectors",
         synopsis: "The story follows three soccer representatives who are nearly bankrupt and decide to team up when a soccer star appears.",
         section: "Trends",
-        sectionTwo: ""
+        sectionTwo: "",
+        sectionThree: "",
+        top: ""
+
     }
   ]
 

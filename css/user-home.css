@@ -26,13 +26,19 @@
     --line-height-tablet: 1.8;
     --line-height-descktop: 1.9;
   }
-html {
-  min-height:100%;
-
-}
-body {
-  background-color: var(--backround-pages); 
-}
+    html {
+      min-height:100%;
+    }
+    body {
+      background-image: url(../images/backgrounds/stars-background-4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      width: 100%;
+      margin: auto;
+    }
+        
 
 /*====================== RES 320 ===================== */
   /*navbar*/
@@ -313,10 +319,15 @@ body {
   }
 
   .main__container-movie:hover > .layer{
+    background-image: url(../images/backgrounds/stars-background-4.jpg);
+    background-size: cover;
+    width: 100%;
+    margin: auto;
     padding-top: 15px;
-    opacity: 0.95; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
+    opacity: 0.85; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
     visibility: visible;
     transform: scale(1.2);
+    border-radius: 5%;
   }
 
   /*Agregué este bloque de código*/
