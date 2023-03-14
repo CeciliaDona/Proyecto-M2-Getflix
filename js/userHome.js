@@ -1,177 +1,199 @@
 const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.container__slider')
+const slides = document.querySelectorAll('.container__slider');
 let currentSlide = 0;
 
 function showSlide() {
-    slides.forEach((slide, index) => {
-        if (index === currentSlide) {
-            slide.style.transform = 'translateX(0)';
-        } else {
-            slide.style.transform = 'translateX(100%)';
-        }
-    });
+	slides.forEach((slide, index) => {
+		if (index === currentSlide) {
+			slide.style.transform = 'translateX(0)';
+		} else {
+			slide.style.transform = 'translateX(100%)';
+		}
+	});
 }
 
 function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
-    showSlide();
+	currentSlide++;
+	if (currentSlide >= slides.length) {
+		currentSlide = 0;
+	}
+	showSlide();
 }
 
 function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = slides.length - 1;
-    }
-    showSlide();
-  }
-  
-  setInterval(nextSlide, 10000);
-  
-  // slider.addEventListener('mouseenter', () => {
-  //   clearInterval(slideInterval);
-  // });
-  
-  // slider.addEventListener('mouseleave', () => {
-  // slideInterval = setInterval(nextSlide, 5000);
-  // });
-  
-  document.querySelector('#next').addEventListener('click', nextSlide);
-  document.querySelector('#previous').addEventListener('click', prevSlide);
+	currentSlide--;
+	if (currentSlide < 0) {
+		currentSlide = slides.length - 1;
+	}
+	showSlide();
+}
+
+setInterval(nextSlide, 10000);
+
+// slider.addEventListener('mouseenter', () => {
+//   clearInterval(slideInterval);
+// });
+
+// slider.addEventListener('mouseleave', () => {
+// slideInterval = setInterval(nextSlide, 5000);
+// });
+
+document.querySelector('#next').addEventListener('click', nextSlide);
+document.querySelector('#previous').addEventListener('click', prevSlide);
 
 ////////////////////////////////////////////////////////////////////////////
 
- import { films } from "../js/data/films.js";
+import { films } from '../js/data/films.js';
 
-  const templateCategories = document.querySelector("#template-categories");
-  const fragment = document.createDocumentFragment();
+const templateCategories = document.querySelector('#template-categories');
+const fragment = document.createDocumentFragment();
 
-  // JUST ADDED
-  const justAddedContainer = document.querySelector(".container__just-added");
+// JUST ADDED
+const justAddedContainer = document.querySelector('.container__just-added');
 
-  const justAddedSection = films.filter((item) => item.section === "Just added" || item.sectionTwo === "Just added" || item.sectionThree === "Just added");
+const justAddedSection = films.filter(
+	(item) =>
+		item.section === 'Just added' ||
+		item.sectionTwo === 'Just added' ||
+		item.sectionThree === 'Just added'
+);
 
-  const showJustAdded = () => {
-    justAddedSection.forEach((item) => {
-      const clone = templateCategories.content.cloneNode(true);
+const showJustAdded = () => {
+	justAddedSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
 
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".add-list").dataset.film= item.title;
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.add-list').dataset.film = item.title;
 
-      fragment.appendChild(clone);
-    })
+		fragment.appendChild(clone);
+	});
 
-    justAddedContainer.appendChild(fragment);
-  }
-  showJustAdded();
+	justAddedContainer.appendChild(fragment);
+};
+showJustAdded();
 
-  // TRENDS
-  const trendsContainer = document.querySelector(".container__trends");
+// TRENDS
+const trendsContainer = document.querySelector('.container__trends');
 
-  const trendsSection = films.filter((item) => item.section === "Trends" || item.sectionTwo === "Trends" || item.sectionThree === "Trends");
+const trendsSection = films.filter(
+	(item) =>
+		item.section === 'Trends' ||
+		item.sectionTwo === 'Trends' ||
+		item.sectionThree === 'Trends'
+);
 
-  const showTrends = () => {
-    trendsSection.forEach((item) => {
-      const clone = templateCategories.content.cloneNode(true);
+const showTrends = () => {
+	trendsSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
 
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".add-list").dataset.film= item.title;
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.add-list').dataset.film = item.title;
 
-      fragment.appendChild(clone);
-    })
+		fragment.appendChild(clone);
+	});
 
-    trendsContainer.appendChild(fragment);
-  }
-  showTrends();
+	trendsContainer.appendChild(fragment);
+};
+showTrends();
 
+// CONTINUE WATCHING
+const continueContainer = document.querySelector('.container__continue');
 
-  // CONTINUE WATCHING
-  const continueContainer = document.querySelector(".container__continue");
+const continueSection = films.filter(
+	(item) =>
+		item.section === 'Continue watching' ||
+		item.sectionTwo === 'Continue watching' ||
+		item.sectionThree === 'Continue watching'
+);
 
-  const continueSection = films.filter((item) => item.section === "Continue watching" || item.sectionTwo === "Continue watching" || item.sectionThree === "Continue watching");
+const showContinueWatching = () => {
+	continueSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
 
-  const showContinueWatching = () => {
-    continueSection.forEach((item) => {
-      const clone = templateCategories.content.cloneNode(true);
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.add-list').dataset.film = item.title;
 
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".add-list").dataset.film= item.title;
+		fragment.appendChild(clone);
+	});
 
+	continueContainer.appendChild(fragment);
+};
+showContinueWatching();
 
-      fragment.appendChild(clone);
-    })
+// TOP TEN
+const topTenContainer = document.querySelector('.container__top-10');
+const templateTopTen = document.querySelector('#template-top-ten');
 
-    continueContainer.appendChild(fragment);
-  }
-  showContinueWatching();
+const topTenSection = films.filter(
+	(item) =>
+		item.section === 'Top ten' ||
+		item.sectionTwo === 'Top ten' ||
+		item.sectionThree === 'Top ten'
+);
 
+const showTopTen = () => {
+	topTenSection.forEach((item) => {
+		const clone = templateTopTen.content.cloneNode(true);
 
-  // TOP TEN
-  const topTenContainer = document.querySelector(".container__top-10");
-  const templateTopTen = document.querySelector("#template-top-ten");
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-number').textContent = item.top;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.add-list').dataset.film = item.title;
 
-  const topTenSection = films.filter((item) => item.section === "Top ten" || item.sectionTwo === "Top ten" || item.sectionThree === "Top ten");
+		fragment.appendChild(clone);
+	});
 
-  const showTopTen = () => {
-    topTenSection.forEach((item) => {
-      const clone = templateTopTen.content.cloneNode(true);
+	topTenContainer.appendChild(fragment);
+};
+showTopTen();
 
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-number").textContent = item.top;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".add-list").dataset.film= item.title;
+////////////////////////////////////////////////////////////////////////////
 
-      fragment.appendChild(clone);
-    })
+const myListContainer = document.querySelector('.container__fav-list');
+const btnRemove = document.querySelector('.remove');
 
-    topTenContainer.appendChild(fragment);
-  }
-  showTopTen();
+// debería pintar en consola el "título" solo cuando el target esté en "add to list"
 
-  ////////////////////////////////////////////////////////////////////////////
+const myListSection = films.filter((item) => item.title === films.title);
 
-  const myListContainer = document.querySelector(".container__fav-list");
-  const btnRemove = document.querySelector(".remove");
+document.addEventListener('click', (e) => {
+	if (e.target.dataset.title === justAddedSection.title) {
+		console.log('titulo');
+		//addToFavoriteList();
+	}
 
+	if (e.target.dataset.title === trendsSection.title) {
+		console.log('titulo');
+		//addToFavoriteList();
+	}
 
-  // debería pintar en consola el "título" solo cuando el target esté en "add to list"
-  
-  const myListSection = films.filter((item) => item.title === films.title);
+	if (e.target.dataset.title === continueSection.title) {
+		console.log('titulo');
+		//addToFavoriteList();
+	}
 
-  document.addEventListener("click", (e) => {
-    
-    if (e.target.dataset.title === justAddedSection.title) {
-      console.log("titulo") 
-      //addToFavoriteList();
-     }
+	if (e.target.dataset.title === topTenSection.title) {
+		console.log('titulo');
+		//addToFavoriteList();
+	}
+});
 
-     if (e.target.dataset.title === trendsSection.title) {
-      console.log("titulo")   
-      //addToFavoriteList();
-     }
+// const addToFavoriteList = (e) => {
+// const myListSection = films.filter((item) => item.title === films.title)
+//};
 
-     if (e.target.dataset.title === continueSection.title) {
-      console.log("titulo") 
-      //addToFavoriteList();  
-     }
+// sign out
 
-     if (e.target.dataset.title === topTenSection.title) {
-      console.log("titulo")  
-      //addToFavoriteList(); 
-     }
+const signOutButton = document.getElementById('sign-out-btn');
 
-  });
-
-  // const addToFavoriteList = (e) => {
-  // const myListSection = films.filter((item) => item.title === films.title)
-  //};
-
+signOutButton.addEventListener('click', (e) => {
+	e.preventDefault();
+	window.location.href = '../index.html'; // reemplaza "ejemplo.com" con la URL de tu página de inicio
+});
