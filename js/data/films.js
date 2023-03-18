@@ -220,13 +220,8 @@ export let films = [
         synopsis: "The story follows three soccer representatives who are nearly bankrupt and decide to team up when a soccer star appears.",
         section: "Trends",
         sectionTwo: "",
-<<<<<<< HEAD
         sectionThree: "",
         top: ""
-
-=======
-        top: ""
->>>>>>> favorites
     }
   ]
 
