@@ -168,9 +168,9 @@
 				<h3 class="section__title just-added__title" data-title="Just added">Just added</h3>        
 			</div>
 			<div class="main__container">
-                <div class="main__container-movies container__just-added"> 
+                <ul class="main__container-movies container__just-added"> 
                     <!--Template categories-->
-                </div>
+                </ul>
 			</div>			
         </div>
         <div class="main">
@@ -178,9 +178,9 @@
 				<h3 class="section__title trends__title" data-title="Trends">Trends</h3>
 			</div>
 			<div class="main__container">
-                <div class="main__container-movies container__trends"> 
+                <ul class="main__container-movies container__trends"> 
                     <!--Template categories-->
-                </div>
+                </ul>
 			</div>			
         </div>
         <div class="main">
@@ -188,9 +188,9 @@
 				<h3 class="section__title just-added__title" data-title="Continue watching">Continue watching</h3>
 			</div>
 			<div class="main__container">
-                <div class="main__container-movies container__continue"> 
+                <ul class="main__container-movies container__continue"> 
                     <!--Template categories-->
-                </div>
+                </ul>
 			</div>			
         </div>
         <div class="main">
@@ -198,9 +198,9 @@
 				<h3 class="section__title just-added__title" data-title="Top 10">Top 10</h3>  
 			</div>
 			<div class="main__container">
-                <div class="main__container-movies container__top-10">
+                <ul class="main__container-movies container__top-10">
                     <!--Template top ten-->
-                </div> 
+                </ul> 
 			</div>	  
         </div>
         <div class="main">
@@ -209,14 +209,14 @@
                 <p class="no-added-movies-msg">No movie has been added to your favorites list. Click on "Add to list" of each movie to add them.</p>
             </div>
             <div id="my-list" class="main__container">
-                <div class="main__container-movies container__fav-list">
+                <ul class="main__container-movies container__fav-list">
                     <!--Template My fav list-->
-                </div>
+                </ul>
             </div>
         </div>
         <template id="template-categories"> 
-            <div class="main__container-movie">
-                <h2 class="movie-title"></h2>
+            <li class="main__container-movie">
+                <h2 class="movie-title">title</h2> 
                 <img class="img-films" data-img="" src="" alt="">
                 <div class="layer">
                     <div class="container__bi-stars">
@@ -226,10 +226,10 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-half"></i>
                     </div>
-                    <div class="container__see-more--add">
-                        <p class="see-more remove">See more</p>                 
+                    <div class="container__btn-see-more--add">
+                        <p class="btn-see-more" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See more</p>                 
                         <p 
-                        class="add-list" 
+                        class="btn-add-list remove" 
                         data-img=""
                         data-title="">
                         Add to List
@@ -237,15 +237,16 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </li>
+            <!--<iframe class="video" src="" frameborder="0"></iframe>-->
         </template>
         <template id="template-top-ten">    
-            <div class="main__container-movie">
+            <li class="main__container-movie">
                 <h2 class="movie-title"></h2>
-                <a class="container__movie-number" href="#">
+                <div class="container__movie-number" href="#">
                     <img class="img-films" src="" alt="" data-img="">
                     <p class="movie-number">N</p>
-                </a>
+                </div>
                 <div class="layer">
                     <div class="container__bi-stars">
                         <i class="bi bi-star-fill"></i>
@@ -254,10 +255,10 @@
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-half"></i>
                     </div>
-                    <div class="container__see-more--add">
-                        <p class="see-more">See more</p>                            
+                    <div class="container__btn-see-more--add">
+                        <p class="btn-see-more" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See more</p>                            
                         <p 
-                        class="add-list" 
+                        class="btn-add-list" 
                         data-img=""
                         data-title=""
                         >
@@ -266,9 +267,34 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </template>     
+            </li>
+        </template>  
 	</main>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
         <div class="footer__container-contact">

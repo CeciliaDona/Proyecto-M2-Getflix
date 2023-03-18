@@ -6,7 +6,7 @@
   }
   
   *::selection {
-    background: #afc43a62;
+    background: #6f52feb1;
     color: #fff;
   }
 
@@ -39,6 +39,14 @@
       margin: auto;
     }
         
+
+  html {
+    min-height:100%;
+
+  }
+  body {
+    background-color: var(--backround-pages); 
+  }
 
 /*====================== RES 320 ===================== */
   /*navbar*/
@@ -110,35 +118,41 @@
   .container__slider-1 {
       background-position: center center;
       background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
-  }
+      width: 100%;
+    }
 
   .container__slider-movie img {
-    position: 0relative;
+    position: 0 relative;
   }
 
   .container__slider-2 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/totoro.jpg.jpg);
+    width: 100%;
   }
 
   .container__slider-3 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/titanic.jpg);
+    width: 100%;
   }
 
   .container__slider-4 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/the-simpsons.webp);
+    width: 100%;
   }
   
   .container__slider-5{
     background-position: center center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/avatar-2.jpg);
+    width: 100%;
   }
 
   .container__slider-6{
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/disenchanted.jpg);
+    width: 100%;
   }
 
   .container__slider-movie {
@@ -209,7 +223,8 @@
     color: var(--color-fonts);
     font-family: var(--font-paragraph);
     }
-  
+
+  /*main films section 320*/
   .main {
     margin-bottom: 70px;
     width: 90%;
@@ -266,7 +281,7 @@
     margin: 0 2px;
   }
 
-  .container__see-more--add {
+  .container__btn-see-more--add {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -275,7 +290,7 @@
   }
 
   /*Agregué estos bloques de código*/
-  .see-more, .add-list, .remove {
+  .btn-see-more, .btn-add-list, .remove {
     color: var(--color-fonts);
     font-size: 0.9rem;
     font-weight:600;
@@ -287,7 +302,7 @@
     width: 125px;
   }
 
-  .see-more:hover, .add-list:hover, .remove:hover {
+  .btn-see-more:hover, .btn-add-list:hover, .remove:hover {
     color: rgb(171, 185, 194);
     transition: 0.7s;
     border: solid 2px rgb(171, 185, 194);
@@ -324,10 +339,12 @@
     width: 100%;
     margin: auto;
     padding-top: 15px;
-    opacity: 0.85; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
+    opacity: 0.87; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
     visibility: visible;
-    transform: scale(1.2);
-    border-radius: 5%;
+    transform: scale(1.15);
+    background-image: url(../images/backgrounds/stars-background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   /*Agregué este bloque de código*/
@@ -347,6 +364,11 @@
     text-shadow: 0 0 40px rgb(14, 165, 246),
     0 0 50px white;
   }
+
+
+  /* Prueba Modal res 320 */
+
+
 
   /*--- FOOTER MOBILE 320 ---*/
   .container__footer {
