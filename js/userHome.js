@@ -139,43 +139,83 @@ function prevSlide() {
 
   ////////////////////////////////////////////////////////////////////////////
 
-  //MY FAVORITE LIST
-  const myListContainer = document.querySelector(".container__fav-list");
-  const btnRemove = document.querySelector(".remove");
+  // MODAL
+  const templateModal = document.querySelector(".template-modal");
+  const containerModal = document.querySelector(".container__modal-template");
+  const btnSeeMore = document.querySelector(".btn-see-more");
 
-  // debería pintar en consola el "título" solo cuando el target esté en "add to list"
-  
-  const myListSection = films.filter((item) => item.title === films.title);
-
-  document.addEventListener("click", (e) => {
-    
-    if (e.target.dataset.title === films.title) {
-      console.log("titulo");
-      //addToFavoriteList();
-     }
-
-     if (e.target.dataset.title === trendsSection.title) {
-      console.log("titulo");
-      //addToFavoriteList();
-     }
-
-     if (e.target.dataset.title === continueSection.title) {
-      console.log("titulo");
-      //addToFavoriteList();  
-     }
-
-     if (e.target.dataset.title === topTenSection.title) {
-      console.log("titulo");
-      //addToFavoriteList(); 
-     }
-
+  btnSeeMore.addEventListener("click", (e) => {
+    if(e.target.dataset.id === films.id)
+    showDataModal(e);
   });
+
+  //const film = films.find((item) => item.id === films.dataset.id); 
+
+  const showDataModal = () => {
+    films.forEach((item) => {
+
+      const clone = templateModal.content.cloneNode(true);
+    
+      clone.querySelector(".modal-title").textContent = item.title;
+      clone.querySelector(".modal-video").src = item.srcTrailer;
+      clone.querySelector(".synopsis-text").textContent = item.synopsis;
+      clone.querySelector(".year").textContent = item.year;
+      clone.querySelector(".genre").textContent = item.Genres;
+
+    
+      fragment.appendChild(clone);
+
+    })
+    containerModal.appendChild(fragment);
+      
+    };
+
+
+  //MY FAVORITE LIST
+  // const myListContainer = document.querySelector(".container__fav-list");
+  // const btnRemove = document.querySelector(".remove");
+
+  // // debería pintar en consola el "título" solo cuando el target esté en "add to list"
+  
+  // const myListSection = films.filter((item) => item.title === films.title);
+
+  // document.addEventListener("click", (e) => {
+    
+  //   if (e.target.dataset.title === films.title) {
+  //     console.log("titulo");
+  //     //addToFavoriteList();
+  //    }
+
+  //    if (e.target.dataset.title === trendsSection.title) {
+  //     console.log("titulo");
+  //     //addToFavoriteList();
+  //    }
+
+  //    if (e.target.dataset.title === continueSection.title) {
+  //     console.log("titulo");
+  //     //addToFavoriteList();  
+  //    }
+
+  //    if (e.target.dataset.title === topTenSection.title) {
+  //     console.log("titulo");
+  //     //addToFavoriteList(); 
+  //    }
+
+  // });
 
   // const addToFavoriteList = (e) => {
   // const myListSection = films.filter((item) => item.title === films.title)
   // };
 
 
-////////////////////////////////////////////////////////
+
+
+
+  
+
+
+
+
+
 
 
