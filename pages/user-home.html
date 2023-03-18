@@ -215,17 +215,9 @@
                 </ul>
             </div>
         </div>
-
-        <ul class="cotainer__modal">
-            <li class="modal">
-                <span class="close-modal">&times;</span>
-                <p>Contenido del modal</p>
-            </li>
-        </ul>
-
         <template id="template-categories"> 
             <li class="main__container-movie">
-                <h2 class="movie-title">title</h2>
+                <h2 class="movie-title">title</h2> 
                 <img class="img-films" data-img="" src="" alt="">
                 <div class="layer">
                     <div class="container__bi-stars">
@@ -236,7 +228,7 @@
                         <i class="bi bi-star-half"></i>
                     </div>
                     <div class="container__btn-see-more--add">
-                        <p class="btn-see-more">See more</p>                 
+                        <p class="btn-see-more" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See more</p>                 
                         <p 
                         class="btn-add-list remove" 
                         data-img=""
@@ -247,15 +239,16 @@
                     </div>
                 </div>
             </li>
+            <!--<iframe class="video" src="" frameborder="0"></iframe>-->
         </template>
 
         <template id="template-top-ten">    
             <li class="main__container-movie">
                 <h2 class="movie-title"></h2>
-                <a class="container__movie-number" href="#">
+                <div class="container__movie-number" href="#">
                     <img class="img-films" src="" alt="" data-img="">
                     <p class="movie-number">N</p>
-                </a>
+                </div>
                 <div class="layer">
                     <div class="container__bi-stars">
                         <i class="bi bi-star-fill"></i>
@@ -265,7 +258,7 @@
                         <i class="bi bi-star-half"></i>
                     </div>
                     <div class="container__btn-see-more--add">
-                        <p class="btn-see-more">See more</p>                            
+                        <p class="btn-see-more" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">See more</p>                            
                         <p 
                         class="btn-add-list" 
                         data-img=""
@@ -277,8 +270,33 @@
                     </div>
                 </div>
             </li>
-        </template>     
+        </template>  
 	</main>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
         <div class="footer__container-contact">

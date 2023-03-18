@@ -61,6 +61,7 @@ function prevSlide() {
       clone.querySelector(".img-films").alt = item.alt;
       clone.querySelector(".movie-title").textContent = item.title;
       clone.querySelector(".btn-add-list").dataset.film= item.title;
+      //clone.querySelector(".video").src = item.trailer;
 
       fragment.appendChild(clone);
     })
@@ -105,7 +106,6 @@ function prevSlide() {
       clone.querySelector(".movie-title").textContent = item.title;
       clone.querySelector(".btn-add-list").dataset.film= item.title;
 
-
       fragment.appendChild(clone);
     })
 
@@ -140,10 +140,8 @@ function prevSlide() {
   ////////////////////////////////////////////////////////////////////////////
 
   //MY FAVORITE LIST
-  
   const myListContainer = document.querySelector(".container__fav-list");
   const btnRemove = document.querySelector(".remove");
-
 
   // debería pintar en consola el "título" solo cuando el target esté en "add to list"
   

@@ -63,6 +63,16 @@
     position: absolute;
   }
 
+  main {
+    background-image: url(../images/backgrounds/stars-background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    margin: auto;
+  }
+
   /*-----slider-----*/
   .slider {
     height: 100vh; /*agregué esto*/
@@ -104,35 +114,41 @@
   .container__slider-1 {
       background-position: center center;
       background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
-  }
+      width: 100%;
+    }
 
   .container__slider-movie img {
-    position: 0relative;
+    position: 0 relative;
   }
 
   .container__slider-2 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/totoro.jpg.jpg);
+    width: 100%;
   }
 
   .container__slider-3 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/titanic.jpg);
+    width: 100%;
   }
 
   .container__slider-4 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/the-simpsons.webp);
+    width: 100%;
   }
   
   .container__slider-5{
     background-position: center center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/avatar-2.jpg);
+    width: 100%;
   }
 
   .container__slider-6{
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/disenchanted.jpg);
+    width: 100%;
   }
 
   .container__slider-movie {
@@ -203,7 +219,8 @@
     color: var(--color-fonts);
     font-family: var(--font-paragraph);
     }
-  
+
+  /*main films section 320*/
   .main {
     margin-bottom: 70px;
     width: 90%;
@@ -314,9 +331,12 @@
 
   .main__container-movie:hover > .layer{
     padding-top: 15px;
-    opacity: 0.95; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
+    opacity: 0.87; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
     visibility: visible;
-    transform: scale(1.2);
+    transform: scale(1.15);
+    background-image: url(../images/backgrounds/stars-background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   /*Agregué este bloque de código*/
@@ -337,41 +357,9 @@
     0 0 50px white;
   }
 
-  /* Modal res 320 */
-  .container__modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  /* Estilo para el contenido del modal */
-  .modal {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-  }
-  
-  /* Estilo para el botón de cierre */
-  .close-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close-modal:hover,
-  .close-modal:focus {
-    color: black;
-    text-decoration: none;
-  }
+
+  /* Prueba Modal res 320 */
+
 
 
   /*--- FOOTER MOBILE 320 ---*/
