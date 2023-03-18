@@ -2,6 +2,7 @@
 const users = [];
 
 const form = document.getElementById('form2');
+const modal = document.querySelector(".modal");
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -89,6 +90,7 @@ form.addEventListener('submit', (e) => {
 
 		// Agregamos el objeto al array de usuarios
 		users.push(user);
+		//modal.classList.add("d-none");
 
 		// Mostramos un mensaje de confirmación al usuario
 		const alertSuccess = document.getElementById('alert-success');
