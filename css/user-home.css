@@ -360,6 +360,77 @@
 
   /* Prueba Modal res 320 */
 
+.modal-content {
+  background-color: var(--backround-pages) !important;
+}
+
+.btn-close {
+  color:rgb(255, 254, 245) !important;
+  opacity: 1 !important;
+  filter: brightness(0) invert(1);
+}
+
+.modal-films {
+    width: 100%;
+    position: relative;
+    background-color: rgb(36, 37, 39);
+    margin: 7%;
+    max-height: 100%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease-out;
+}
+
+.container__modal-template {
+  padding: 0;
+}
+
+.modal-video {
+  margin-top: 30px;
+  box-shadow: 0px 3px 30px 9px rgba(134, 150, 224, 0.679);
+  -webkit-box-shadow: 0px 3px 30px 9px rgba(134, 150, 224, 0.634);
+  -moz-box-shadow: 0px 3px 30px 9px rgba(134,150,224,0.45);
+}
+
+.modal-films--info {
+  color: #fff;
+  font-size: var(--font-paragraph);
+  font-size: 0.85rem;
+  line-height: var(--line-height-tablet);
+  padding: 12px;
+}
+
+.container__modal-description {
+  padding: 20px 0;
+}
+
+/*coments*/
+.img-coments {
+	width: 40px;
+	height: 40px;
+}
+
+.bg-coments {
+  background: #43C6AC; 
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);  
+  background: linear-gradient(to right, #191654, #43C6AC);
+	margin-bottom: 50px;
+  box-shadow: 0px 3px 30px 9px rgba(134,150,224,0.45);
+  -webkit-box-shadow: 0px 3px 30px 9px rgba(134,150,224,0.45);
+  -moz-box-shadow: 0px 3px 30px 9px rgba(134,150,224,0.45);
+  }
+
+.form-size {
+	width: 90% !important;
+	border-radius: 5px;
+	resize: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
 
 
   /*--- FOOTER MOBILE 320 ---*/
