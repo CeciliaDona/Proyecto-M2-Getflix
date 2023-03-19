@@ -160,7 +160,6 @@ showTopTen();
 // MODAL
 const templateModal = document.querySelector('.template-modal');
 const containerModal = document.querySelector('.container__modal-template');
-const btnSeeMore = document.querySelector('.btn-see-more');
 
 document.addEventListener('click', (e) => {
 	if (e.target.matches('.btn-see-more')) {
