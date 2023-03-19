@@ -40,13 +40,13 @@
     }
         
 
-  html {
-    min-height:100%;
+    html {
+      min-height:100%;
 
-  }
-  body {
-    background-color: var(--backround-pages); 
-  }
+    }
+    body {
+      background-color: var(--backround-pages); 
+    }
 
 /*====================== RES 320 ===================== */
   /*navbar*/
@@ -128,12 +128,6 @@
   .container__slider-2 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/totoro.jpg.jpg);
-    width: 100%;
-  }
-
-  .container__slider-3 {
-    background-position: right center;
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/titanic.jpg);
     width: 100%;
   }
 
