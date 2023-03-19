@@ -43,132 +43,152 @@ function prevSlide() {
 
 ////////////////////////////////////////////////////////////////////////////
 
- import { films } from "../js/data/films.js";
+import { films } from '../js/data/films.js';
 
-  const templateCategories = document.querySelector("#template-categories");
-  const fragment = document.createDocumentFragment();
+const templateCategories = document.querySelector('#template-categories');
+const fragment = document.createDocumentFragment();
 
-  // JUST ADDED
-  const justAddedContainer = document.querySelector(".container__just-added");
+// JUST ADDED
+const justAddedContainer = document.querySelector('.container__just-added');
 
-  const justAddedSection = films.filter((item) => item.section === "Just added" || item.sectionTwo === "Just added" || item.sectionThree === "Just added");
+const justAddedSection = films.filter(
+	(item) =>
+		item.section === 'Just added' ||
+		item.sectionTwo === 'Just added' ||
+		item.sectionThree === 'Just added'
+);
 
-  const showJustAdded = () => {
-    justAddedSection.forEach((item) => {
-      const clone = templateCategories.content.cloneNode(true);
+const showJustAdded = () => {
+	justAddedSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
 
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".btn-add-list").dataset.film= item.title;
-      //clone.querySelector(".video").src = item.trailer;
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.btn-add-list').dataset.film = item.title;
+		//clone.querySelector(".video").src = item.trailer;
+		clone.querySelector('.btn-see-more').dataset.film = item.title;
 
-      fragment.appendChild(clone);
-    })
+		fragment.appendChild(clone);
+	});
 
-    justAddedContainer.appendChild(fragment);
-  }
-  showJustAdded();
+	justAddedContainer.appendChild(fragment);
+};
+showJustAdded();
 
-  // TRENDS
-  const trendsContainer = document.querySelector(".container__trends");
+// TRENDS
+const trendsContainer = document.querySelector('.container__trends');
 
-  const trendsSection = films.filter((item) => item.section === "Trends" || item.sectionTwo === "Trends" || item.sectionThree === "Trends");
+const trendsSection = films.filter(
+	(item) =>
+		item.section === 'Trends' || item.sectionTwo === 'Trends' || item.sectionThree === 'Trends'
+);
 
-  const showTrends = () => {
-    trendsSection.forEach((item) => {
-      const clone = templateCategories.content.cloneNode(true);
+const showTrends = () => {
+	trendsSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
 
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".btn-add-list").dataset.film= item.title;
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.btn-add-list').dataset.film = item.title;
+		clone.querySelector('.btn-see-more').dataset.film = item.title;
 
-      fragment.appendChild(clone);
-    })
+		fragment.appendChild(clone);
+	});
 
-    trendsContainer.appendChild(fragment);
-  }
-  showTrends();
+	trendsContainer.appendChild(fragment);
+};
+showTrends();
+
+// CONTINUE WATCHING
+const continueContainer = document.querySelector('.container__continue');
+
+const continueSection = films.filter(
+	(item) =>
+		item.section === 'Continue watching' ||
+		item.sectionTwo === 'Continue watching' ||
+		item.sectionThree === 'Continue watching'
+);
+
+const showContinueWatching = () => {
+	continueSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
+
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.btn-add-list').dataset.film = item.title;
+		clone.querySelector('.btn-see-more').dataset.film = item.title;
+
+		fragment.appendChild(clone);
+	});
+
+	continueContainer.appendChild(fragment);
+};
+showContinueWatching();
+
+// TOP TEN
+const topTenContainer = document.querySelector('.container__top-10');
+const templateTopTen = document.querySelector('#template-top-ten');
+
+const topTenSection = films.filter(
+	(item) =>
+		item.section === 'Top ten' || item.sectionTwo === 'Top ten' || item.sectionThree === 'Top ten'
+);
+
+const showTopTen = () => {
+	topTenSection.forEach((item) => {
+		const clone = templateTopTen.content.cloneNode(true);
+
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-number').textContent = item.top;
+		clone.querySelector('.movie-title').textContent = item.title;
+		clone.querySelector('.btn-add-list').dataset.film = item.title;
+		clone.querySelector('.btn-see-more').dataset.film = item.title;
+
+		fragment.appendChild(clone);
+	});
+
+	topTenContainer.appendChild(fragment);
+};
+showTopTen();
+
+////////////////////////////////////////////////////////////////////////////
+
+// MODAL
+const templateModal = document.querySelector('.template-modal');
+const containerModal = document.querySelector('.container__modal-template');
+const btnSeeMore = document.querySelector('.btn-see-more');
+
+document.addEventListener('click', (e) => {
+	if (e.target.matches('.btn-see-more')) {
+		showDataModal(e);
+	}
+});
+
+//const film = films.find((item) => item.id === films.dataset.id);
+
+const showDataModal = (e) => {
+	containerModal.textContent = '';
+	films.forEach((item) => {
+		if (item.title === e.target.dataset.film) {
+			const clone = templateModal.content.cloneNode(true);
+			clone.querySelector('.modal-title').textContent = item.title;
+			clone.querySelector('.modal-video').src = item.srcTrailer;
+			clone.querySelector('.synopsis-text').textContent = item.synopsis;
+			clone.querySelector('.year').textContent = item.year;
+			clone.querySelector('.genre').textContent = item.Genres;
+
+			fragment.appendChild(clone);
+		}
+	});
+	containerModal.appendChild(fragment);
+};
 
 
-  // CONTINUE WATCHING
-  const continueContainer = document.querySelector(".container__continue");
 
-  const continueSection = films.filter((item) => item.section === "Continue watching" || item.sectionTwo === "Continue watching" || item.sectionThree === "Continue watching");
-
-  const showContinueWatching = () => {
-    continueSection.forEach((item) => {
-      const clone = templateCategories.content.cloneNode(true);
-
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".btn-add-list").dataset.film= item.title;
-
-      fragment.appendChild(clone);
-    })
-
-    continueContainer.appendChild(fragment);
-  }
-  showContinueWatching();
-
-
-  // TOP TEN
-  const topTenContainer = document.querySelector(".container__top-10");
-  const templateTopTen = document.querySelector("#template-top-ten");
-
-  const topTenSection = films.filter((item) => item.section === "Top ten" || item.sectionTwo === "Top ten" || item.sectionThree === "Top ten");
-
-  const showTopTen = () => {
-    topTenSection.forEach((item) => {
-      const clone = templateTopTen.content.cloneNode(true);
-
-      clone.querySelector(".img-films").src = item.img;
-      clone.querySelector(".img-films").alt = item.alt;
-      clone.querySelector(".movie-number").textContent = item.top;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".btn-add-list").dataset.film= item.title;
-
-      fragment.appendChild(clone);
-    })
-
-    topTenContainer.appendChild(fragment);
-  }
-  showTopTen();
-
-  ////////////////////////////////////////////////////////////////////////////
-
-  // MODAL (CORREGIR QUE SOLO MUESTRE UNA PELI EN VEZ DE TODO EL ARRAY DE PELIS)
-  const templateModal = document.querySelector(".template-modal");
-  const containerModal = document.querySelector(".container__modal-template");
-  const btnSeeMore = document.querySelector(".btn-see-more");
-
-  btnSeeMore.addEventListener("click", (e) => {
-    if(e.target.dataset.id === films.id)
-    showDataModal(e);
-  });
-
-  //const film = films.find((item) => item.id === films.dataset.id); 
-
-  const showDataModal = () => {
-    films.forEach((item) => {
-
-      const clone = templateModal.content.cloneNode(true);
-    
-      clone.querySelector(".modal-title").textContent = item.title;
-      clone.querySelector(".modal-video").src = item.srcTrailer;
-      clone.querySelector(".synopsis-text").textContent = item.synopsis;
-      clone.querySelector(".year").textContent = item.year;
-      clone.querySelector(".genre").textContent = item.Genres;
-
-    
-      fragment.appendChild(clone);
-
-    })
-    containerModal.appendChild(fragment);
-      
-    };
 
 
   //MY FAVORITE LIST (NO FUNCIONA, CORREGIR)
