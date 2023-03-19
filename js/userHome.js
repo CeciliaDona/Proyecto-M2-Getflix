@@ -139,7 +139,7 @@ function prevSlide() {
 
   ////////////////////////////////////////////////////////////////////////////
 
-  // MODAL
+  // MODAL (CORREGIR QUE SOLO MUESTRE UNA PELI EN VEZ DE TODO EL ARRAY DE PELIS)
   const templateModal = document.querySelector(".template-modal");
   const containerModal = document.querySelector(".container__modal-template");
   const btnSeeMore = document.querySelector(".btn-see-more");
@@ -171,7 +171,60 @@ function prevSlide() {
     };
 
 
-  //MY FAVORITE LIST
+  //MY FAVORITE LIST (NO FUNCIONA, CORREGIR)
+    const containerMyList = document.querySelector(".container__fav-list");
+    const templateFavoriteList = document.querySelector(".template-categories");
+
+    const myListSection = [];
+
+    document.addEventListener("click", (e) => {
+      if (e.target.dataset.id === films.title) {
+        addToFavList(e);
+      }
+   });
+
+    const addToFavList = (e) => {
+     const film = {
+      title: e.target.dataset.title,
+      id: e.target.dataset.id,
+      img: e.target.dataset.img,
+      alt: e.target.dataset.title
+     }
+
+     const position = myListSection.findIndex(item => item.id === film.id);
+
+     if (position === -1) {
+      myListSection.push();
+     }
+     showFilm();
+   }
+
+   const showFilm = () => {
+    containerMyList.textContent = "";
+    myListSection.forEach((item) => {
+      const clone = templateFavoriteList.content.cloneNode(true);
+      clone.querySelector(".add-to-list").dataset.id = item.id;
+      clone.querySelector(".movie-title").textContent = item.title;
+      clone.querySelector(".img-films").src = item.img;
+      fragment.appendChild(clone);
+    });
+
+    containerMyList.appendChild(fragment);
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // const myListContainer = document.querySelector(".container__fav-list");
   // const btnRemove = document.querySelector(".remove");
 
