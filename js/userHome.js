@@ -191,48 +191,100 @@ const showDataModal = (e) => {
 
 
   //MY FAVORITE LIST (NO FUNCIONA, CORREGIR)
-    const containerMyList = document.querySelector(".container__fav-list");
-    const templateFavoriteList = document.querySelector(".template-categories");
+  //   const containerMyList = document.querySelector(".container__fav-list");
+  //   const templateFavoriteList = document.querySelector(".template-categories");
 
-    const myListSection = [];
+  //   const myListSection = [];
 
-    document.addEventListener("click", (e) => {
-      if (e.target.dataset.id === films.title) {
-        addToFavList(e);
-      }
-   });
+  //   document.addEventListener("click", (e) => {
+  //     if (e.target.matches(".btn-add-list") === films.title) {
+  //       addToFavList(e);
+  //     }
+  //  });
 
-    const addToFavList = (e) => {
-     const film = {
-      title: e.target.dataset.title,
-      id: e.target.dataset.id,
-      img: e.target.dataset.img,
-      alt: e.target.dataset.title
-     }
+  //   const addToFavList = (e) => {
+  //    const film = {
+  //     title: e.target.dataset.title,
+  //     id: e.target.dataset.title,
+  //     img: e.target.dataset.img,
+  //     alt: e.target.dataset.title
+  //    }
 
-     const position = myListSection.findIndex(item => item.id === film.id);
+  //    const position = myListSection.findIndex(item => item.dataset.id === film.id);
 
-     if (position === -1) {
-      myListSection.push();
-     }
-     showFilm();
-   }
+  //    if (position === -1) {
+  //     myListSection.push();
+  //    }
+  //    showFilm();
+  //  }
 
-   const showFilm = () => {
-    containerMyList.textContent = "";
-    myListSection.forEach((item) => {
-      const clone = templateFavoriteList.content.cloneNode(true);
-      clone.querySelector(".add-to-list").dataset.id = item.id;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".img-films").src = item.img;
-      fragment.appendChild(clone);
-    });
+  //  const showFilm = () => {
+  //   containerMyList.textContent = "";
+  //   myListSection.forEach((item) => {
+  //     const clone = templateFavoriteList.content.cloneNode(true);
+  //     clone.querySelector(".add-to-list").dataset.id = item.title;
+  //     clone.querySelector(".add-to-list").dataset.title = item.title;
+  //     clone.querySelector(".movie-title").textContent = item.title;
+  //     clone.querySelector(".img-films").src = item.img;
 
-    containerMyList.appendChild(fragment);
-   }
+  //     fragment.appendChild(clone);
+  //   });
 
+  //   containerMyList.appendChild(fragment);
+  //  }
 
+ //MY FAVORITE LIST 
+const containerMyList = document.querySelector(".container__fav-list");
+const templateFavoriteList = document.querySelector("#template-categories");
 
+const myListSection = JSON.parse(localStorage.getItem("favorites")) || [];
+
+document.addEventListener("click", (e) => {
+  if (films.some((item) => item.title === e.target.dataset.film)) {
+    addToFavList(e);
+  }
+});
+
+const addToFavList = (e) => {
+  const selectFilm = films.find((item) => item.title === e.target.dataset.film); // Obtengo los datos de la pelicula en base al "filename" (nombre de la peli obtenida en el dataset)
+
+  const film = {
+    title: selectFilm.title,
+    id: selectFilm.id,
+  };
+
+  if (!myListSection.includes(film.title)) {
+    myListSection.push(film.title); //  cargo la peli en la lista myListSection
+    localStorage.setItem("favorites", JSON.stringify(myListSection)); //actualizo la lista en el
+  }
+
+  showFilm();
+};
+
+const showFilm = () => {
+  const favMovies = JSON.parse(localStorage.getItem("favorites")); // obtengo la lista de favoritos desde el localstorage (getitem)
+
+  if (favMovies) {
+    const element = document.querySelector(".no-added-movies-msg");
+    element.style.display = "none";
+  }
+
+  containerMyList.textContent = "";
+  favMovies.forEach((item) => {
+    const film = films.find((e) => e.title === item); // busco los datos de la peli
+
+    const clone = templateFavoriteList.content.cloneNode(true);
+    console.log(clone);
+    //clone.querySelector(".add-to-list").dataset.id = film.id;
+    clone.querySelector(".movie-title").textContent = film.title;
+    clone.querySelector(".img-films").src = film.img;
+    fragment.appendChild(clone);
+  });
+
+  containerMyList.appendChild(fragment);
+};
+
+showFilm();
 
 
 
