@@ -37,19 +37,94 @@ const showJustAdded = () => {
 };
 showJustAdded();
 
+const trendsContainer = document.querySelector('.container__trends');
+
+const trendsSection = films.filter(
+	(item) =>
+		item.section === 'Trends' || 
+        item.sectionTwo === 'Trends' || 
+        item.sectionThree === 'Trends'
+);
+
+const showTrends = () => {
+	trendsSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
+
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+
+		fragment.appendChild(clone);
+	});
+
+	trendsContainer.appendChild(fragment);
+};
+showTrends();
+
+// CONTINUE WATCHING
+const continueContainer = document.querySelector('.container__continue');
+
+const continueSection = films.filter(
+	(item) =>
+		item.section === 'Continue watching' ||
+		item.sectionTwo === 'Continue watching' ||
+		item.sectionThree === 'Continue watching'
+);
+
+const showContinueWatching = () => {
+	continueSection.forEach((item) => {
+		const clone = templateCategories.content.cloneNode(true);
+
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-title').textContent = item.title;
+
+		fragment.appendChild(clone);
+	});
+
+	continueContainer.appendChild(fragment);
+};
+showContinueWatching();
+
+// TOP TEN
+const topTenContainer = document.querySelector('.container__top-10');
+const templateTopTen = document.querySelector('#template-top-ten');
+
+const topTenSection = films.filter(
+	(item) =>
+		item.section === 'Top ten' || item.sectionTwo === 'Top ten' || item.sectionThree === 'Top ten'
+);
+
+const showTopTen = () => {
+	topTenSection.forEach((item) => {
+		const clone = templateTopTen.content.cloneNode(true);
+
+		clone.querySelector('.img-films').src = item.img;
+		clone.querySelector('.img-films').alt = item.alt;
+		clone.querySelector('.movie-number').textContent = item.top;
+		clone.querySelector('.movie-title').textContent = item.title;
+
+		fragment.appendChild(clone);
+	});
+
+	topTenContainer.appendChild(fragment);
+};
+showTopTen();
 
 
+function showModal () {
+    modal.style.display = 'block';
+}
 
+function hideModal () {
+    modal.style.display = 'none';
+}
 
 open.forEach((item) => {
-    item.addEventListener('click', function() {
-        modal.style.display = 'block';
-    });
+    item.addEventListener('click', showModal)
 });
 
-close.addEventListener('click', function() {
-    modal.style.display = 'none';
-});
+close.addEventListener('click', hideModal);
 
 add.addEventListener('click', function() {
     table.style.display = 'none';
