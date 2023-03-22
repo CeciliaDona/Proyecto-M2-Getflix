@@ -62,19 +62,17 @@
 									class="nav-link active" aria-current="page" href="#">Home</a>
 							</li>
 							<li class="nav-item ps-3">
-								<a class="nav-link active" aria-current="page" href="#"
-									><i class="bi bi-info-circle me-4"></i> About Us</a
-								>
+								<a class="nav-link active" aria-current="page" href="#">
+                                    <i class="bi bi-info-circle me-4"></i> About Us
+                                </a>
 							</li>
 							<li class="nav-item ps-3">
 								<a class="nav-link active" aria-current="page" href="#"
-									><i class="bi bi-envelope-fill me-4"></i> Contact Us</a
-								>
+									><i class="bi bi-envelope-fill me-4"></i> Contact Us</a>
 							</li>
 							<li class="nav-item ps-3">
-								<a class="nav-link active" aria-current="page" href="#"
-									><i class="bi bi-person-circle me-4"> </i>Sign In</a
-								>
+								<a class="nav-link active" aria-current="page" href="#">
+                                    <i class="bi bi-person-circle me-4"> </i>Sign In</a>
 							</li>
 						</ul>
 					</div>
@@ -113,37 +111,52 @@
                 <p>💻 This internship helped us to reinforce the technical knowledge learned during the course.</p> 
             </div>
         </div>
-        <div class="container__main-members">
-            <h4 class="main-members__title">We make a great team!!</h4>
-            <div class="container__main-members-flex">
-                <div class="main__members">
-                    <img class="members__img" src="../images/about-us/members/guille.jpg"
-                        alt="Guillermo-llanos">
-                    <p class="members__name">Guillermo Llanos</p>
+        
+        <div class="container__cards">
+            <div class="container__card">
+                <!--TEMPLATE MEMBER 1-->
+            </div>
+            <div class="container__card">
+                <!--TEMPLATE MEMBER 2-->
+            </div>
+            <div class="container__card">
+                <!--TEMPLATE MEMBER 3-->
+            </div>
+            <div class="container__card">
+                <!--TEMPLATE MEMBER 4-->
+            </div>
+            <div class="container__card">
+                <!--TEMPLATE MEMBER 5-->
+            </div>
+        </div> 
+
+        <template class="template-cards">   
+            <div class="card">
+                <div class="lines"></div>
+                <div class="imgBx">
+                    <img src="../images/about-us/members/cecilia-img.JPG" alt="">
                 </div>
-                <div class="main__members">
-                    <img class="members__img" src="../images/about-us/members/victor-img.jpeg"
-                        alt="Víctor Quiroga">
-                    <p class="members__name">Víctor Quiroga</p>
-                </div>
-                <div class="main__members">
-                    <img class="members__img" src="../images/about-us/members/cecilia-img.JPG"
-                        alt="Cecilia Do Nascimento">
-                    <p class="members__name">Cecilia Do Nascimento</p>
-                </div>
-                <div class="main__members">
-                    <img class="members__img" src="../images/about-us/members/gise3.jpg"
-                        alt="Gisela-cano">
-                    <p class="members__name">Gisela Cano</p>
-                </div>
-                <div class="main__members">
-                    <img class="members__img" src="../images/about-us/members/serena.jpg"
-                        alt="serena-lin">
-                    <p class="members__name">Serena Lin</p>
+                <div class="content">
+                    <div class="details">
+                        <h3>Student Name<br><span>DevSchool Academy Student</span></h3>
+                        <div class="data">
+                            <div class="container__social">
+                                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <p>Instagram</p>
+                            </div>
+                            <div class="container__social">
+                                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1392697184%3A1679351441567912&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AWnogHf41I2xPI1ugD1K0_TJUg4rukqGtb3h2GVks-oaQX3cg0LCujHY81bO4J9gqaGSDsOz6fYe0g&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="bi bi-envelope-fill" target="_blank"></i></a>
+                                <p>Email</p>
+                            </div>
+                            <div class="container__social">
+                                <a href="https://ar.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <p>LinkedIn</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h4 class="main-members__title">♥ Thank you for teaching us! ♥</h4>
-        </div>       
+        </template>
     </main>
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
