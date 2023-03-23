@@ -113,16 +113,15 @@ form.addEventListener('submit', (e) => {
 			rol: 'usuario',
 		};
 
-		// Agregamos el objeto al array de usuarios
 		users.push(user);
-		//modal.classList.add("d-none");
 
-		// Mostramos un mensaje de confirmación al usuario
 		const alertSuccess = document.getElementById('alert-success');
 		alertSuccess.classList.remove('d-none');
 		alertSuccess.textContent = 'User registered successfully!';
-
-		// Limpiamos los campos del formulario
+		setTimeout(() => {
+			alertSuccess.textContent = '';
+			alertSuccess.classList.add('d-none');
+		}, 5000);
 		form.reset();
 	}
 });
@@ -160,5 +159,10 @@ signInButton.addEventListener('click', (e) => {
 		const alertPassword = document.getElementById('alert-Password2');
 		alertPassword.innerText = '';
 		alertPassword.classList.add('d-none');
+		// Limpia las alertas después de 5 segundos
+		setTimeout(() => {
+			alertEmail.innerText = '';
+			alertEmail.classList.add('d-none');
+		}, 5000);
 	}
 });
