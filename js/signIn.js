@@ -15,6 +15,9 @@ let pass = '';
 
 passwordInputReg.addEventListener('keydown', (e) => {
 	pass += e.key;
+	if (pass.length > 2) {
+		mensaje.classList.remove('d-none');
+	}
 	if (pass.length < 4) {
 		mensaje.textContent = 'muy debil';
 		mensaje.classList.replace('text-warning', 'text-danger');
@@ -135,12 +138,14 @@ signInButton.addEventListener('click', (e) => {
 	const email = emailInput.value;
 	const password = passwordInput.value;
 
-	// Validar si el usuario está registrado en el array users
-	const user = users.find(
-		(user) => user.email === email && user.password === password
-	);
+	let isValidUser = false;
+	const user = users.find((user) => user.email === email);
 
-	if (user) {
+	if (user && user.password === password) {
+		isValidUser = true;
+	}
+
+	if (isValidUser) {
 		if (user.rol === 'admin') {
 			window.location.href = './admin1.html';
 		} else {
@@ -148,10 +153,12 @@ signInButton.addEventListener('click', (e) => {
 		}
 	} else {
 		const alertEmail = document.getElementById('alert-email3');
-		alertEmail.innerText = 'We cannot find an account with that email address';
+		alertEmail.innerText = user
+			? 'Your password is incorrect'
+			: 'We cannot find an account with that email address';
 		alertEmail.classList.remove('d-none');
 		const alertPassword = document.getElementById('alert-Password2');
-		alertPassword.innerText = 'Your password is incorrect';
-		alertPassword.classList.remove('d-none');
+		alertPassword.innerText = '';
+		alertPassword.classList.add('d-none');
 	}
 });
