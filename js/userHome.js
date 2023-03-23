@@ -165,6 +165,10 @@ document.addEventListener('click', (e) => {
 	if (e.target.matches('.btn-see-more')) {
 		showDataModal(e);
 	}
+	//agregué esto 22/03
+	if (e.target.matches(".add-to-list")) {
+		addFilm();
+	}
 });
 
 const showDataModal = (e) => {
@@ -186,7 +190,40 @@ const showDataModal = (e) => {
 
  /////////////////////////////////////////////////////////////////////////////////////////////
 
- //MY FAVORITE LIST (este código funciona)
+// my favorite list probando nuevo código
+
+const containerMyList = document.querySelector(".container__fav-list");
+const templateFavoriteList = document.querySelector("#template-categories");
+// const fragment = document.createDocumentFragment();
+
+let arrayFavList = [];
+
+const addFilm = () => {
+	arrayFavList.push(films);
+	showFilms();
+}
+
+const showFilms = () => {
+	containerMyList.textContent = "";
+	const fragment = dcument.createDocumentFragment();
+
+	arrayFavList.forEach((item) => {
+		const clone = templateFavoriteList.content.cloneNode(true);
+		clone.querySelector(".movie-title").textContent = item.title;
+		clone.querySelector(".img-films").src = item.img;
+
+		fragment.appendChild(clone);
+	})
+
+	containerMyList.appendChild(fragment);
+}
+
+
+
+
+
+
+ //MY FAVORITE LIST (este código funciona desde acá)
 // const containerMyList = document.querySelector(".container__fav-list");
 // const templateFavoriteList = document.querySelector("#template-categories");
 
@@ -238,8 +275,7 @@ const showDataModal = (e) => {
 // };
 
 // showFilm();
-
-// hasta acá funciona
+// (hasta acá funciona)
 
 
 
