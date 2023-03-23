@@ -74,20 +74,20 @@
                                 class="nav-item-img me-3"
                                 src="/images/icons/logo.png"
                                 alt="logo"
-                                class="nav-link active" aria-current="page" href="#">Home</a>
+                                class="nav-link active" aria-current="page" href="./user-home.html">Home</a>
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active" aria-current="page" href="#"
+                            <a class="nav-link active" aria-current="page" href="./aboutus.html"
                                 ><i class="bi bi-info-circle me-4"></i> About Us</a
                             >
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active" aria-current="page" href="#"
+                            <a class="nav-link active" aria-current="page" href="./contact.html"
                                 ><i class="bi bi-envelope-fill me-4"></i> Contact Us</a
                             >
                         </li>
                         <li class="nav-item ps-3">
-                            <a class="nav-link active" aria-current="page" href="#"
+                            <a class="nav-link active" aria-current="page" href="./signin.html"
                                 ><i class="bi bi-person-circle me-4"> </i>Sign In</a
                             >
                         </li>
@@ -96,10 +96,10 @@
             </div>
         </div>
         <div class="d-none d-md-flex  justify-content-around">
-                <a class="nav-link text-light me-3" href="#">About Us</a>
-                <a class="nav-link text-light" href="#">Contact Us</a>
+                <a class="nav-link text-light me-3" href="./aboutus.html">About Us</a>
+                <a class="nav-link text-light" href="./contact.html">Contact Us</a>
             <form role="search">
-                <button type="button" class="btn btn-navbar  ms-4 me-3">Sing in</button>
+              <a href="./signin.html" class="btn btn-navbar ms-4 me-3">Sing in</a>
             </form>
         </div>
     </nav>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="row mb-3 mb-md-4">
                         <input
-                          type="text"
+                          type="password"
                           class="user-password-admin form-control bg-light login__form-input border-0 py-xl-2"
                           id="User-Password2"
                           placeholder="Password"
@@ -142,7 +142,7 @@
                     <div class="mb-3">
                         <button
                          
-                          class="btn btn-login login__btn text-white rounded-pill fw-semibold py-1 px-3 py-xl-2 px-xl-4"
+                          class="btn  btn-login login__btn text-white rounded-pill fw-semibold py-1 px-3 py-xl-2 px-xl-4"
                           _msttexthash="114478"
                           _msthash="24"
                         >
@@ -254,6 +254,7 @@
                           autocomplete="off"
                           value=""
                         />
+                        <p class="text-warning" id="mensaje-para-fortalecer-pass">Muy debil</p>
                         <p class="text-danger mb-3 d-none" id="alert-Password3"></p>
         
                         <input
@@ -288,6 +289,8 @@
                         <button
                           type="submit"
                           class="btn btn-register text-black fw-normal"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
                         >
                           Sign Up
                         </button>

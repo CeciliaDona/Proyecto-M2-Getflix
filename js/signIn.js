@@ -1,8 +1,30 @@
+const passwordInputReg = document.getElementById('User-Password3');
+const repeatPasswordInput = document.getElementById('User-Password4');
+const mensaje = document.getElementById('mensaje-para-fortalecer-pass');
 // Creamos un array
-const users = [];
+const users = [
+	{
+		email: 'admin@admin.com',
+		password: 'admin',
+		rol: 'admin',
+	},
+];
 
 const form = document.getElementById('form2');
+let pass = '';
 
+passwordInputReg.addEventListener('keydown', (e) => {
+	pass += e.key;
+	if (pass.length < 4) {
+		mensaje.textContent = 'muy debil';
+		mensaje.classList.replace('text-warning', 'text-danger');
+	} else {
+		if (pass.length > 4) {
+			mensaje.textContent = 'fuerte';
+			mensaje.classList.replace('text-danger', 'text-info');
+		}
+	}
+});
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
@@ -85,6 +107,7 @@ form.addEventListener('submit', (e) => {
 			username: usernameInput.value,
 			email: emailInput.value,
 			password: passwordInput.value,
+			rol: 'usuario',
 		};
 
 		// Agregamos el objeto al array de usuarios
@@ -117,7 +140,11 @@ signInButton.addEventListener('click', (e) => {
 	);
 
 	if (user) {
-		window.location.href = './user-home.html';
+		if (user.rol === 'admin') {
+			window.location.href = './admin1.html';
+		} else {
+			window.location.href = './user-home.html';
+		}
 	} else {
 		const alertEmail = document.getElementById('alert-email3');
 		alertEmail.innerText = 'We cannot find an account with that email address';
