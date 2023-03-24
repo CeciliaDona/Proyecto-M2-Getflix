@@ -167,6 +167,7 @@
                 <th class="modal__table-title-1">Movie</th>
                 <th class="modal__table-title-2">Year</th>
                 <th class="modal__table-title-3">Description</th>
+                <th class="modal__table-title-4">Add Movie<i class="bi bi-plus-lg"></i></th>
                 <!--modal template-->
             </tr>
         </table>
@@ -179,24 +180,29 @@
                 <th class="modal__table-title-icon"><i class="bi bi-pencil-square modal__table-btn" id="edit"></i><i class="bi bi-trash3-fill modal__table-btn"></i></th>
             </tr>
         </template>
-            
-        <div class="modal__btn">
-            <i class="bi bi-plus-circle-fill"></i>
-        </div>
-        
-        <div class="modal__modification">
-            <i class="bi bi-arrow-left" id="back"></i>
-            <h5>Movie title</h5>
-            <input type="text" required>
-            <h5>Year</h5>
-            <input type="text" required>
-            <h5>Description</h5>
-            <input type="text" required>
-            <button role="button">Save changes</button>
-        </div>
-
     </div>
-
+    <div class="modal__modification">
+        <i class="bi bi-arrow-left" id="back"></i>
+        <h5 class="modal__modification-title">Movie title</h5>
+        <input class="modal__modification-input" type="text" placeholder="Example" required>
+        <h5 class="modal__modification-title">ID</h5>
+        <input class="modal__modification-input" type="text" placeholder="example" required>
+        <h5 class="modal__modification-title">Year</h5>
+        <input class="modal__modification-input" type="text" placeholder="2023" required>
+        <h5 class="modal__modification-title">Genres</h5>
+        <input class="modal__modification-input" type="text" placeholder="Science-Fiction, Action, Love" required>
+        <h5 class="modal__modification-title">Image url</h5>
+        <input class="modal__modification-input" type="text" placeholder="www.image.com" required>
+        <h5 class="modal__modification-title">Alt</h5>
+        <input class="modal__modification-input" type="text" placeholder="example" required>
+        <h5 class="modal__modification-title">Trailer url</h5>
+        <input class="modal__modification-input" type="text" placeholder="www.youtube.com/trailer" required>
+        <h5 class="modal__modification-title">Description(Synopsis)</h5>
+        <input class="modal__modification-input" type="text" placeholder="Example is a movie about..." required >
+        <h5 class="modal__modification-title">Category</h5>
+        <input class="modal__modification-input" type="text" placeholder="Trends, Top 10" required>
+        <button class="modal__modification-btn" role="button" >Save changes</button>
+    </div>
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
         <div class="footer__container-contact">

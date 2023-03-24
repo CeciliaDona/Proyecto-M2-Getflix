@@ -17,6 +17,7 @@
   :root {
     --btn-color: #B0C43A;
     --backround-pages: #201f21;
+    --modal-color: rgb(217, 217, 217);
     --color-fonts: rgb(255, 254, 245);
     --font-titles: 'Anton', sans-serif;
     --font-paragraph: 'Arimo', sans-serif;
@@ -263,12 +264,12 @@
 }
 
 .modal__table  {
-  width: 98%;
+  width: 100%;
   padding: 15px;
 }
 
 .modal__table-titles{
-  background-color: rgb(217, 217, 217);
+  background-color: var(--modal-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -281,15 +282,24 @@
 }
 
 .modal__table-title-1 {
-  width: 23%;
+  width: 20%;
+  
 }
 
 .modal__table-title-2 {
   width: 15%;
+  padding: 5px;
 }
 
 .modal__table-title-3 {
   width: 50%;
+  padding: 5px;
+}
+
+.modal__table-title-4 {
+  width: 20%;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .modal__table-icons {
@@ -324,44 +334,69 @@
 }
 
 .modal__modification {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
-  justify-content: start;
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   display: none;
+  height: calc(100% - 50px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: var(--color-fonts);
+  border-radius: 10px;
+  font-family: var(--font-paragraph);
+  margin: 70px 10px;
 }
 
-.modal__modification i{
+.bi-arrow-left{
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;
 }
 
-.modal__modification h5 {
+.modal__modification-title {
   margin: 10px 0 3px;
+  font-family: var(--font-2-paragraph);
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.modal__modification input {
+.modal__modification-input {
   margin-bottom: 10px;
-  height: 35px;
+  height: 40px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--modal-color);
 }
 
-.modal__modification button {
+.modal__modification-input:focus {
+  outline: 1px solid black;
+}
+
+.modal__modification-btn {
   background: rgba(0,0,0, 0.5);
   border: none;
   border-radius: 0.31em;
-  padding: 0.5em 1.5em;
+  padding: 0.3em 1em;
   color: var(--color-fonts);
-  margin-right: 1.25em;
-  margin-top: 15px;
+  margin: 15px 1.25em 30px 0;
   cursor: pointer;
   transition: .3s ease all;
-  font-size: 1em;
+  font-size: 15px;
+  font-family: var(--font-2-paragraph);
   width: 70%;
+  height: 40px;
+  font-weight: bold;
+
 }
 
-.modal__modification button:hover {
+.modal__modification-btn:hover {
   background: #fff;
   color: #000;
 }
@@ -399,6 +434,10 @@
     width: 60%;
   }
 
+  .modal__table-title-4 {
+    width: 10%;
+  }
+
   .modal__table-title-icon {
     width: 13%;
     display: flex;
@@ -420,10 +459,10 @@
   }
 
   .modal__modification{
-    padding: 10px 20px;
+    padding: 10px 50px;
   }
 
-  .modal__modification button {
+  .modal__modification-btn {
     width: 40%;
   }
 
@@ -504,6 +543,10 @@
     width: 62%;
   }
 
+  .modal__table-title-4 {
+    width: 15%;
+  }
+
   .bi-x-lg{
     font-size: 30px;
   }
@@ -513,12 +556,13 @@
   }
 
   .modal__modification{
-    padding: 15px 30px;
+    padding: 15px 70px;
   }
 
-  .modal__modification button {
+  .modal__modification-btn {
     width: 30%;
   }
+
   .footer__container-contact {
       flex-direction: row;
   }

@@ -112,16 +112,15 @@ const modal = document.querySelector('.modal__container');
 const modalTemplate = document.querySelector('#modal-template');
 const closeModal = document.querySelector('#btn-close');
 const table = document.querySelector('.modal__table');
-const addMovie = document.querySelector('.bi-plus-circle-fill');
 const justAddedEdit = document.querySelector('.just-added-edit');
 const trendsEdit = document.querySelector('.trends-edit');
 const top10Edit = document.querySelector('.top-10-edit');
+
 
 // JUST ADDED
 justAddedEdit.addEventListener('click', function () {
         modal.style.display = 'block';
         showJustAddedData();
-        addMovie.style.display = 'block';
     });
 
 const showJustAddedData = () => {
@@ -142,7 +141,6 @@ const showJustAddedData = () => {
 trendsEdit.addEventListener('click', function () {
     modal.style.display = 'block';
     showTrendsData();
-    addMovie.style.display = 'block';
 });
 
 const showTrendsData = () => {
@@ -163,7 +161,6 @@ modal.appendChild(fragment);
 top10Edit.addEventListener('click', function () {
     modal.style.display = 'block';
     showTop10Data();
-    addMovie.style.display = 'block';
 });
 
 const showTop10Data = () => {
@@ -180,7 +177,17 @@ topTenSection.forEach((item) => {
 modal.appendChild(fragment);
 };
 
+const addMovie = document.querySelector('.modal__table-title-4');
+const remove = document.querySelectorAll('.bi-trash3-fill');
+const edit = document.querySelectorAll('#edit');
+const back = document.querySelector('#back');
+const modificate = document.querySelector('.modal__modification');
 
+
+
+addMovie.addEventListener('click', function()  {
+    modificate.style.display = 'block';
+});
 
 
 
@@ -191,26 +198,4 @@ modal.appendChild(fragment);
 
 closeModal.addEventListener('click', function(){
     modal.style.display = 'none';
-});
-
-const remove = document.querySelectorAll('.bi-trash3-fill');
-const edit = document.querySelectorAll('#edit');
-const back = document.querySelector('#back');
-const add = document.querySelector('.modal__modification');
-
-
-
-
-addMovie.addEventListener('click', function() {
-    table.style.display = 'none';
-    close.style.display = 'none';
-    add.style.display = 'none';
-    addMovie.style.display = 'flex';
-});
-
-back.addEventListener('click', function(){
-    table.style.display = 'flex';
-    close.style.display = 'flex';
-    add.style.display = 'flex';
-    addMovie.style.display = 'none';
 });
