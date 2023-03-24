@@ -28,6 +28,10 @@
 
   body {
     background-color: var(--backround-pages);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
   }
   
 /*========================== RES 320 ==============================*/
@@ -137,35 +141,39 @@
   justify-content: space-between;
   align-items: end;
   font-size: 15px;
-  margin: 15px 0 15px 28px;
+  margin: 15px 0 15px;
 }
 
 
 .main__title h3 {
   color: var(--color-fonts);
-  font-size: 25px;
+  font-size: 1.1em;
   font-family: var(--font-2-paragraph);
-  margin-bottom: 20px;
+  margin: 0 10px 20px;
   font-weight: bolder;
 }
 
 .main {
   margin-bottom: 70px;
   width: 90%;
-  margin: 5%;
+}
+
+.main-1{
+  margin-top: 150px;
 }
 
 .main__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   position: relative;
 }
- .movie-title {
-    color: rgb(208, 208, 221);
-    font-size: 1rem;
-    font-family: var(--font-paragraph);
-  }
+
+.movie-title {
+  color: rgb(208, 208, 221);
+  font-size: 1rem;
+  font-family: var(--font-paragraph);
+}
 
 .main__container-movies {
   display: grid;
@@ -173,9 +181,9 @@
   justify-content: center;
   gap: 4em; 
   flex-wrap: wrap;
-  margin: 20px;
   width: 100%;
   cursor: pointer;
+  padding: 5px;
 }
 
 .main__container-movie {
@@ -195,29 +203,10 @@
   transition: all 500ms ease-out;
 }
 
-.layer {
-  width:100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background: var(--backround-pages); 
-  transition: all 500ms ease-out;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.layer i {
-  font-size: 30px;
-}
-
 .main__container-btn {
   color: var(--color-fonts);
   font-size: 50px;
+  cursor: pointer;
 }
 
 .main__container-movie:hover > .layer{
@@ -242,20 +231,21 @@
   0 0 50px white;
 }
 
-.modal__container {
-  background-color: rgba(0, 0, 0, 0);
-  padding: 20px;
-  height: 100%;
+.modal__container,
+.modal-template {
+  padding: 10px;
+  height: calc(100% - 50px);
+  width: 90%;
+  display: none;
   justify-content: center;
   position: fixed;
-  top: 10px;
+  top: 0;
+  bottom: 0;
   overflow: auto;
-  display: none;
-  background-color: beige;
-  padding: 10px;
-  width: 90%;
+  background-color: var(--color-fonts);
   border-radius: 10px;
-  font-family: var(--font-paragraph)
+  font-family: var(--font-paragraph);
+  margin: 70px 10px;
 }
 
 .modal__close {
@@ -265,36 +255,41 @@
   margin: 5px;
 }
 
-.bi-x-square-fill{
+.bi-x-lg {
   font-size: 20px;
   cursor: pointer;
   margin: 5px;
+  font-weight: bold;
+}
+
+.modal__table  {
+  width: 98%;
+  padding: 15px;
+}
+
+.modal__table-titles{
+  background-color: rgb(217, 217, 217);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  margin: 10px 2px;
 }
 
 .modal__table-title-1 {
-  width: 30%;
+  width: 23%;
 }
+
 .modal__table-title-2 {
   width: 15%;
 }
+
 .modal__table-title-3 {
   width: 50%;
-}
-
-.modal__table {
-  width: 100%;
-  padding: 15px 2px;
-}
-
-.modal__table-titles {
-  display: flex;
-  flex-direction: row;
-  border: 2px solid black;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  padding: 5px;
-  font-size: 12px;
 }
 
 .modal__table-icons {
@@ -318,6 +313,8 @@
   display: flex;
   margin-right: 3px;
   cursor: pointer;
+  display: none;
+
 }
 
 .bi-plus-circle-fill{
@@ -372,39 +369,49 @@
 
 /*================ RES 768 ================*/
 @media (min-width: 768px) {
-  
+  .main__container {
+    align-items: center;
+  }
   .main__container-movies {
     grid-template-columns: 35% 35% 35%; 
     gap: 2em; 
     width: 88%;
+    align-items: center;
+  }
+  
+  .bi-x-lg {
+    font-size: 28px;
   }
   
   .bi-plus-circle-fill{
-      font-size: 50px;
+    font-size: 40px;
   }
 
   .modal__table-titles{
-    font-size: 18px;
-    width: 100%;
+    font-size: 15px;
   }
+
+  .modal__table-title-2 {
+    width: 10%;
+  }
+
+  .modal__table-title-3 {
+    width: 60%;
+  }
+
   .modal__table-title-icon {
     width: 13%;
     display: flex;
     justify-content: center;
   }
+
   .modal__table-btn {
     font-size: 25px; 
     padding: 10px;
   }  
 
-  .bi-x-square-fill{
-    font-size: 30px;
-  }
-
-  .modal__container {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  .bi-x-lg{
+    font-size: 25px;
   }
 
   .modal__table {
@@ -473,16 +480,32 @@
     width: 95%;
   }
 
-  .layer i {
-    font-size: 40px;
+  .main__title {
+    font-size: 25px;
+  }
+
+  .bi-x-lg {
+    font-size: 32px;
   }
 
   .modal__table{
     width: 100%;
   }
-  
-  .bi-x-square-fill{
-    font-size: 40px;
+
+  .modal__table-titles{
+    font-size: 18px;
+  }
+
+  .modal__table-title-2 {
+    width: 8%;
+  }
+
+  .modal__table-title-3 {
+    width: 62%;
+  }
+
+  .bi-x-lg{
+    font-size: 30px;
   }
 
   .bi-plus-circle-fill{

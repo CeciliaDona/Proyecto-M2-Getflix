@@ -90,10 +90,12 @@
         </div>
     </nav>
 
-    <div class="main">
+    <div class="main main-1">
         <div class="main__title">
             <h3 class="section__title just-added__title" data-title="Just added">JUST ADDED</h3>
+            <h3 class="main__container-btn just-added-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
         </div>
+
 
         <div class="main__container">
             <ul class="main__container-movies container__just-added">
@@ -104,6 +106,7 @@
     <div class="main">
         <div class="main__title">
             <h3 class="section__title trends__title" data-title="Trends">TRENDS</h3>
+            <h3 class="main__container-btn trends-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
         </div>
 
         <div class="main__container">
@@ -115,6 +118,7 @@
     <div class="main">
         <div class="main__title">
             <h3 class="section__title just-added__title" data-title="Continue watching">CONTINUE WATCHING</h3>
+            
         </div>
 
         <div class="main__container">
@@ -126,6 +130,7 @@
     <div class="main">
         <div class="main__title">
             <h3 class="section__title just-added__title" data-title="Top 10">TOP 10</h3>
+            <h3 class="main__container-btn top-10-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
         </div>
 
         <div class="main__container">
@@ -139,11 +144,6 @@
         <li class="main__container-movie">
             <h2 class="movie-title">title</h2> 
             <img class="img-films" data-img="" src="" alt="">
-            <div class="layer">
-                <div class="container__icon">
-                    <i class="bi bi-pencil-square main__container-btn" id="open"></i>
-                </div>
-            </div>
         </li>
     </template>
 
@@ -154,31 +154,36 @@
                 <img class="img-films" src="" alt="" data-img="">
                 <p class="movie-number">N</p>
             </div>
-            <div class="layer">
-                <div class="container__icon">
-                    <i class="bi bi-pencil-square main__container-btn" id="open"></i>
-                </div>
-            </div>
         </li>
     </template>
 
 
     <div class="modal__container">
         <div class="modal__close">
-            <i class="bi bi-x-square-fill" id="btn-close"></i>
+            <strong><i class="bi bi-x-lg" id="btn-close"></i></strong>
         </div>
         <table class="modal__table">
             <tr class="modal__table-titles">
-                <th class="modal__table-title-icon"></i></th>
                 <th class="modal__table-title-1">Movie</th>
                 <th class="modal__table-title-2">Year</th>
                 <th class="modal__table-title-3">Description</th>
+                <!--modal template-->
             </tr>
-            <!--template table-->
         </table>
+            
+        <template class="modal__template" id="modal-template">
+            <tr class="modal__table-titles">
+                <th class="modal__table-title-1"></th>
+                <th class="modal__table-title-2"></th>
+                <th class="modal__table-title-3"></th>
+                <th class="modal__table-title-icon"><i class="bi bi-pencil-square modal__table-btn" id="edit"></i><i class="bi bi-trash3-fill modal__table-btn"></i></th>
+            </tr>
+        </template>
+            
         <div class="modal__btn">
             <i class="bi bi-plus-circle-fill"></i>
         </div>
+        
         <div class="modal__modification">
             <i class="bi bi-arrow-left" id="back"></i>
             <h5>Movie title</h5>
@@ -189,15 +194,6 @@
             <input type="text" required>
             <button role="button">Save changes</button>
         </div>
-
-        <template>
-            <tr class="modal__table-titles" data-id="">
-                <th class="modal__table-title-icon"><i class="bi bi-pencil-square modal__table-btn" id="edit"></i><i class="bi bi-trash3-fill modal__table-btn"></i></th>
-                <th class="modal__table-title-1"></th>
-                <th class="modal__table-title-2"></th>
-                <th class="modal__table-title-3"></th>
-            </tr>
-        </template>
 
     </div>
 

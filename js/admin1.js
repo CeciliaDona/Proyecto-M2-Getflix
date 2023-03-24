@@ -1,17 +1,11 @@
-const open = document.querySelectorAll('#open');
-const close = document.querySelector('#btn-close');
-const modal = document.querySelector('.modal__container');
-const add = document.querySelector('.bi-plus-circle-fill');
-const remove = document.querySelectorAll('.bi-trash3-fill');
-const edit = document.querySelectorAll('#edit');
-const back = document.querySelector('#back');
-const addMovie = document.querySelector('.modal__modification');
-const table = document.querySelector('.modal__table');
+
 
 import { films } from '../js/data/films.js'; 
 
 const templateCategories = document.querySelector('#template-categories');
 const fragment = document.createDocumentFragment();
+
+// JUST ADDED
 
 const justAddedContainer = document.querySelector('.container__just-added');
 
@@ -37,6 +31,8 @@ const showJustAdded = () => {
 };
 showJustAdded();
 
+
+//TRENDS
 const trendsContainer = document.querySelector('.container__trends');
 
 const trendsSection = films.filter(
@@ -112,21 +108,100 @@ const showTopTen = () => {
 showTopTen();
 
 
-function showModal () {
+const modal = document.querySelector('.modal__container');
+const modalTemplate = document.querySelector('#modal-template');
+const closeModal = document.querySelector('#btn-close');
+const table = document.querySelector('.modal__table');
+const addMovie = document.querySelector('.bi-plus-circle-fill');
+const justAddedEdit = document.querySelector('.just-added-edit');
+const trendsEdit = document.querySelector('.trends-edit');
+const top10Edit = document.querySelector('.top-10-edit');
+
+// JUST ADDED
+justAddedEdit.addEventListener('click', function () {
+        modal.style.display = 'block';
+        showJustAddedData();
+        addMovie.style.display = 'block';
+    });
+
+const showJustAddedData = () => {
+	justAddedSection.forEach((item) => {
+		const clone = modalTemplate.content.cloneNode(true);
+
+		clone.querySelector('.modal__table-title-1').textContent = item.title;
+        clone.querySelector('.modal__table-title-2').textContent = item.year;
+        clone.querySelector('.modal__table-title-3').textContent = item.synopsis;
+		
+		fragment.appendChild(clone);
+	});
+
+	modal.appendChild(fragment);
+};
+
+//TRENDS
+trendsEdit.addEventListener('click', function () {
     modal.style.display = 'block';
-}
-
-function hideModal () {
-    modal.style.display = 'none';
-}
-
-open.forEach((item) => {
-    item.addEventListener('click', showModal)
+    showTrendsData();
+    addMovie.style.display = 'block';
 });
 
-close.addEventListener('click', hideModal);
+const showTrendsData = () => {
+trendsSection.forEach((item) => {
+    const clone = modalTemplate.content.cloneNode(true);
 
-add.addEventListener('click', function() {
+    clone.querySelector('.modal__table-title-1').textContent = item.title;
+    clone.querySelector('.modal__table-title-2').textContent = item.year;
+    clone.querySelector('.modal__table-title-3').textContent = item.synopsis;
+    
+    fragment.appendChild(clone);
+});
+
+modal.appendChild(fragment);
+};
+
+//TOP 10
+top10Edit.addEventListener('click', function () {
+    modal.style.display = 'block';
+    showTop10Data();
+    addMovie.style.display = 'block';
+});
+
+const showTop10Data = () => {
+topTenSection.forEach((item) => {
+    const clone = modalTemplate.content.cloneNode(true);
+
+    clone.querySelector('.modal__table-title-1').textContent = item.title;
+    clone.querySelector('.modal__table-title-2').textContent = item.year;
+    clone.querySelector('.modal__table-title-3').textContent = item.synopsis;
+    
+    fragment.appendChild(clone);
+});
+
+modal.appendChild(fragment);
+};
+
+
+
+
+
+
+
+
+
+
+closeModal.addEventListener('click', function(){
+    modal.style.display = 'none';
+});
+
+const remove = document.querySelectorAll('.bi-trash3-fill');
+const edit = document.querySelectorAll('#edit');
+const back = document.querySelector('#back');
+const add = document.querySelector('.modal__modification');
+
+
+
+
+addMovie.addEventListener('click', function() {
     table.style.display = 'none';
     close.style.display = 'none';
     add.style.display = 'none';
@@ -139,5 +214,3 @@ back.addEventListener('click', function(){
     add.style.display = 'flex';
     addMovie.style.display = 'none';
 });
-
-
