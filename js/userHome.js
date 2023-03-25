@@ -186,98 +186,104 @@ const showDataModal = (e) => {
 	containerModal.appendChild(fragment);
 };
 
+// código para borrar la lista y hacer pruebas
+// const clearFavorites = () => {
+// 	localStorage.removeItem("favorites");
+// 	myListSection.length = 0; // vacío la lista de favoritos
+// 	showFilm(); // actualizo la vista para que muestre la lista vacía
+//   };
+
+//   clearFavorites();
+// hasta acá código de prueba para vaciar la lista
 
 
+//   //MY FAVORITE LIST (NO FUNCIONA, CORREGIR)
+//     const containerMyList = document.querySelector(".container__fav-list");
+//     const templateFavoriteList = document.querySelector(".template-categories");
 
+//     const myListSection = [];
 
-  //MY FAVORITE LIST (NO FUNCIONA, CORREGIR)
-    const containerMyList = document.querySelector(".container__fav-list");
-    const templateFavoriteList = document.querySelector(".template-categories");
+//     document.addEventListener("click", (e) => {
+//       if (e.target.dataset.id === films.title) {
+//         addToFavList(e);
+//       }
+//    });
 
-    const myListSection = [];
+//     const addToFavList = (e) => {
+//      const film = {
+//       title: e.target.dataset.title,
+//       id: e.target.dataset.id,
+//       img: e.target.dataset.img,
+//       alt: e.target.dataset.title
+//      }
 
-    document.addEventListener("click", (e) => {
-      if (e.target.dataset.id === films.title) {
-        addToFavList(e);
-      }
-   });
+//      const position = myListSection.findIndex(item => item.id === film.id);
 
-    const addToFavList = (e) => {
-     const film = {
-      title: e.target.dataset.title,
-      id: e.target.dataset.id,
-      img: e.target.dataset.img,
-      alt: e.target.dataset.title
-     }
+//      if (position === -1) {
+//       myListSection.push();
+//      }
+//      showFilm();
+//    }
 
-     const position = myListSection.findIndex(item => item.id === film.id);
+//    const showFilm = () => {
+//     containerMyList.textContent = "";
+//     myListSection.forEach((item) => {
+//       const clone = templateFavoriteList.content.cloneNode(true);
+//       clone.querySelector(".add-to-list").dataset.id = item.id;
+//       clone.querySelector(".movie-title").textContent = item.title;
+//       clone.querySelector(".img-films").src = item.img;
+//       fragment.appendChild(clone);
+//     });
 
-     if (position === -1) {
-      myListSection.push();
-     }
-     showFilm();
-   }
+//     containerMyList.appendChild(fragment);
+//    }
 
-   const showFilm = () => {
-    containerMyList.textContent = "";
-    myListSection.forEach((item) => {
-      const clone = templateFavoriteList.content.cloneNode(true);
-      clone.querySelector(".add-to-list").dataset.id = item.id;
-      clone.querySelector(".movie-title").textContent = item.title;
-      clone.querySelector(".img-films").src = item.img;
-      fragment.appendChild(clone);
-    });
+//MY FAVORITE LIST
+const containerMyList = document.querySelector(".container__fav-list");
+const templateFavoriteList = document.querySelector("#template-categories");
 
-    containerMyList.appendChild(fragment);
-   }
+const myListSection = JSON.parse(localStorage.getItem("favorites")) || [];
 
+document.addEventListener("click", (e) => {
+  if (films.some((item) => item.title === e.target.dataset.film)) {
+    addToFavList(e);
+  }
+});
 
+const addToFavList = (e) => {
+  const filmName = e.target.dataset.film; // Cargo el nombre de la peli
+  const selectFilm = films.find((item) => item.title === filmName); // Obtengo los datos de la pelicula en base al "filename" (nombre de la peli obtenida en el dataset)
 
+  const film = { // Cargo datos basicos. 
+    title: selectFilm.title,
+    id: selectFilm.id,
+  };
 
+  if (!myListSection.includes(film.title)) { // Valido si existe ya en mi favs, si no existe lo agrego 
+    myListSection.push(film.title); //  cargo la peli en la lista myListSection
+    localStorage.setItem("favorites", JSON.stringify(myListSection)); //actualizo la lista en el
+  }
 
+  showFilm();
+};
 
+const showFilm = () => {
+  const favMovies = JSON.parse(localStorage.getItem("favorites")); // obtengo la lista de favoritos desde el localstorage (getitem)
 
+  containerMyList.textContent = "";
+  favMovies.forEach((item) => {
+    const film = films.find((e) => e.title === item); // busco los datos de la peli 
 
+    const clone = templateFavoriteList.content.cloneNode(true);
+    console.log(clone);
+    //clone.querySelector(".add-to-list").dataset.id = film.id;
+    clone.querySelector(".movie-title").textContent = film.title;
+    clone.querySelector(".img-films").src = film.img;
+    fragment.appendChild(clone);
+  });
 
-
-
-
-
-
-  // const myListContainer = document.querySelector(".container__fav-list");
-  // const btnRemove = document.querySelector(".remove");
-
-  // // debería pintar en consola el "título" solo cuando el target esté en "add to list"
-  
-  // const myListSection = films.filter((item) => item.title === films.title);
-
-  // document.addEventListener("click", (e) => {
-    
-  //   if (e.target.dataset.title === films.title) {
-  //     console.log("titulo");
-  //     //addToFavoriteList();
-  //    }
-
-  //    if (e.target.dataset.title === trendsSection.title) {
-  //     console.log("titulo");
-  //     //addToFavoriteList();
-  //    }
-
-  //    if (e.target.dataset.title === continueSection.title) {
-  //     console.log("titulo");
-  //     //addToFavoriteList();  
-  //    }
-
-  //    if (e.target.dataset.title === topTenSection.title) {
-  //     console.log("titulo");
-  //     //addToFavoriteList(); 
-  //    }
-
-  // });
-
-  // const addToFavoriteList = (e) => {
-  // const myListSection = films.filter((item) => item.title === films.title)
-  // };
+  containerMyList.appendChild(fragment);
+};
 
 
 ////////////////////////////////////////////////////////
