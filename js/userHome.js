@@ -76,7 +76,6 @@ const showJustAdded = () => {
 };
 showJustAdded();
 
-
 // TRENDS
 const trendsContainer = document.querySelector('.container__trends');
 
@@ -158,44 +157,38 @@ showTopTen();
 
 ////////////////////////////////////////////////////////////////////////////
 
-//   const myListContainer = document.querySelector(".container__fav-list");
-//   const btnRemove = document.querySelector(".remove");
+// MODAL
+const templateModal = document.querySelector('.template-modal');
+const containerModal = document.querySelector('.container__modal-template');
 
+document.addEventListener('click', (e) => {
+	if (e.target.matches('.btn-see-more')) {
+		showDataModal(e);
+	}
+});
 
-  // debería pintar en consola el "título" solo cuando el target esté en "add to list"
+//const film = films.find((item) => item.id === films.dataset.id);
+const showDataModal = (e) => {
+	containerModal.textContent = '';
+	films.forEach((item) => {
+		if (item.title === e.target.dataset.film) {
+			const clone = templateModal.content.cloneNode(true);
+			clone.querySelector('.modal-title').textContent = item.title;
+			clone.querySelector('.modal-video').src = item.srcTrailer;
+			clone.querySelector('.synopsis-text').textContent = item.synopsis;
+			clone.querySelector('.year').textContent = item.year;
+			clone.querySelector('.genre').textContent = item.Genres;
 
-//   const myListSection = films.filter((item) => item.title === films.title);
+			fragment.appendChild(clone);
+		}
+	});
+	containerModal.appendChild(fragment);
+};
 
-//   document.addEventListener("click", (e) => {
-    
-//     if (e.target.dataset.title === justAddedSection.title) {
-//       console.log("titulo") 
-//       //addToFavoriteList();
-//      }
+////////////////////////////////////////////////////////////////////////////
 
-//      if (e.target.dataset.title === trendsSection.title) {
-//       console.log("titulo")   
-//       //addToFavoriteList();
-//      }
-
-//      if (e.target.dataset.title === continueSection.title) {
-//       console.log("titulo") 
-//       //addToFavoriteList();  
-//      }
-
-//      if (e.target.dataset.title === topTenSection.title) {
-//       console.log("titulo")  
-//       //addToFavoriteList(); 
-//      }
-
-//   });
-
-  // const addToFavoriteList = (e) => {
-  // const myListSection = films.filter((item) => item.title === films.title)
-  //};
 
 // sign out
-
 const signOutButton = document.getElementById('sign-out-btn');
 
 signOutButton.addEventListener('click', (e) => {
