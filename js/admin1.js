@@ -178,24 +178,46 @@ modal.appendChild(fragment);
 };
 
 const addMovie = document.querySelector('.modal__table-title-4');
-const remove = document.querySelectorAll('.bi-trash3-fill');
+const removeMovie = document.querySelectorAll('.bi-trash3-fill');
 const edit = document.querySelectorAll('#edit');
 const back = document.querySelector('#back');
 const modificate = document.querySelector('.modal__modification');
-
 
 
 addMovie.addEventListener('click', function()  {
     modificate.style.display = 'block';
 });
 
-
-
-
-
-
-
+back.addEventListener('click', function(){
+    modificate.style.display = 'none'
+})
 
 closeModal.addEventListener('click', function(){
     modal.style.display = 'none';
 });
+
+
+removeMovie.addEventListener('click', (e) => {
+    films = films.filter((item) => {
+        if (e.target.dataset.id === item.id) {
+            item.remove();
+        } else {
+            return item;
+        }
+    });
+    showJustAddedData()
+});
+
+function addToFilms() {
+    var movieTitle = document.getElementById('movie-title').value;
+    var movieId = document.getElementById('movie-id').value;
+    var movieYear = document.getElementById('movie-year').value;
+    var movieGenres = document.getElementById('movie-genres').value;
+    var movieImgUrl = document.getElementById('movie-img-url').value;
+    var movieAlt = document.getElementById('movie-alt').value;
+    var movieTrailerUrl = document.getElementById('movie-trailer-url').value;
+    var movieSynopsis = document.getElementById('movie-synopsis').value;
+    var movieCategory = document.getElementById('movie-category').value;
+
+
+}

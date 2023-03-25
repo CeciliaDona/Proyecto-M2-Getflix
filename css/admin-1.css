@@ -247,6 +247,7 @@
   border-radius: 10px;
   font-family: var(--font-paragraph);
   margin: 70px 10px;
+  
 }
 
 .modal__close {
@@ -254,6 +255,12 @@
   justify-content: end;
   margin-right: 3px;
   margin: 5px;
+}
+
+.modal__close:hover,
+.modal__table-title-4:hover {
+  transition: 0.4s;
+  color: rgb(158, 158, 158);
 }
 
 .bi-x-lg {
@@ -324,19 +331,12 @@
   margin-right: 3px;
   cursor: pointer;
   display: none;
-
-}
-
-.bi-plus-circle-fill{
-  font-size: 30px;
-  cursor: pointer;
-  margin: 5px;
 }
 
 .modal__modification {
   display: none;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -356,6 +356,11 @@
   font-weight: bolder;
   font-size: 30px;
   cursor: pointer;
+}
+
+.bi-arrow-left:hover {
+  transition: 0.4s;
+  color: rgb(158, 158, 158);
 }
 
 .modal__modification-title {
@@ -416,10 +421,6 @@
   
   .bi-x-lg {
     font-size: 28px;
-  }
-  
-  .bi-plus-circle-fill{
-    font-size: 40px;
   }
 
   .modal__table-titles{
