@@ -178,15 +178,27 @@ modal.appendChild(fragment);
 };
 
 const addMovie = document.querySelector('.modal__table-title-4');
-const removeMovie = document.querySelectorAll('.bi-trash3-fill');
+const removeBtn = document.querySelectorAll('.bi-trash3-fill');
 const edit = document.querySelectorAll('#edit');
 const back = document.querySelector('#back');
 const modificate = document.querySelector('.modal__modification');
+const saveChangesBtn = document.querySelector('.modal__modification-btn')
 
 
 addMovie.addEventListener('click', function()  {
     modificate.style.display = 'block';
 });
+
+//REMOVE
+removeBtn.addEventListener('click', function (){
+    removeMovie();
+})
+
+function removeMovie(movieTitle) {
+    const index = films.findIndex(movie => movie.movieTitle === movieTitle);
+    films.splice(index, 1);
+
+}
 
 back.addEventListener('click', function(){
     modificate.style.display = 'none'
@@ -196,16 +208,9 @@ closeModal.addEventListener('click', function(){
     modal.style.display = 'none';
 });
 
-
-removeMovie.addEventListener('click', (e) => {
-    films = films.filter((item) => {
-        if (e.target.dataset.id === item.id) {
-            item.remove();
-        } else {
-            return item;
-        }
-    });
-    showJustAddedData()
+/*
+saveChangesBtn.addEventListener('click', function(){
+    addToFilms();
 });
 
 function addToFilms() {
@@ -219,5 +224,25 @@ function addToFilms() {
     var movieSynopsis = document.getElementById('movie-synopsis').value;
     var movieCategory = document.getElementById('movie-category').value;
 
+    const movie = {movieTitle, movieId, movieYear, movieGenres, movieImgUrl, movieAlt, movieTrailerUrl, movieSynopsis, movieCategory};
 
-}
+    films.push(movie);
+
+    updateInterface();
+};
+
+
+function updateInterface() {
+    // obtener el elemento de la lista de películas en la interfaz de usuario
+    const list = document.querySelector('.modal-template');
+  
+    
+  
+    // agregar cada película a la lista
+    films.forEach(movie => {
+      const th = document.createElement('th');
+      th.innerHTML = `${movie.movieTitle} - ${movie.movieYear} - ${movie.movieSynopsis}`;
+      list.appendChild(th);
+    });
+  }
+  */
