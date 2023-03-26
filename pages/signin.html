@@ -106,55 +106,57 @@
         </div>
     </nav>
     <main>
-        <div class="container__login">
-            <div class="login__form-container">
-                <h3 class="login__title" _msttexthash="197041" _msthash="21">
-                SIGN IN
-                </h3>
-                <form class="login__form" id="form3">
-                    <div class="row mb-3 mb-lg-4">
-                        <input
-                          type="text"
-                          class="user-email-admin form-control bg-light login__form-input border-0 py-xl-2"
-                          id="User-email3"
-                          placeholder="E-mail Address"
-                          name="Useremail3"
-                          _mstplaceholder="385671"
-                          _msthash="22"
-                          autocomplete="off"
-                          value=""
-                          
-                        />
-                        <p class="text-danger mb-3 d-none" id="alert-email3"></p>
-                    </div>
-                    <div class="row mb-3 mb-md-4">
-                        <input
-                          type="password"
-                          class="user-password-admin form-control bg-light login__form-input border-0 py-xl-2"
-                          id="User-Password2"
-                          placeholder="Password"
-                          name="UserPassword2"
-                          _mstplaceholder="182013"
-                          _msthash="23"
-                          autocomplete="off"
-                          value=""
-                        />
-                        <p class="text-danger mb-3 d-none" id="alert-Password2"></p>
-                    </div>
-                    <div class="mb-3">
-                        <button
-                         
-                          class="btn  btn-login login__btn text-white rounded-pill fw-semibold py-1 px-3 py-xl-2 px-xl-4"
-                          _msttexthash="114478"
-                          _msthash="24"
-                        >
-                          Sign in
-                        </button>
-                    </div>
-                    <div class="alert alert-success mt-4 d-none" id="alert-success">
-                      The form has been sent successfully
-                    </div>
-                </form>
+        <div class="container__login box">
+            <div class="login__form-container"> 
+              <form class="login__form form" id="form3">
+                    <h3 class=" contact__title" _msttexthash="197041" _msthash="21">
+                      SIGN IN
+                    </h3>
+                      <div class="row mb-3 mb-lg-4 inputBox">
+                          <input
+                            type="text"
+                            class="user-email-admin form-control bg-light login__form-input border-0 py-xl-2"
+                            id="User-email3"
+                            placeholder="E-mail Address"
+                            name="Useremail3"
+                            _mstplaceholder="385671"
+                            _msthash="22"
+                            autocomplete="off"
+                            value=""
+                            
+                          />
+                          <p class="text-danger mb-3 d-none" id="alert-email3"></p>
+                      </div>
+                      <div class="row mb-3 mb-md-4 inputBox">
+                          <input
+                            type="password"
+                            class="user-password-admin form-control bg-light login__form-input border-0 py-xl-2"
+                            id="User-Password2"
+                            placeholder="Password"
+                            name="UserPassword2"
+                            _mstplaceholder="182013"
+                            _msthash="23"
+                            autocomplete="off"
+                            value=""
+                          />
+                          <p class="text-danger mb-3 d-none" id="alert-Password2"></p>
+                      </div>
+                      <div class="mb-3">
+                          <button
+                            class="btn  btn-login login__btn text-white rounded-pill fw-semibold py-1 px-3 py-xl-2 px-xl-4 send-button"
+                            _msttexthash="114478"
+                            _msthash="24"
+                          >
+                              Sign in
+                              <span></span>
+                              <span></span>
+                          </button>
+                      </div>
+                      <div class="alert alert-success d-none" id="alert-success">
+                        The form has been sent successfully
+                      </div>
+                  </form>
+              </div>
               <a
                 class="login__forgot-password"
                 href="#"
