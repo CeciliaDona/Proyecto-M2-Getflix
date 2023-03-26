@@ -79,10 +79,10 @@
                 </div>
             </div>
         </div>
-        <form class=" d-none d-md-flex" role="search">
-            <input class="form__position form-control me-2 text-light" type="search"  aria-label="Search">
+        <form class="d-none d-md-flex" role="search" id="form-search">
+            <input class="form__position form-control me-2 text-light" type="search"  aria-label="Search" id="search" name="search">
             <i class="form__position-search fs-5 text-light mt-1 ps-2 bi bi-search"></i>
-            <button class="btn btn-navbar me-4" type="submit">Sign Out</button>
+            <button class="btn btn-navbar me-4" type="submit">Buscar</button>
         </form>
     </nav>
     <main>
@@ -151,7 +151,7 @@
             <i class="bi bi-chevron-right" id="next"></i>
 		</div>  
         
-        <div class="main just-added-section">
+        <div class="main">
 			<div class="main__title">
 				<h3 class="section__title just-added__title" data-title="Just added">Just added</h3>        
 			</div>
@@ -161,7 +161,7 @@
                 </ul>
 			</div>			
         </div>
-        <div class="main trends-section">
+        <div class="main">
 			<div class="main__title">
 				<h3 class="section__title trends__title" data-title="Trends">Trends</h3>
 			</div>
@@ -171,7 +171,7 @@
                 </ul>
 			</div>			
         </div>
-        <div class="main continue-section">
+        <div class="main">
 			<div class="main__title">
 				<h3 class="section__title just-added__title" data-title="Continue watching">Continue watching</h3>
 			</div>
@@ -181,7 +181,7 @@
                 </ul>
 			</div>			
         </div>
-        <div class="main top-ten-section">
+        <div class="main">
 			<div class="main__title">
 				<h3 class="section__title just-added__title" data-title="Top 10">Top 10</h3>  
 			</div>
@@ -191,7 +191,7 @@
                 </ul> 
 			</div>	  
         </div>
-        <div class="main fav-list-section">
+        <div class="main">
             <div class="main__title">
                 <h3 class="section__title my-list__title" data-title="My favorite list">My list</h3>
                 <p class="no-added-movies-msg">No movie has been added to your favorites list. Click on "Add to list" of each movie to add them.</p>
@@ -199,16 +199,6 @@
             <div id="my-list" class="main__container">
                 <ul class="main__container-movies container__fav-list">
                     <!--Template My fav list-->
-                </ul>
-            </div>
-        </div>
-        <div class="main search-section d-none">
-            <div class="main__title">
-                <h3 class="section__title search__title" data-title="Search">Search</h3>
-            </div>
-            <div id="my-list" class="main__container">
-                <ul class="main__container-movies container__search">
-                    <!--Template Search-->
                 </ul>
             </div>
         </div>
@@ -238,6 +228,29 @@
                             data-id="">
                             Add to List
                             <i class="bi bi-plus-circle-fill"></i>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </template>
+        <template id="template-fav-list"> 
+            <li class="main__container-movie">
+                <h2 class="movie-title">title</h2> 
+                <img class="img-films" data-img="" src="" alt="">
+                <div class="layer">
+                    <div class="container__bi-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="container__btn-see-more--add">     
+                        <p 
+                            class="btn-add-list remove" 
+                            data-img=""
+                            data-id="">
+                            Remove   
                         </p>
                     </div>
                 </div>
