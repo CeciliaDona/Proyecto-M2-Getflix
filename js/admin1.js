@@ -189,7 +189,7 @@ addMovie.addEventListener('click', function()  {
     modificate.style.display = 'block';
 });
 
-//REMOVE
+/*REMOVE
 removeBtn.addEventListener('click', function (){
     removeMovie();
 })
@@ -199,7 +199,7 @@ function removeMovie(movieTitle) {
     films.splice(index, 1);
 
 }
-
+*/
 back.addEventListener('click', function(){
     modificate.style.display = 'none'
 })
