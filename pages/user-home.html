@@ -76,8 +76,8 @@
                 </div>
             </div>
         </div>
-        <form class=" d-none d-md-flex" role="search">
-            <input class="form__position form-control me-2 text-light" type="search"  aria-label="Search">
+        <form class="d-none d-md-flex" role="search" id="form-search">
+            <input class="form__position form-control me-2 text-light" type="search"  aria-label="Search" id="search" name="search">
             <i class="form__position-search fs-5 text-light mt-1 ps-2 bi bi-search"></i>
             <button id="sign-out-btn" class="btn btn-navbar me-4" type="submit">Sign Out</button>
         </form>
@@ -225,6 +225,29 @@
                             data-id="">
                             Add to List
                             <i class="bi bi-plus-circle-fill"></i>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </template>
+        <template id="template-fav-list"> 
+            <li class="main__container-movie">
+                <h2 class="movie-title">title</h2> 
+                <img class="img-films" data-img="" src="" alt="">
+                <div class="layer">
+                    <div class="container__bi-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="container__btn-see-more--add">     
+                        <p 
+                            class="btn-add-list remove" 
+                            data-img=""
+                            data-id="">
+                            Remove   
                         </p>
                     </div>
                 </div>
