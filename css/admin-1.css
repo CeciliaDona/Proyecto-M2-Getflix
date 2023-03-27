@@ -333,7 +333,7 @@
   display: none;
 }
 
-.modal__modification {
+.add-movie {
   display: none;
   flex-direction: column;
   width: 90%;
@@ -363,14 +363,14 @@
   color: rgb(158, 158, 158);
 }
 
-.modal__modification-title {
+.modal__add-movie-title {
   margin: 10px 0 3px;
   font-family: var(--font-2-paragraph);
   font-size: 15px;
   font-weight: bold;
 }
 
-.modal__modification-input {
+.modal__add-movie-input {
   margin-bottom: 10px;
   height: 40px;
   width: 100%;
@@ -380,11 +380,11 @@
   background-color: var(--modal-color);
 }
 
-.modal__modification-input:focus {
+.modal__add-movie-input:focus {
   outline: 1px solid black;
 }
 
-.modal__modification-btn {
+.modal__add-movie-btn {
   background: rgba(0,0,0, 0.5);
   border: none;
   border-radius: 0.31em;
@@ -401,7 +401,7 @@
 
 }
 
-.modal__modification-btn:hover {
+.modal__add-movie-btn:hover {
   background: #fff;
   color: #000;
 }

@@ -111,7 +111,6 @@ showTopTen();
 const modal = document.querySelector('.modal__container');
 const modalTemplate = document.querySelector('#modal-template');
 const closeModal = document.querySelector('#btn-close');
-const table = document.querySelector('.modal__table');
 const justAddedEdit = document.querySelector('.just-added-edit');
 const trendsEdit = document.querySelector('.trends-edit');
 const top10Edit = document.querySelector('.top-10-edit');
@@ -177,72 +176,121 @@ topTenSection.forEach((item) => {
 modal.appendChild(fragment);
 };
 
-const addMovie = document.querySelector('.modal__table-title-4');
+const addMoviePlus = document.querySelector('.modal__table-title-4');
 const removeBtn = document.querySelectorAll('.bi-trash3-fill');
 const edit = document.querySelectorAll('#edit');
 const back = document.querySelector('#back');
-const modificate = document.querySelector('.modal__modification');
-const saveChangesBtn = document.querySelector('.modal__modification-btn')
+const table = document.querySelector('.modal__table');
+const tableBody = table.querySelector('tbody')
+const add = document.querySelector('.add-movie')
+const addMovieForm = document.querySelector('.modal__add-movie');
+const addMovieBtn = document.querySelector('#add-btn');
+const addMovieCancel = document.querySelector('#add-cancel');
 
 
-addMovie.addEventListener('click', function()  {
-    modificate.style.display = 'block';
+addMoviePlus.addEventListener('click', function()  {
+    add.style.display = 'block';
 });
 
-/*REMOVE
-removeBtn.addEventListener('click', function (){
-    removeMovie();
+addMovieCancel.addEventListener('click', function (){
+    addMovieForm.reset();
+    add.style.display = 'none';
 })
 
-function removeMovie(movieTitle) {
-    const index = films.findIndex(movie => movie.movieTitle === movieTitle);
-    films.splice(index, 1);
+addMovieForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let movieTitle = document.getElementById('movie-title').value;
+    let movieId = document.getElementById('movie-id').value;
+    let movieYear = document.getElementById('movie-year').value;
+    let movieGenres = document.getElementById('movie-genres').value;
+    let movieImgUrl = document.getElementById('movie-img-url').value;
+    let movieAlt = document.getElementById('movie-alt').value;
+    let movieTrailerUrl = document.getElementById('movie-trailer-url').value;
+    let movieSynopsis = document.getElementById('movie-synopsis').value;
+    let movieCategory = document.getElementById('movie-category').value;
 
+    const addMovieTemplate = `
+        <tr class="modal__table-titles">
+            <th class="modal__table-title-1">${movieTitle}</th>
+            <th class="modal__table-title-2">${movieYear}</th>
+            <th class="modal__table-title-3">${movieSynopsis}</th>
+            <th class="modal__table-title-icon"><i class="bi bi-pencil-square modal__table-btn" id="edit"></i><i class="bi bi-trash3-fill modal__table-btn"></i></th>
+        </tr>`
+    tableBody.insertAdjacentHTML('beforeend', addMovieTemplate);
+    addMovieForm.reset();
+    add.style.display = 'none';
+    
+});
+
+function addToFilms () {
+    let movieTitle = document.getElementById('movie-title').value;
+    let movieId = document.getElementById('movie-id').value;
+    let movieYear = document.getElementById('movie-year').value;
+    let movieGenres = document.getElementById('movie-genres').value;
+    let movieImgUrl = document.getElementById('movie-img-url').value;
+    let movieAlt = document.getElementById('movie-alt').value;
+    let movieTrailerUrl = document.getElementById('movie-trailer-url').value;
+    let movieSynopsis = document.getElementById('movie-synopsis').value;
+    let movieCategory = document.getElementById('movie-category').value;
+
+    let newMovie = {
+        title: movieTitle,
+        id: movieId,
+        year: movieYear,
+        Genres: movieGenres,
+        img: movieImgUrl,
+        alt: movieAlt,
+        srcTrailer: movieTrailerUrl,
+        synopsis: movieSynopsis,
+        section: movieCategory,
+        sectionTwo: "Top ten",
+        sectionThree: "",
+        top: 1
+    };
+
+    films.push(newMovie);
 }
-*/
+
+function displayFilms () {
+    let table = document.querySelector('.modal__table');
+    let tableBody = table.querySelector('tbody');
+    tableBody.innerHTML = "";
+
+    for(let i = 0; i < films.length; i++) {
+        let movie = films[i];
+
+        let row = document.createElement('tr');
+        let nameCell = document.createElement("td");
+        let yearCell = document.createElement("td");
+        let descriptionCell = document.createElement("td");
+
+        nameCell.textContent = movie.movieName;
+        yearCell.textContent = movie.movieYear;
+        descriptionCell.textContent = movie.movieSynopsis;
+
+        row.appendChild(nameCell);
+        row.appendChild(yearCell);
+        row.appendChild(descriptionCell);
+        
+        tableBody.appendChild(row);
+    }
+}
+
+addMovieBtn.addEventListener('click', addToFilms);
+
+document.addEventListener('load', displayFilms);
+
+
 back.addEventListener('click', function(){
-    modificate.style.display = 'none'
-})
+    add.style.display = 'none'
+});
+
+
+
+
 
 closeModal.addEventListener('click', function(){
     modal.style.display = 'none';
 });
 
-/*
-saveChangesBtn.addEventListener('click', function(){
-    addToFilms();
-});
-
-function addToFilms() {
-    var movieTitle = document.getElementById('movie-title').value;
-    var movieId = document.getElementById('movie-id').value;
-    var movieYear = document.getElementById('movie-year').value;
-    var movieGenres = document.getElementById('movie-genres').value;
-    var movieImgUrl = document.getElementById('movie-img-url').value;
-    var movieAlt = document.getElementById('movie-alt').value;
-    var movieTrailerUrl = document.getElementById('movie-trailer-url').value;
-    var movieSynopsis = document.getElementById('movie-synopsis').value;
-    var movieCategory = document.getElementById('movie-category').value;
-
-    const movie = {movieTitle, movieId, movieYear, movieGenres, movieImgUrl, movieAlt, movieTrailerUrl, movieSynopsis, movieCategory};
-
-    films.push(movie);
-
-    updateInterface();
-};
-
-
-function updateInterface() {
-    // obtener el elemento de la lista de películas en la interfaz de usuario
-    const list = document.querySelector('.modal-template');
-  
-    
-  
-    // agregar cada película a la lista
-    films.forEach(movie => {
-      const th = document.createElement('th');
-      th.innerHTML = `${movie.movieTitle} - ${movie.movieYear} - ${movie.movieSynopsis}`;
-      list.appendChild(th);
-    });
-  }
-  */
