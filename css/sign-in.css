@@ -29,6 +29,9 @@
 
 body {
   background-image: url(../images/backgrounds/stars-background-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -84,14 +87,14 @@ ul li a {
   flex-direction: column;
   margin: 15px auto;
   padding: 10px;
-}
+}*/
 
-.login__form {
+/* .login__form {
   display: flex;
   flex-direction: column;
   padding: 10px;
   align-items: flex-start;
-}
+} */
 
 .login__forgot-password {
   margin-bottom: 15px;
@@ -130,7 +133,7 @@ img a {
 
 .modal-p {
   font-size: 0.9rem;
-} */
+} 
 
 /*------------- MAIN MOBILE --------------*/
 main {
