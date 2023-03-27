@@ -177,7 +177,6 @@ modal.appendChild(fragment);
 };
 
 const addMoviePlus = document.querySelector('.modal__table-title-4');
-const removeBtn = document.querySelectorAll('.bi-trash3-fill');
 const edit = document.querySelectorAll('#edit');
 const back = document.querySelector('#back');
 const table = document.querySelector('.modal__table');
@@ -282,13 +281,27 @@ addMovieBtn.addEventListener('click', addToFilms);
 document.addEventListener('load', displayFilms);
 
 
-back.addEventListener('click', function(){
+
+/*
+document.addEventListener('DOMContentLoaded', function() { //cargar todo al dom
+    const removeBtn = document.querySelectorAll('#remove-btn');
+  
+    removeBtn.forEach(function(e) {
+      e.addEventListener('click', function() {
+        const row = this.closest('tr');
+        const title = row.querySelector('td:first-child').textContent;
+        row.remove();
+        const index = films.findIndex(movie => movie.title === title);
+        films.splice(index, 1);
+        localStorage.setItem('movies', JSON.stringify(films));
+      });
+    });
+  });
+  */
+
+  back.addEventListener('click', function(){
     add.style.display = 'none'
 });
-
-
-
-
 
 closeModal.addEventListener('click', function(){
     modal.style.display = 'none';
