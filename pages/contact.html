@@ -38,15 +38,9 @@
 	<body class="bg-body">
 		<!-- navbar -->
 		<nav class="navbar navbar-dark bg-dark fixed-top nav-shadow">
-			<div class="d-none d-md-block">
-				<a href="../index.html">
-					<img
-						class="navbar__img ms-3"
-						src="../../images/icons/logo.png"
-						alt="logo"
-					/>
-				</a>
-			</div>
+			<a href="../index.html" class="d-none d-md-block"> 
+				<img class="navbar__img ms-3" src="../images/icons/logo.png" alt="logo">
+			</a>
 			<div class="container-fluid d-md-none">
 				<button
 					class="navbar-toggler"
@@ -57,9 +51,7 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<a class="navbar-brand" href="./signin.html"
-					><i class="bi bi-person-circle fs-3"></i
-				></a>
+				<a class="navbar-brand" href="../pages/signin.html"><i class="bi bi-person-circle fs-3"></i></a>
 				<div
 					class="offcanvas offcanvas-start text-bg-dark"
 					tabindex="-1"
@@ -76,40 +68,25 @@
 					</div>
 					<div class="offcanvas-body">
 						<ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-							<li class="nav-item ps-3 d-flex">
+							<li class="nav-item ps-3">
 								<img
 									class="nav-item-img me-3"
 									src="../images/icons/logo.png"
 									alt="logo"
-								/>
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="../index.html"
-									>Home</a
-								>
+									class="nav-link active" aria-current="page" href="../index.html">Home</a>
 							</li>
 							<li class="nav-item ps-3">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="./aboutus.html"
+								<a class="nav-link active" aria-current="page" href="../pages/aboutus.html"
 									><i class="bi bi-info-circle me-4"></i> About Us</a
 								>
 							</li>
 							<li class="nav-item ps-3">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="./contact.html"
+								<a class="nav-link active" aria-current="page" href="../pages/contact.html"
 									><i class="bi bi-envelope-fill me-4"></i> Contact Us</a
 								>
 							</li>
 							<li class="nav-item ps-3">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="./signin.html"
+								<a class="nav-link active" aria-current="page" href="../pages/signin.html"
 									><i class="bi bi-person-circle me-4"> </i>Sign In</a
 								>
 							</li>
@@ -117,104 +94,92 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-none d-md-flex justify-content-around">
-				<a class="nav-link text-light me-3" href="./aboutus.html">About Us</a>
-				<a class="nav-link text-light" href="./contact.html">Contact Us</a>
+			<div class="d-none d-md-flex justify-content-around align-items-center">
+					<a class="nav-links me-3" href="../pages/aboutus.html">About Us</a>
+					<a class="nav-links" href="../pages/contact.html">Contact Us</a>
 				<form role="search">
-					<a href="./signin.html" class="btn btn-navbar ms-4 me-3">Sing in</a>
+					<a type="button" href="../pages/signin.html" class="btn btn-navbar ms-4 me-3">Sing in
+                        <span></span>
+                        <span></span>
+                    </a> 
 				</form>
 			</div>
 		</nav>
 		<main>
-			<div class="container__contact">
-				<h3 class="contact__title"><span class="letter-big">C</span>ontact</h3>
-				<form id="formulario">
-					<input
-						class="form-control mb-3"
-						name="Username"
-						id="User-name"
-						placeholder="Name"
-						type="text"
-						autocomplete="off"
-					/>
-					<p class="text-danger mb-3 d-none" id="alert-name"></p>
-
-					<input
-						class="form-control mb-3"
-						name="Useremail"
-						id="User-email"
-						placeholder="Email adress"
-						type="email"
-						autocomplete="off"
-					/>
-					<p class="text-danger mb-3 d-none" id="alert-email"></p>
-
-					<input
-						class="form-control mb-3"
-						name="Userphone"
-						id="User-phone"
-						placeholder="Phone number"
-						type="number"
-						autocomplete="off"
-					/>
-					<p class="text-danger mb-3 d-none" id="alert-phone"></p>
-
-					<input
-						class="form-control mb-3"
-						name="Usermesssage"
-						id="User-message"
-						placeholder="Message"
-						type="text"
-						autocomplete="off"
-					/>
-					<p class="text-danger mb-3 d-none" id="alert-message"></p>
-					<button class="btn btn-warning mb-3" type="submit">Send</button>
-				</form>
-				<div class="alert alert-success mt-2 d-none" id="alert-success">
-					The form has been sent successfully
-				</div>
-			</div>
-			<div class="contact__adress">
-				<iframe
-					class="contact__adress-map"
-					src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d105144.56531667229!2d-58.46895269566665!3d-34.559437474926604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1splanetario!5e0!3m2!1ses-419!2sar!4v1666507886730!5m2!1ses-419!2sar"
-					width="600"
-					height="450"
-					style="border: 0"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"
-				></iframe>
-				<p class="contact__adress-text">
-					home: Avenue Sarmiento s/n, 1425 CABA
-				</p>
-			</div>
-		</main>
-		<footer class="container__footer">
-			<h2 class="footer__title">GETFLIX</h2>
-			<div class="footer__container-contact">
-				<div class="footer__container-logo">
-					<img class="footer__logo" src="../images/icons/logo.png" alt="Logo" />
-				</div>
-				<div class="footer__icons">
-					<a href="https://twitter.com/?lang=es"
-						><i class="icon-redes bi bi-twitter text-white"></i
-					></a>
-					<a href="https://www.instagram.com/"
-						><i class="icon-redes bi bi-instagram text-white"></i
-					></a>
-					<a href="https://www.facebook.com/"
-						><i class="icon-redes bi bi-facebook text-white"></i
-					></a>
-				</div>
-				<div class="footer__contact">
-					<p>e-mail: movies@getflix.com</p>
-					<p>Social Media: @getflix</p>
-					<p>Phone number: 0123-4567</p>
-				</div>
-			</div>
-			<p class="footer__reserved">All rights reserved - 2023</p>
-		</footer>
-		<script src="../js/contact.js"></script>
-	</body>
+            <div class="container__contact box">
+                <form id ="form" class="form">
+                    <h3 class="contact__title">CONTACT</h3>
+                    <div class="inputBox">
+                        <input  
+                            class="form-control mb-3" 
+                            name="Username"
+                            id="User-name" 
+                            type="text"
+                            autocomplete="off"
+                            placeholder="Name"
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-name"></p>
+                    </div>
+                    <div class="inputBox">
+                        <input 
+                            class="form-control mb-3" 
+                            name="Useremail"
+                            id="User-email"
+                            placeholder="Email adress"
+                            type="email"
+                            autocomplete="off"
+                        />
+                        <p class="text-danger mb-2 d-none" id="alert-email"></p>
+                    </div>
+                    <div class="inputBox">
+                        <input 
+                            class="form-control mb-3"
+                            name="Userphone" 
+                            id="User-phone" 
+                            type="number"
+                            autocomplete="off"
+                            placeholder="Phone number"
+                        />
+                        <p class="text-danger mb-1 d-none" id="alert-phone"></p>
+                    </div>
+                    <div class="inputBox">
+                        <input 
+                            class="form-control mb-3" 
+                            name="Usermesssage" 
+                            id="User-message"
+                            placeholder="Message"
+                            type="text"
+                            autocomplete="off"
+                        />
+                        <p class="text-danger mb-3 d-none" id="alert-message"></p>
+                    </div>
+                        <button type="submit" class="send-button">Send
+                            <span></span>
+                            <span></span>
+                        </button>
+                    <div class="alert alert-success d-none" id="alert-success">The form has been sent successfully</div>
+                </form>   
+            </div>
+        </main>
+        <footer class="container__footer">
+            <h2 class="footer__title">GETFLIX</h2>
+            <div class="footer__container-contact">
+                <div class="footer__container-logo">
+                    <img class="footer__logo" src="../images/icons/logo.png" alt="Logo">
+                </div>
+                <div class="footer__icons">
+                    <a href="https://twitter.com/?lang=es"><i class="icon-redes bi bi-twitter text-white"></i></a>
+                    <a href="https://www.instagram.com/"><i class="icon-redes bi bi-instagram text-white "></i></a>
+                    <a href="https://www.facebook.com/"><i class="icon-redes bi bi-facebook text-white "></i></a>
+                </div>
+                <div class="footer__contact">
+                    <p>e-mail: movies@getflix.com</p>
+                    <p>Social Media: @getflix</p>
+                    <p>Phone number: 0123-4567</p>
+                </div>
+            </div>
+            <p class="footer__reserved">All rights reserved - 2023</p>
+        </footer>
+        <script src="../js/contact.js"></script>
+    </body>
 </html>
