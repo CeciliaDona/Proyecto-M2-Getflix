@@ -331,7 +331,7 @@ nav {
   left: 50%;
   width: 600px;
   height: 100px;
-  background: linear-gradient(transparent, #69ecf5bc, #39d1dc, #9745df);
+  background: linear-gradient(transparent, #75e5edbc, #2f92cf, #7d18d4);
   animation: animate 8s linear infinite;
 }
 
@@ -347,8 +347,8 @@ nav {
 .card .lines::after {
   content: "";
   position: absolute;
-  inset: 3px;
-  background: #1d56ad;
+  inset: 5.5px;
+  background: linear-gradient( #67e9f3, #1b7dba, #750cd1);
 
 }
 
@@ -375,7 +375,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  background: linear-gradient(transparent, #3affffb8, #8a5af2, #943cffbc);
+  background: linear-gradient(transparent, #3affffb8, #5068ca, #4f3cffbc);
   width: 400px;
   height: 70px;
   transform: translate(-50%, -50%);
@@ -395,7 +395,7 @@ nav {
   content: "";
   position: absolute;
   background: #292929;
-  inset: 2px;
+  inset: 3px;
 }
 
 .card .imgBx img {
@@ -441,7 +441,7 @@ nav {
  span {
   font-size: 0.85em;
   font-weight: 500;
-  color: aliceblue;
+  color: var(--color-fonts);
   margin-bottom: 30px;
 }
 
@@ -449,7 +449,7 @@ nav {
   display: flex;
   justify-content: space-around;
   margin: 15px 0;
-  color: aliceblue;
+  color: var(--color-fonts);
   margin-bottom: 20px;
 }
 
@@ -461,12 +461,13 @@ nav {
   width: 30px; 
   height: 30px;
   text-align: center;
-  color: aliceblue;
+  color: var(--color-fonts);
+  z-index: 5;
 }
 
 .container__social .bi:hover {
   background-color: rgb(248, 245, 239);
-  color: black;
+  color: rgb(75, 73, 84) !important;
   box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
   -webkit-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
   -moz-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
