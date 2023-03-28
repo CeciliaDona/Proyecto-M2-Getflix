@@ -154,41 +154,10 @@ nav {
   color: var(--btn-color);
 }
 
-/* DE ACÁ PARA ABAJO CHEQUEAR TODO EL CÓDIGO PORQUE ERA DE POCHOCLITOS Y MUCHAS CLASES ACÁ NO VAN!!! (MENOS EL FOOTER QUE ESTÁ BIEN) */
-/*------------- MAIN MOBILE --------------*/
-/* .container__login {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.login__title {
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.login__form-container {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  margin: 15px auto;
-  padding: 10px;
-}*/
-
-/* .login__form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  align-items: flex-start;
-} */
-
-
 /*------------- MAIN MOBILE --------------*/
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
@@ -196,13 +165,13 @@ main {
   width: 100%;
 }
 
-/* .box {
+.box {
   position: relative;
   top: 20px;
   margin-bottom: 100px;
-  margin-top: 55px;
-  width: 305px;
-  height: 430px;
+  margin-top: 100px;
+  width: 300px;
+  height: 370px;
   background: #1c1c1c;
   background-image: url(../images/backgrounds/backround-stars-2.jpg);
   background-size: cover;
@@ -245,6 +214,14 @@ main {
   }
 }
 
+.sign-in__title {
+  color: var(--color-fonts);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+} 
+
 .box .form {
   position: absolute;
   inset: 7.5px;
@@ -257,23 +234,20 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+} 
 
-.contact__title {
-  color: var(--color-fonts);
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
+.container__sign-up {
+  display: flex;
+  flex-direction: column;
 }
 
-/* .box .form .inputBox {
+.box .form .inputBox {
   position: relative;
   width: 250px;
   margin-top: 5px;
 }
 
-.box .form .inputBox input {
+.box .login__form-container .form .inputBox input {
   position: relative;
   width: 100%;
   padding: 7px 5px 3px;
@@ -288,29 +262,29 @@ main {
   z-index: 10;
   border-radius: 2px;
   transition: 0.3s;
+  background-color: #201f21;
 }
 
 input[type="email"] {
   background-color: #14131300;
-  color: #ced0d9;
+  color: black !important;
 }
 
-.box .form .inputBox input:hover {
+.login__form-input:hover {
   color: white;
 }
 
 .text-danger {
   font-size: 0.8em;
-  color: #8e35ca !important;
+  color: #8a2dc4 !important;
   letter-spacing: 0.06em;
 }
 
 .send-button {
-  padding: 5px 10px;
-  width: 100%;
+  padding: 5px 40px !important;
   margin-top: 12px;
-  border: 3px solid #fdfef7;
-  border-radius: 7px;
+  border: 2px solid #fdfef7;
+  border-radius: 10px;
   background-image: var(--color-btn);
   transition: all 0.4s ease-in;
   position: relative;
@@ -326,34 +300,34 @@ input[type="email"] {
 
 .send-button span:nth-child(n) {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   border: 3px solid;
   transition: all 1s;
 }
 
 .send-button span:nth-child(1) {
-  right: 0.5%;
-  top: -18%;
+  right: 5%;
+  top: -12%;
   background-color: #fff;
   border: solid #fff;
 }
 
 .send-button span:nth-child(2) {
-  left: 0.5%;
-  bottom: -16%;
+  left: 5%;
+  bottom: -12%;
   border: 3px solid #fff;
   background-color: #fff;
 }
 
 .send-button:hover span:nth-child(1) {
-  right: 99%;
+  right: 90%;
   transform: rotate(90deg);
   color: var(--btn-color);
 }
 
 .send-button:hover span:nth-child(2) {
-  left: 99%;
+  left: 90%;
   transform: rotate(90deg);
   color: var(--btn-color);
 }
@@ -368,11 +342,45 @@ input[type="email"] {
   color: white;
   letter-spacing: 0.04em;
   width: 100%;
-} */
+} 
+
+.new-getflix {
+  color: var(--color-fonts) !important;
+  padding-top: 15px;
+}
+
+.btn-sign-up {
+  padding: 5px 40px !important;
+  margin-top: 0;
+  border: 2px solid #fdfef7;
+  border-radius: 10px;
+  transition: all 0.4s ease-in;
+  position: relative;
+  font-weight: 500;
+  box-shadow: 0 0 20px #8b6dee;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.btn-sign-up:hover {
+  box-shadow: 0 0 80px #8b6deea8;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  background-image: var(--color-btn);
+}
+
+.btn-register {
+  background: #0e6ba9;
+  color: var(--color-fonts) !important;
+}
 
 /*lo deje de antes*/
+.container__sign-up {
+  margin-bottom: 60px;
+}
+
 .login__forgot-password {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-decoration: none;
   color: white;
 }
@@ -485,112 +493,11 @@ img a {
   margin: 0;
 }
 
-/*============================== RES 500 ==============================*/
-@media (min-width: 500px) {
-  /* .box {
-    width: 450px;
-    height: 480px;
-    border-radius: 10px;
-    margin-top: 63px;
-  }
-  
-  .box::before {
-    width: 450px;
-    height: 480px;
-  }
-  
-  .box .form {
-    inset: 7.5px;
-    padding: 20px 0;
-    width: 97%;
-    border-radius: 10px;
-  }
-  
-  .contact__title {
-    margin-bottom: 10px;
-    margin-top: 7px;
-  }
-  
-  .box .form .inputBox input {
-    width: 100%;
-    padding: 6px 5px 2px;
-    font-size: 1em;
-    letter-spacing: 0.06em;
-  }
-  
-  .text-danger {
-    font-size: 0.85em;
-    letter-spacing: 0.05em;
-  }
-  
-  .send-button {
-    padding: 7px 30px;
-    width: 55%;
-  }
-  
-  .alert-success {
-    font-size: 0.8em;
-    text-align: center;
-    margin-top: 20px;
-    letter-spacing: 0.06em;
-    width: 55%;
-  } */
-}
-
-
 /********************************* TABLET *************************************/
 @media (min-width: 768px) {
   .box {
-    margin-top: 70px;
+    margin-top: 120px;
   }
-
-
-  
-  /*------------- MAIN TABLET --------------*/
-  /* .container__login {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 170px 50px 50px;
-  }
-
-  .login__container-image {
-    width: 54%;
-    padding-left: 50px;
-    margin-top: 35px;
-  }
-
-  .login__img {
-    width: 100%;
-    border-radius: 15px;
-    padding-left: 40px;
-  }
-
-  .login__form-container {
-    width: 44%;
-    margin: 20px;
-    padding: 0 10px;
-  }
-
-  .login__form {
-    padding-bottom: 10px;
-  }
-
-  .login__form-input {
-    margin-bottom: 0;
-  }
-
-  .login__forgot-password {
-    margin-bottom: 15px;
-  }
-
-  .login__container-icons {
-    margin: 5px 16px;
-  }
-
-  .login__icons {
-    width: 40px;
-  } */
-
 
    /*--- FOOTER 768 ---*/
    .footer__container-contact {
@@ -644,42 +551,7 @@ img a {
    .box {
     margin-top: 100px;
   }
-  /*------------- MAIN DESCKTOP --------------*/
-  /* .container__login {
-    padding: 130px 7% 20px;
-  }
-
-  .login__container-image {
-    width: 50%;
-    margin-right: 60px;
-  }
-
-  .login__img {
-    margin-left: 20px;
-  }
-
-  .login__form-container {
-    width: 45%;
-    margin: 0;
-    padding: 0 10px;
-  }
-
-  .login__title {
-    font-size: 1.3rem;
-  }
-
-  .login__form {
-    padding-bottom: 20px;
-  }
-
-  .login__forgot-password {
-    margin-bottom: 50px;
-  }
-
-  .login__container-icons {
-    margin: 15px 16px;
-  } */
-
+ 
   /*--- FOOTER DESCKTOP 1024 ---*/
   .footer__container-contact {
     flex-direction: row;
@@ -703,27 +575,5 @@ img a {
       font-size: 0.9rem;
   }
 }
-/********************************* RES 1200 *************************************/
-/*------------- MAIN RES 1200 --------------*/
 
-@media (min-width: 1200px) {
-  .container__login {
-    padding: 150px 14% 20px;
-  }
-
-  .login__form {
-    padding-bottom: 10px;
-  }
-
-  .login__forgot-password {
-    margin-bottom: 25px;
-  }
-
-  .login__container-icons {
-    margin: 10px 16px;
-  }
-
-  .login__icons {
-    width: 40px;
-  }
-}  
+ 

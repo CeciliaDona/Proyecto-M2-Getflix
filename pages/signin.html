@@ -102,9 +102,9 @@
                 <a class="nav-links text-light" href="./contact.html">Contact Us</a>
 				<form role="search">
 					<a href="./signin.html" type="button" class="btn btn-navbar ms-4 me-3">Sing in
-                        <span></span>
-                        <span></span>
-                    </a> 
+            <span></span>
+            <span></span>
+          </a> 
 				</form>
 			</div>
 		</nav>
@@ -112,13 +112,13 @@
         <div class="container__login box">
             <div class="login__form-container"> 
               <form class="login__form form" id="form3">
-                    <h3 class=" contact__title" _msttexthash="197041" _msthash="21">
+                    <h3 class=" sign-in__title" _msttexthash="197041" _msthash="21">
                       SIGN IN
                     </h3>
                       <div class="row mb-3 mb-lg-4 inputBox">
                           <input
                             type="text"
-                            class="user-email-admin form-control bg-light login__form-input border-0 py-xl-2"
+                            class="user-email-admin form-control login__form-input border-0 py-xl-2"
                             id="User-email3"
                             placeholder="E-mail Address"
                             name="Useremail3"
@@ -132,7 +132,7 @@
                       <div class="row mb-3 mb-md-4 inputBox">
                           <input
                             type="password"
-                            class="user-password-admin form-control bg-light login__form-input border-0 py-xl-2"
+                            class="user-password-admin form-control login__form-input border-0 py-xl-2"
                             id="User-Password2"
                             placeholder="Password"
                             name="UserPassword2"
@@ -145,10 +145,9 @@
                       </div>
                       <div class="mb-3">
                           <button
-                            class="btn  btn-login login__btn text-white rounded-pill fw-semibold py-1 px-3 py-xl-2 px-xl-4 send-button"
+                            class="btn  btn-login login__btn send-button"
                             _msttexthash="114478"
-                            _msthash="24"
-                          >
+                            _msthash="24">
                               Sign in
                               <span></span>
                               <span></span>
@@ -157,49 +156,49 @@
                       <div class="alert alert-success d-none" id="alert-success">
                         The form has been sent successfully
                       </div>
-                  </form>
+                    </form>
+                  </div>
               </div>
-              <a
-                class="login__forgot-password"
-                href="#"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                _msttexthash="575419"
-                _msthash="25"
-                >FORGOT YOUR PASSWORD?</a
-              >
-              <h6 class="login__social-title" _msttexthash="369278" _msthash="26">
-                Sign in with:
-              </h6>
-              <div class="login__container-icons">
-                  <a href="https://www.facebook.com/" target="_blank">
+
+              <div class="container__sign-up">
+                <a
+                  class="login__forgot-password"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  _msttexthash="575419"
+                  _msthash="25"
+                  >FORGOT YOUR PASSWORD?</a>
+                <h6 class="login__social-title" _msttexthash="369278" _msthash="26">
+                  Sign in with:
+                </h6>
+                <div class="login__container-icons">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img
+                        class="login__icons"
+                        src="../images/login/facebook-icon.png"
+                        alt="Facebook (en inglés)"
+                        _mstalt="110734"
+                        _msthash="27"/>
+                    </a>
+                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S403298787%3A1666647323560212&amp;continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;rip=1&amp;sacu=1&amp;service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;ifkv=AQDHYWp8LSuC5ZeWi9N3Izu17ETDNmamWM8_h17JdBp7Ns87kyElWsrzfM7mpRYv0Vrckcm82N9X6A"
+                    target="_blank">
                       <img
                       class="login__icons"
-                      src="../images/login/facebook-icon.png"
-                      alt="Facebook (en inglés)"
-                      _mstalt="110734"
-                      _msthash="27"
-                      />
+                      src="../images/login/gmail-icon.png"
+                      alt="G-mail"
+                      _mstalt="68367"
+                      _msthash="28"/>
                   </a>
-                  <a href="https://accounts.google.com/v3/signin/identifier?dsh=S403298787%3A1666647323560212&amp;continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;rip=1&amp;sacu=1&amp;service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;ifkv=AQDHYWp8LSuC5ZeWi9N3Izu17ETDNmamWM8_h17JdBp7Ns87kyElWsrzfM7mpRYv0Vrckcm82N9X6A"
-                  target="_blank">
-                    <img
-                    class="login__icons"
-                    src="../images/login/gmail-icon.png"
-                    alt="G-mail"
-                    _mstalt="68367"
-                    _msthash="28"
-                    />
-                </a>
-                </div>
-                <p>New to Getflix?</p>
-              <!-- Button trigger modal SIGN UP-->
-              <button type="button" class="btn-register btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignUp">
-                SIGN UP
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="modalSignUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  </div>
+                  <p class="new-getflix">New to Getflix?</p>
+                <!-- Button trigger modal SIGN UP-->
+                <button type="button" class="btn-sign-up btn" data-bs-toggle="modal" data-bs-target="#modalSignUp">
+                  SIGN UP
+                </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modalSignUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -239,7 +238,6 @@
                         />
                         <p class="text-danger mb-3 d-none" id="alert-name2"></p>
                         
-                        <!-- Le cambié el nombre al id user-email por user-email-1 para que no se repitan IDs -->
                         <input
                           type="email"
                           class="register-email form-control mb-3 bg-secondary bg-opacity-25"
@@ -294,10 +292,9 @@
                         </div>
                         <button
                           type="submit"
-                          class="btn btn-register text-black fw-normal"
+                          class="btn btn-register fw-normal"
                         data-bs-dismiss="modal"
-                        aria-label="Close"
-                        >
+                        aria-label="Close">
                           Sign Up
                         </button>
                       </form>
@@ -308,7 +305,6 @@
                   </div>
                 </div>
               </div>
-            </div>
         </div>
 
         <!-- Modal Forgot password-->
@@ -352,7 +348,7 @@
                 </p>
                 <div class="col-11" _msthidden="1">
                   <input
-                    type="text"
+                    type="email"
                     class="form-control bg-secondary bg-opacity-25"
                     id="User-email2"
                     placeholder="E-mail address"
@@ -362,6 +358,8 @@
                     _msthidden="A"
                     _mstplaceholder="385671"
                     _msthash="32"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                    required
                   />
                   <p class="text-danger mb-3 d-none" id="alert-email2"></p>
                 </div>
@@ -420,7 +418,5 @@
     crossorigin="anonymous"
     ></script>
     <script src="../js/signIn.js"></script>
-    <script src="../js/signUp.js"></script>
-    <script ></script>
   </body>
 </html>
