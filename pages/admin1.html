@@ -93,6 +93,128 @@
     </nav>
 
     
+    <div class="main main-1">
+        <div class="main__title">
+            <h3 class="section__title just-added__title" data-title="Just added">JUST ADDED</h3>
+            <h3 class="main__container-btn just-added-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
+        </div>
+
+
+        <div class="main__container">
+            <ul class="main__container-movies container__just-added">
+                <!--Template movies-->
+            </ul>
+        </div>			
+    </div>
+    <div class="main">
+        <div class="main__title">
+            <h3 class="section__title trends__title" data-title="Trends">TRENDS</h3>
+            <h3 class="main__container-btn trends-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
+        </div>
+
+        <div class="main__container">
+            <ul class="main__container-movies container__trends">
+                <!--Template movies-->
+            </ul>
+        </div>			
+    </div>
+    <div class="main">
+        <div class="main__title">
+            <h3 class="section__title just-added__title" data-title="Continue watching">CONTINUE WATCHING</h3>
+            
+        </div>
+
+        <div class="main__container">
+            <ul class="main__container-movies container__continue">
+                <!--Template movies-->
+            </ul>
+        </div>			
+    </div>
+    <div class="main">
+        <div class="main__title">
+            <h3 class="section__title just-added__title" data-title="Top 10">TOP 10</h3>
+            <h3 class="main__container-btn top-10-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
+        </div>
+
+        <div class="main__container">
+            <div class="main__container-movies container__top-10">
+                <!--Template movies-->
+            </div>
+        </div>			
+    </div>
+
+    <template id="template-categories">
+        <li class="main__container-movie">
+            <h2 class="movie-title">title</h2> 
+            <img class="img-films" data-img="" src="" alt="">
+        </li>
+    </template>
+
+    <template id="template-top-ten">
+        <li class="main__container-movie">
+            <h2 class="movie-title">title</h2> 
+            <div class="container__movie-number" href="#">
+                <img class="img-films" src="" alt="" data-img="">
+                <p class="movie-number">N</p>
+            </div>
+        </li>
+    </template>
+
+
+    <div class="modal__container w3-animate-opacity">
+        <div class="modal__close  w3-animate-opacity">
+            <strong><i class="bi bi-x-lg" id="btn-close"></i></strong>
+        </div>
+        <table class="modal__table">
+            <thead>
+                <tr class="modal__table-titles" data-id="">
+                    <th class="modal__table-title-1">Movie</th>
+                    <th class="modal__table-title-2">Year</th>
+                    <th class="modal__table-title-3">Description</th>
+                    <th class="modal__table-title-4">Add Movie<i class="bi bi-plus-lg" data-id=""></i></th>
+                    <!--modal template-->
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+            
+        <template class="modal__template" id="modal-template">
+            <tr class="modal__table-titles" data-id=""> 
+                <th class="modal__table-title-1"></th>
+                <th class="modal__table-title-2"></th>
+                <th class="modal__table-title-3"></th>
+                <th class="modal__table-title-icon">
+                    <i class="bi bi-pencil-square modal__table-btn" id="edit" data-id=""></i>
+                    <i class="bi bi-trash3-fill modal__table-btn" id="remove-btn" data-id=""></i>
+                </th>
+            </tr>
+        </template>
+    </div>
+    <div class="add-movie">
+        <form class="modal__add-movie w3-animate-opacity">
+            <i class="bi bi-arrow-left  w3-animate-opacity" id="back"></i>
+            <h5 class="modal__add-movie-title">Movie title</h5>
+            <input class="modal__add-movie-input" id="movie-title" type="text" placeholder="Example" required>
+            <h5 class="modal__add-movie-title">ID</h5>
+            <input class="modal__add-movie-input" id="movie-id" type="text" placeholder="example" required>
+            <h5 class="modal__add-movie-title">Year</h5>
+            <input class="modal__add-movie-input" id="movie-year" type="number" placeholder="2023" required>
+            <h5 class="modal__add-movie-title">Genres</h5>
+            <input class="modal__add-movie-input" id="movie-genres" type="text" placeholder="Science-Fiction, Action, Love" required>
+            <h5 class="modal__add-movie-title">Image url</h5>
+            <input class="modal__add-movie-input" id="movie-img-url" type="text" placeholder="www.image.com" required>
+            <h5 class="modal__add-movie-title">Alt</h5>
+            <input class="modal__add-movie-input" id="movie-alt" type="text" placeholder="example" required>
+            <h5 class="modal__add-movie-title">Trailer url</h5>
+            <input class="modal__add-movie-input" id="movie-trailer-url" type="text" placeholder="www.youtube.com/trailer" required>
+            <h5 class="modal__add-movie-title">Description(Synopsis)</h5>
+            <input class="modal__add-movie-input" id="movie-synopsis" type="text" placeholder="Example is a movie about..." required >
+            <h5 class="modal__add-movie-title">Category</h5>
+            <input class="modal__add-movie-input" id="movie-category" type="text" placeholder="Trends, Top 10" required>
+            <button class="modal__add-movie-btn" role="button" type="submit" id="add-btn">Add movie</button>
+            <button class="modal__add-movie-btn" role="button" type="button" id="add-cancel">Cancel</button>
+        </form>
+    </div>
 
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
