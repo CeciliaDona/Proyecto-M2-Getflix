@@ -15,7 +15,6 @@
   }
 
   :root {
-    --btn-color: #B0C43A;
     --backround-pages: #201f21;
     --color-fonts: rgb(255, 254, 245);
     --color-btn: linear-gradient(150deg, #58074a, #0e6ba9, #4adae4);
@@ -224,7 +223,7 @@ main {
 
 .box .form {
   position: absolute;
-  inset: 7.5px;
+  inset: 7px;
   background-color: #222;
   background-image: url(../images/backgrounds/stars-background-3.jpg);
   padding: 20px 40px;
@@ -497,8 +496,24 @@ img a {
 @media (min-width: 768px) {
   .box {
     margin-top: 120px;
+    width: 400px;
   }
 
+  .box::before {
+    
+    width: 400px;
+    height: 380px;
+  }
+
+  .box .form {
+    inset: 9px;
+  } 
+
+  .box .login__form-container .form .inputBox input {
+    padding: 9px 5px 3px;
+    font-size: 16px;
+  }
+  
    /*--- FOOTER 768 ---*/
    .footer__container-contact {
     flex-direction: row;
