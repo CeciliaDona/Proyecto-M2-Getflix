@@ -188,24 +188,28 @@
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/totoro.jpg.jpg);
     width: 100%;
+    background-repeat: no-repeat;
   }
 
   .container__slider-4 {
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/the-simpsons.webp);
     width: 100%;
+    background-repeat: no-repeat;
   }
   
   .container__slider-5{
     background-position: center center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/avatar-2.jpg);
     width: 100%;
+    background-repeat: no-repeat;
   }
 
   .container__slider-6{
     background-position: right center;
     background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/disenchanted.jpg);
     width: 100%;
+    background-repeat: no-repeat;
   }
 
   .container__slider-movie {
@@ -666,19 +670,13 @@ a {
   }
   /*==================== RES 1024 (DESCKTOP) ================== */
   @media(min-width: 1024px) {
-    .main__container-movies {
-      grid-template-columns: 24% 24% 24% 24%; 
-      gap: 2em; 
-      width: 95%;
-    }
-
     .bi-chevron-left,
     .bi-chevron-right {
       font-size: 50px !important;
     }
 
     .container__slider-title {
-      font-size: 5em;
+      font-size: 4em;
     }
   
     .container__slider-body {
@@ -686,7 +684,7 @@ a {
     }
     
     .container__slider-buttons {
-      margin-top: 100px;
+      margin-top: 50px;
     }
     
     .container__slider-btn {
@@ -694,25 +692,18 @@ a {
     }
 
     .container__slider-description {
-      font-size: 1.6em;
-    }
-
-    .container__slider-btn {
-      padding: 0.93em 1.87em;
-      font-size: 1.3em;
+      font-size: 2em;
     }
 
     .main {
       padding-top: 10px;
     }
-
+   
     .main__container-movies {
-      grid-template-columns: 35% 35% 35%; 
+      grid-template-columns: 24% 24% 24% 24%; 
       gap: 2em; 
-      width: 88%;
+      width: 95%;
     }
-
-
 
     /*--- FOOTER DESCKTOP 1024 ---*/
     .footer__container-contact {
