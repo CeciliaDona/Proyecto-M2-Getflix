@@ -165,7 +165,7 @@
         </div>
         <table class="modal__table">
             <thead>
-                <tr class="modal__table-titles">
+                <tr class="modal__table-titles" data-id="">
                     <th class="modal__table-title-1">Movie</th>
                     <th class="modal__table-title-2">Year</th>
                     <th class="modal__table-title-3">Description</th>
@@ -177,11 +177,14 @@
         </table>
             
         <template class="modal__template" id="modal-template">
-            <tr class="modal__table-titles">
+            <tr class="modal__table-titles" data-id=""> 
                 <th class="modal__table-title-1"></th>
                 <th class="modal__table-title-2"></th>
                 <th class="modal__table-title-3"></th>
-                <th class="modal__table-title-icon"><i class="bi bi-pencil-square modal__table-btn" id="edit"></i><i class="bi bi-trash3-fill modal__table-btn" id="remove-btn"></i></th>
+                <th class="modal__table-title-icon">
+                    <i class="bi bi-pencil-square modal__table-btn" id="edit" data-id=""></i>
+                    <i class="bi bi-trash3-fill modal__table-btn" id="remove-btn" data-id=""></i>
+                </th>
             </tr>
         </template>
     </div>
@@ -193,7 +196,7 @@
             <h5 class="modal__add-movie-title">ID</h5>
             <input class="modal__add-movie-input" id="movie-id" type="text" placeholder="example" required>
             <h5 class="modal__add-movie-title">Year</h5>
-            <input class="modal__add-movie-input" id="movie-year" type="text" placeholder="2023" required>
+            <input class="modal__add-movie-input" id="movie-year" type="number" placeholder="2023" required>
             <h5 class="modal__add-movie-title">Genres</h5>
             <input class="modal__add-movie-input" id="movie-genres" type="text" placeholder="Science-Fiction, Action, Love" required>
             <h5 class="modal__add-movie-title">Image url</h5>
@@ -210,6 +213,14 @@
             <button class="modal__add-movie-btn" role="button" type="button" id="add-cancel">Cancel</button>
         </form>
     </div>
+    <template id="add-movie-template">
+        <form id="add-movie-form" class="add-movie-form">
+          <h3>Add Movie</h3>
+          <input type="text" id="title-input" placeholder="Title" required>
+          <input type="text" id="image-input" placeholder="Image URL" required>
+          <button type="submit">Add</button>
+        </form>
+      </template>
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
         <div class="footer__container-contact">

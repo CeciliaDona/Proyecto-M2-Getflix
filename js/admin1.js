@@ -110,7 +110,6 @@ showTopTen();
 
 const modal = document.querySelector('.modal__container');
 const modalTemplate = document.querySelector('#modal-template');
-const closeModal = document.querySelector('#btn-close');
 const justAddedEdit = document.querySelector('.just-added-edit');
 const trendsEdit = document.querySelector('.trends-edit');
 const top10Edit = document.querySelector('.top-10-edit');
@@ -176,25 +175,33 @@ topTenSection.forEach((item) => {
 modal.appendChild(fragment);
 };
 
-const addMoviePlus = document.querySelector('.modal__table-title-4');
-const edit = document.querySelectorAll('#edit');
-const back = document.querySelector('#back');
 const table = document.querySelector('.modal__table');
 const tableBody = table.querySelector('tbody')
 const add = document.querySelector('.add-movie')
 const addMovieForm = document.querySelector('.modal__add-movie');
-const addMovieBtn = document.querySelector('#add-btn');
-const addMovieCancel = document.querySelector('#add-cancel');
 
-
-addMoviePlus.addEventListener('click', function()  {
-    add.style.display = 'block';
+document.addEventListener('click', (e) => {
+    if(e.target.matches('.modal__table-title-4')) {
+        add.style.display = 'block';
+    };
+    if(e.target.matches('#add-cancel')) {
+        addMovieForm.reset();
+        add.style.display = 'none';
+    };
+    if(e.target.matches('#back')) {
+        add.style.display = 'none'
+    };
+    if(e.target.matches('#btn-close')) {
+        modal.style.display = 'none';
+    };
+    if (e.target.matches('#remove-btn')) {
+        removeMovie(e);
+    }
+    if (e.target.matches('#add-btn')) {
+        addToFilms();
+    }
 });
 
-addMovieCancel.addEventListener('click', function (){
-    addMovieForm.reset();
-    add.style.display = 'none';
-})
 
 addMovieForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -276,13 +283,44 @@ function displayFilms () {
     }
 }
 
-addMovieBtn.addEventListener('click', addToFilms);
-
 document.addEventListener('load', displayFilms);
 
+//YO CREO QUE DEBE SER ASI, PERO NO LOGRO PASARLE EL DATO (DATASET) AL BOTON, NO ME SALEEEEEE
+/*const removeMovie = (e) => {
+    const newFilms = films.filter((item) => {
+        if(e.target.dataset.id === item.id)return;
+    });
+    showFilms();
+};*/
 
+const showFilms = () => {
+    films.forEach((item) => {
+        
+        const clone = modalTemplate.content.cloneNode(true);
+        
+        clone.querySelector('.modal__table-title-1').textContent = item.title;
+        clone.querySelector('.modal__table-title-2').textContent = item.year;
+        clone.querySelector('.modal__table-title-3').textContent = item.synopsis;
+
+        clone.querySelector('#remove-btn').dataset.id = item.id;
+
+        fragment.appendChild(clone);
+    });
+
+    modal.appendChild(fragment);
+};
 
 /*
+//CUALQUIER COSA, NO FUNCIONA....
+const removeMovie = (e) => {
+    films = films.filter((item) => {
+        if(e.target.dataset.id === item.id)
+            return;
+    });
+
+    showFilms();
+};
+
 document.addEventListener('DOMContentLoaded', function() { //cargar todo al dom
     const removeBtn = document.querySelectorAll('#remove-btn');
   
@@ -299,11 +337,5 @@ document.addEventListener('DOMContentLoaded', function() { //cargar todo al dom
   });
   */
 
-  back.addEventListener('click', function(){
-    add.style.display = 'none'
-});
 
-closeModal.addEventListener('click', function(){
-    modal.style.display = 'none';
-});
 
