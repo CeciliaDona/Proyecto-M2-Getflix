@@ -48,21 +48,110 @@ ul li a {
 }
 
 /*navbar*/
+nav {
+  background-image: linear-gradient(150deg, #58074a64, #08619c50, #4adae452); /*borrar en caso que quede el de abajo*/
+  background-image: url(../images/backgrounds/stars-background-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .nav-shadow {
-	box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
-	-webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
-	-moz-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
+  box-shadow: -1px 9px 21px -5px rgba(126, 154, 234, 0.94);
+  -webkit-box-shadow: -1px 9px 21px -5px rgba(126, 154, 234, 0.94);
+  -moz-box-shadow: -1px 9px 21px -5px rgba(126, 154, 234, 0.94);
 }
+
 .nav-item-img {
-	width: 30px;
-	height: 30px;
+  width: 30px;
+  height: 30px;
 }
+
 .navbar__img {
-	width: 50px;
-	height: 50px;
+  width: 50px;
+  height: 50px;
 }
+
+.nav-links {
+  background: linear-gradient(to top, #93e4fb, #6a73f3, #adc3fa, #93e4fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-2-paragraph);
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 15px;
+  --clippy: polygon(0 1%, 0 0, 0 100%, 0% 100%);
+}
+
+.nav-links:hover {
+  background: linear-gradient(to top, #bdeaf7, #a0b9f7, #c093f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-links::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 0.2px;
+  height: 3px;
+  border-radius: 2px;
+  clip-path: var(--clippy);
+  transition: clip-path 0.5s;
+}
+
 .btn-navbar {
-	background-color: var(--btn-color) !important;
+  padding: 5px 12px;
+  width: 80%;
+  border: 2px solid #fdfef7;
+  border-radius: 7px;
+  background-image: var(--color-btn);
+  transition: all 0.4s ease-in;
+  position: relative;
+  font-weight: 500;
+  right: 10px;
+}
+
+.btn-navbar:hover {
+  box-shadow: 0 0 80px #8b6dee;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: 2px solid #fdfef7;
+}
+
+.btn-navbar span:nth-child(n) {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 3px solid;
+  transition: all 1s;
+}
+
+.btn-navbar span:nth-child(1) {
+  right: 0.5%;
+  top: -12%;
+  background-color: #fff;
+  border: solid #fff;
+}
+
+.btn-navbar span:nth-child(2) {
+  left: 1%;
+  bottom: -10%;
+  border: 3px solid #fff;
+  background-color: #fff;
+}
+
+.btn-navbar:hover span:nth-child(1) {
+  right: 90%;
+  transform: rotate(90deg);
+  color: var(--btn-color);
+}
+
+.btn-navbar:hover span:nth-child(2) {
+  left: 90%;
+  transform: rotate(90deg);
+  color: var(--btn-color);
 }
 
 /* DE ACÁ PARA ABAJO CHEQUEAR TODO EL CÓDIGO PORQUE ERA DE POCHOCLITOS Y MUCHAS CLASES ACÁ NO VAN!!! (MENOS EL FOOTER QUE ESTÁ BIEN) */
@@ -323,8 +412,9 @@ img a {
 
 /*--- FOOTER MOBILE 320 ---*/
 .container__footer {
-  background:var(--backround-pages);
-  border-top: solid 4px var(--btn-color);
+  background-image: linear-gradient(to top, rgb(19, 19, 19), rgba(35, 35, 38, 0.673), rgba(31, 31, 34, 0.475));
+  border-top: solid 5px var(--btn-color);
+  border-image: linear-gradient(to right, #8a01ce, #9232ff, #9180ff, #00c6ff, #4cdbfb) 1;
 }
 
 .footer__container-contact {
@@ -338,7 +428,7 @@ img a {
 
 .footer__title {
   font-family: var(--font-titles);
-  font-size: 60px;
+  font-size: 50px;
   color: var(--color-fonts);
   font-weight: bold;
   letter-spacing: 8px;
@@ -347,8 +437,8 @@ img a {
 }
 
 .footer__logo {
-  width: 130px;
-  padding-bottom: 15px;
+  width: 100px;
+  padding-bottom: 5px;
 }
 
 .footer__icons {
@@ -370,9 +460,15 @@ img a {
 .icon-redes:hover {
   background-color: var(--color-fonts);
   color: var(--backround-pages) !important;
-  box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
-  -webkit-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
-  -moz-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
+  box-shadow: 1px 0px 17px 3px rgba(168, 203, 246, 0.77);
+  -webkit-box-shadow: 1px 0px 17px 3px rgba(168, 203, 246, 0.77);
+  -moz-box-shadow: 1px 0px 17px 3px rgba(168, 203, 246, 0.77);
+}
+
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
 }
 
 .footer__contact {

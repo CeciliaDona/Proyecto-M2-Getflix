@@ -141,8 +141,8 @@ nav {
 }
 
 .btn-navbar span:nth-child(2) {
-  left: 1%;
-  bottom: -98%;
+  left: 0.1%;
+  bottom: -97%;
   border: 3px solid #fff;
   background-color: #fff;
 }
@@ -161,7 +161,8 @@ nav {
 
 /*------------- MAIN MOBILE --------------*/
 .container__header {
-  background-image: url(../images/backgrounds/stars-background-3.jpg);  background-repeat: no-repeat;
+  background-image: url(../images/backgrounds/stars-background-3.jpg);  
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -227,16 +228,11 @@ nav {
   line-height: var(--line-height-mobile);
   padding: 3em 1.5em;
   border-top: solid 5px var(--btn-color);
-  border-bottom: solid 5px var(--btn-color);
+  border-bottom: solid 5px var(--color-btn);
   border-radius: 90px;
   margin: 90px 0 60px 0;
   text-align: center;
   position: relative;
-}
-
-.letter-big {
-  font-size: 1.3rem;
-  font-weight: 600;
 }
 
 .about-us__part-1 ,
@@ -244,6 +240,11 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: 200;
+  border: solid 5px var(--btn-color);
+  border-image: linear-gradient(to right, #8a01ce, #9232ff, #9180ff, #00c6ff, #4cdbfb) 1;
+  padding: 60px 30px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 50px #8b6dee;
 }
 
 .about__us-title {
@@ -256,7 +257,7 @@ nav {
 .about-us__p {
   text-align: center;
   line-height: 1.55rem;
-  font-weight: 500;
+  font-weight: 00;
   font-size: 0.9rem;
   padding-bottom: 30px;
 }
@@ -325,7 +326,7 @@ nav {
   left: 50%;
   width: 600px;
   height: 100px;
-  background: linear-gradient(transparent, #69ecf5bc, #3993dc, #871ee2);
+  background: linear-gradient(transparent, #69ecf5bc, #39d1dc, #9745df);
   animation: animate 8s linear infinite;
 }
 
@@ -567,11 +568,10 @@ a {
   }
 
   .container__about-us {
-    padding: 30px 20px;
+    padding: 50px 20px;
   }
 
   .about-us__part-1,
-  .about-us__part-2,
   .about-us__part-3  {
     border-radius: 10px;
   }
@@ -697,7 +697,6 @@ a {
   }
 
   .about-us__part-1,
-  .about-us__part-2,
   .about-us__part-3  {
     font-size: 1.2rem;
     line-height: 2.2rem;

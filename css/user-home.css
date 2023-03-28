@@ -19,6 +19,7 @@
     --btn-color: #B0C43A;
     --backround-pages: #201f21;
     --color-fonts: rgb(255, 254, 245);
+    --color-btn: linear-gradient(150deg, #58074a, #0e6ba9, #4adae4);
     --font-titles: 'Anton', sans-serif;
     --font-paragraph: 'Arimo', sans-serif;
     --font-2-paragraph: 'Montserrat', sans-serif;
@@ -50,6 +51,13 @@
 
 /*====================== RES 320 ===================== */
   /*navbar*/
+
+  nav {
+    background-image: linear-gradient(150deg, #58074a64, #08619c50, #4adae452); /*borrar en caso que quede el de abajo*/
+    background-image: url(../images/backgrounds/stars-background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .nav-shadow {
     box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
     -webkit-box-shadow: -1px 9px 21px -5px rgba(126,154,234,0.94);
@@ -63,10 +71,7 @@
     width: 50px;
     height: 50px;
   }
-  .btn-navbar {
-    background-color: var(--btn-color) !important;
-    width: 130px;
-  }
+
   .form__position {
     position: relative;
     padding-left: 30px !important;
@@ -77,11 +82,64 @@
     position: absolute;
   }
 
+  .btn-navbar {
+    padding: 5px 12px;
+    width: 80%;
+    border: 2px solid #fdfef7;
+    border-radius: 7px;
+    background-image: var(--color-btn);
+    transition: all 0.4s ease-in;
+    position: relative;
+    font-weight: 500;
+    right: 10px;
+  }
+  
+  .btn-navbar:hover {
+    box-shadow: 0 0 80px #8b6dee;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid #fdfef7;
+  }
+  
+  .btn-navbar span:nth-child(n) {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 3px solid;
+    transition: all 1s;
+  }
+  
+  .btn-navbar span:nth-child(1) {
+    right: 0.5%;
+    top: -12%;
+    background-color: #fff;
+    border: solid #fff;
+  }
+  
+  .btn-navbar span:nth-child(2) {
+    left: 1%;
+    bottom: -10%;
+    border: 3px solid #fff;
+    background-color: #fff;
+  }
+  
+  .btn-navbar:hover span:nth-child(1) {
+    right: 90%;
+    transform: rotate(90deg);
+    color: var(--btn-color);
+  }
+  
+  .btn-navbar:hover span:nth-child(2) {
+    left: 90%;
+    transform: rotate(90deg);
+    color: var(--btn-color);
+  }
+
   /*-----slider-----*/
   .slider {
-    height: 100vh; /*agregué esto*/
-    width: 100%; /*agregué esto*/
-    background-size: cover; /*agregué esto*/
+    height: 100vh; 
+    width: 100%; 
+    background-size: cover; 
     display: flex;
     flex-direction: row;
     position: relative;
@@ -99,27 +157,28 @@
     }
 
   .bi-chevron-left {
-    left: 0;
+    left: 5px;
+    font-size: 20px !important;
   }
   .bi-chevron-right {
-    right: 0;
+    right: 5px;
+    font-size: 20px !important;
   }
 
   .container__slider {
-    font-size: 16px;
-    min-height: 40.62em;
-    padding-top: 200px;
-    display: flex;
+    font-size: 14px;
+    height: 100vh;
+    padding-top: 120px;
     position: absolute;
     transition: all 0.5s ease-in-out;
     background-size: contain;
   }
 
   .container__slider-1 {
-      background-position: center center;
-      background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
-      width: 100%;
-    }
+    background-position: center center;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/movies/interestellar.jpg);
+    width: 100%;
+  }
 
   .container__slider-movie img {
     position: 0 relative;
@@ -150,7 +209,6 @@
   }
 
   .container__slider-movie {
-    width: 90%;
     margin: 10px auto;
     margin-bottom: 6.25em;
   }
@@ -161,7 +219,7 @@
   
   .container__slider-title {
     font-weight: 600;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.3em;
     font-size: 2em;
   }
   
@@ -170,25 +228,31 @@
     font-size: 1em;
     line-height: 1.75em;
     max-width: 90%;
-    margin-bottom: 1.25em;
+    margin-bottom: 1.4em;
+  }
+
+  .container__slider-buttons {
+    margin-top: 80px;
   }
   
   .container__slider-btn {
-    background: rgba(0,0,0, 0.5);
     border: none;
     border-radius: 0.31em;
     padding: 0.5em 1.5em;
-    color: var(--color-fonts);
     margin-right: 1.25em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     cursor: pointer;
     transition: .3s ease all;
     font-size: 1em;
+    background: #fff;
+    color: #000;
+    width: 180px;
+    text-align: left;
   }
   
   .container__slider-btn:hover {
-    background: #fff;
-    color: #000;
+    background: rgba(0,0,0, 0.5);
+    color: var(--color-fonts);
   }
   
   .container__slider-btn i {
@@ -218,7 +282,7 @@
     font-family: var(--font-paragraph);
     }
 
-  /*main films section 320*/
+  /*--- main films section 320 ---*/
   .main {
     margin-bottom: 70px;
     width: 90%;
@@ -234,9 +298,9 @@
  
   .main__container-movies {
     display: grid;
-		grid-template-columns: 85%; /*agregue esto*/
-    justify-content: center; /*agregue esto*/
-		gap: 4em; /*cambié esto, antes decía 20px*/
+		grid-template-columns: 85%; 
+    justify-content: center; 
+		gap: 4em; 
     flex-wrap: wrap;
     margin: 20px;
     width: 100%;
@@ -283,7 +347,6 @@
     align-items: center;
   }
 
-  /*Agregué estos bloques de código*/
   .btn-see-more, .btn-add-list, .remove {
     color: var(--color-fonts);
     font-size: 0.9rem;
@@ -333,7 +396,7 @@
     width: 100%;
     margin: auto;
     padding-top: 15px;
-    opacity: 0.87; /*cambié esto como para que se vea un poco la peli, antes tenía opacity 1, si no te gusta cambialo de nuevo*/
+    opacity: 0.87; 
     visibility: visible;
     transform: scale(1.15);
     background-image: url(../images/backgrounds/stars-background-4.jpg);
@@ -341,13 +404,11 @@
     background-size: cover;
   }
 
-  /*Agregué este bloque de código*/
   .container__movie-number {
     position: relative;
     color: var(--color-fonts);
   }
 
-  /*Agregué este bloque de código*/
   .movie-number {
     position: absolute;
     top: -25%;
@@ -359,9 +420,7 @@
     0 0 50px white;
   }
 
-
-  /* Prueba Modal res 320 */
-
+/*--- Modal --- */
 .modal-content {
   background-color: var(--backround-pages) !important;
 }
@@ -434,89 +493,116 @@ a {
     color: white;
 }
 
-
   /*--- FOOTER MOBILE 320 ---*/
-  .container__footer {
-    background:var(--backround-pages);
-    border-top: solid 4px var(--btn-color);
-  }
+.container__footer {
+  background-image: linear-gradient(to top, rgb(19, 19, 19), rgba(35, 35, 38, 0.673), rgba(31, 31, 34, 0.475));
+  border-top: solid 5px var(--btn-color);
+  border-image: linear-gradient(to right, #8a01ce, #9232ff, #9180ff, #00c6ff, #4cdbfb) 1;
+}
 
-  .footer__container-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-  }
+.footer__container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
 
-  .footer__title {
-    font-family: var(--font-titles);
-    font-size: 60px;
-    color: var(--color-fonts);
-    font-weight: bold;
-    letter-spacing: 8px;
-    padding-top: 20px;
-    text-align: center;
-  }
+.footer__title {
+  font-family: var(--font-titles);
+  font-size: 50px;
+  color: var(--color-fonts);
+  font-weight: bold;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  text-align: center;
+}
 
-  .footer__logo {
-    width: 130px;
-    padding-bottom: 15px;
-  }
+.footer__logo {
+  width: 100px;
+  padding-bottom: 5px;
+}
 
-  .footer__icons {
-    width: 55%;
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0 50px 0;
-  }
+.footer__icons {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0 50px 0;
+}
 
-  .icon-redes {
-    padding: 3px 8px 3px 8px;
-    color: var(--color-fonts);
-    border: solid 0.1px rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    transition: 0.6s;
-    font-size: 35px;
-  }
+.icon-redes {
+  padding: 3px 8px 3px 8px;
+  color: var(--color-fonts);
+  border: solid 0.1px rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  transition: 0.6s;
+  font-size: 35px;
+}
 
-  .icon-redes:hover {
-    background-color: var(--color-fonts);
-    color: var(--backround-pages) !important;
-    box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
-    -webkit-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
-    -moz-box-shadow: 1px 0px 17px 3px rgba(168,203,246,0.77);
-  }
+.icon-redes:hover {
+  background-color: var(--color-fonts);
+  color: var(--backround-pages) !important;
+  box-shadow: 1px 0px 17px 3px rgba(168, 203, 246, 0.77);
+  -webkit-box-shadow: 1px 0px 17px 3px rgba(168, 203, 246, 0.77);
+  -moz-box-shadow: 1px 0px 17px 3px rgba(168, 203, 246, 0.77);
+}
 
-  .footer__contact {
-    color: var(--color-fonts);
-    font-size: 0.8rem;
-    padding: 10px;
-  }
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
+}
 
-  .footer__reserved {
-    color: var(--color-fonts);
-    font-size: 0.6rem;
-    text-align: center;
-    padding-bottom: 10px;
-    margin: 0;
-  }
-    /*Los media query que habría que hacer son res 768 para tablet y 1024 para descktop, y después un poco más grande también como para que no se deforme tanto cuando lo veamos en pantalla completa. Y también si queres ir ajustando algunos valores en resoluciones intermedias para algún bloque en particular se puede hacer, pero lo ideal es que esté si o si la 768 y la 1024 después de la 320 como mobile first como todo lo que está acá arriba. Los media query ddeben colocarse de forma ascencente, es decir primero res 320, después 768, 1024 y así hasta la que llegues. AGREGO 768 Y 1024 ACÁ ABAJO*/
+.footer__contact {
+  color: var(--color-fonts);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+.footer__reserved {
+  color: var(--color-fonts);
+  font-size: 0.6rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0;
+}
   
   /*===================== RES 768 (TABLET) ==================== */
   @media(min-width: 768px) {
     .bi-chevron-left,
     .bi-chevron-right {
-      font-size: 60px;
+      font-size: 40px !important;
+    }
+
+    .container__slider-movie {
+      margin: 150px 60px;
+    }
+  
+    .container__slider-body {
+      padding-left: 50px ;
     }
     
     .container__slider-title {
-      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 0.3em;
+      font-size: 2em;
+    }
+    
+    .container__slider-buttons {
+      margin-top: 100px;
+    }
+    
+    .container__slider-btn {
+      width: 250px;
+    }
+    
+    .container__slider-title {
+      font-size: 3em;
     }
 
     .container__slider-description {
-      font-size: 1.5em;
+      font-size: 1.6em;
     }
 
     .container__slider-btn {
@@ -588,12 +674,45 @@ a {
 
     .bi-chevron-left,
     .bi-chevron-right {
-      font-size: 80px;
+      font-size: 50px !important;
     }
 
     .container__slider-title {
-    font-size: 3.5em;
+      font-size: 5em;
     }
+  
+    .container__slider-body {
+      padding-left: 80px ;
+    }
+    
+    .container__slider-buttons {
+      margin-top: 100px;
+    }
+    
+    .container__slider-btn {
+      width: 250px;
+    }
+
+    .container__slider-description {
+      font-size: 1.6em;
+    }
+
+    .container__slider-btn {
+      padding: 0.93em 1.87em;
+      font-size: 1.3em;
+    }
+
+    .main {
+      padding-top: 10px;
+    }
+
+    .main__container-movies {
+      grid-template-columns: 35% 35% 35%; 
+      gap: 2em; 
+      width: 88%;
+    }
+
+
 
     /*--- FOOTER DESCKTOP 1024 ---*/
     .footer__container-contact {
@@ -618,58 +737,3 @@ a {
       font-size: 0.9rem;
     }
   }
-
-/* ESTAS RESOLUCIONES TE LAS COMENTÉ PORQUE ALGUNAS COSAS NO LAS PODÍA ACOMODAR Y CREO QUE ERA POR ESTO, NO TE LAS BORRO POR SI NECESITAS USARLAS, CUALQUIER COSA DESCOMENTALAS
-  @media(max-width: 800px) {
-    .bi-chevron-left,
-    .bi-chevron-right{
-      font-size: 60px; 
-    }
-  
-    .main__container-movies {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .container__slider {
-      font-size: 14px;
-    }
-
-    .container__slider-body {
-      padding-left: 20px ;
-      padding-right: 15px;
-    }
-  
-    .container__slider-description {
-      max-width: 100%;
-      font-size: 1.3em;
-    }
-
-    .container__slider-btn {
-      font-size: 1.3em;
-    }
-
-    .main__title h3 {
-      font-size: 20px;
-      margin: 15px 0 10px 8px;
-    }
-  }*/
-
-  /*@media(max-width: 350px) {
-    .bi-chevron-left,
-    .bi-chevron-right{
-      font-size: 40px; 
-    }
-
-    .container__slider-body {
-      padding-left: 30px ;
-    }
-
-    .container__slider-title {
-      font-size: 2.5em;
-    }
-
-    .main__title h3 {
-      font-size: 15px;
-      margin: 15px 0 15px 28px;
-    }
-  } */

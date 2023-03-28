@@ -1,4 +1,3 @@
-const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.container__slider');
 let currentSlide = 0;
 
@@ -29,14 +28,6 @@ function prevSlide() {
 }
 
 setInterval(nextSlide, 10000);
-
-// slider.addEventListener('mouseenter', () => {
-//   clearInterval(slideInterval);
-// });
-
-// slider.addEventListener('mouseleave', () => {
-// slideInterval = setInterval(nextSlide, 5000);
-// });
 
 document.querySelector('#next').addEventListener('click', nextSlide);
 document.querySelector('#previous').addEventListener('click', prevSlide);

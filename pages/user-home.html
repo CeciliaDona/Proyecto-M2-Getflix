@@ -38,7 +38,7 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="./signin.html"><i class="bi bi-person-circle fs-3"></i></a>
+            <a class="navbar-brand" href="../index.html"><i class="bi bi-person-circle fs-3"></i></a>
             <div
                 class="offcanvas offcanvas-start text-bg-dark"
                 tabindex="-1"
@@ -79,7 +79,12 @@
         <form class="d-none d-md-flex" role="search" id="form-search">
             <input class="form__position form-control me-2 text-light" type="search"  aria-label="Search" id="search" name="search">
             <i class="form__position-search fs-5 text-light mt-1 ps-2 bi bi-search"></i>
-            <button id="sign-out-btn" class="btn btn-navbar me-4" type="submit">Sign Out</button>
+            
+            <a id="sign-out-btn" href="./signin.html" type="submit" class="btn btn-navbar ms-4 me-3">Sing out
+                <span></span>
+                <span></span>
+            </a> 
+
         </form>
     </nav>
     <main>
@@ -92,8 +97,10 @@
                         <p class="container__slider-description">
                             In the near future Earth has been devastated by drought and famine, causing a scarcity in food and extreme changes in climate. When humanity is facing extinction, a mysterious rip in the space-time continuum is discovered, giving mankind the opportunity to widen their lifespan.
                         </p>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        <div class="container__slider-buttons">
+                            <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
+                            <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -102,10 +109,12 @@
                     <div class="container__slider-body">
                         <h3 class="container__slider-title">My Neighbor Totoro</h3>
                         <p class="container__slider-description">
-                            This animated story from director Hayao Miyazaki follows students and sisters Satsuke and Mei as they settle into their country home with their father and wait for their mother to recover from an illness at an area hospital. As the sisters explore their new home, they discover and befriend some playful goblins, and in the nearby forest they encounter a huge creature known as Totoro.
+                            This animated story from director Hayao Miyazaki follows students and sisters Satsuke and Mei as they settle into their country home with their father and wait for their mother to recover from an illness at an area hospital.
                         </p>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        <div class="container__slider-buttons">
+                            <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
+                            <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -114,10 +123,12 @@
                     <div class="container__slider-body">
                         <h3 class="container__slider-title">The Simpsons</h3>
                         <p class="container__slider-description">
-                            The combination of Homer, his new pet pig, and a silo full of manure could lead to a disaster that threatens not only Springfield, but the entire world. An angry mob arrives at the Simpson house and divides the family. With the fate of Earth at stake, Homer prepares to try to redeem himself in order to save the world and earn Marge's forgiveness.
+                            The combination of Homer, his new pet pig, and a silo full of manure could lead to a disaster that threatens not only Springfield, but the entire world. An angry mob arrives at the Simpson house and divides the family. 
                         </p>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        <div class="container__slider-buttons">
+                            <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
+                            <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -128,8 +139,10 @@
                         <p class="container__slider-description">
                             Jake Sully and Ney'tiri have started a family and do everything they can to stay together. However, they must leave their home and explore the regions of Pandora when an ancient threat reappears.
                         </p>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        <div class="container__slider-buttons">
+                            <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
+                            <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -140,8 +153,10 @@
                         <p class="container__slider-description">
                             Giselle questions her happiness and inadvertently upsets the balance of everyone in Andalasia and the real world.
                         </p>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
-                        <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        <div class="container__slider-buttons">
+                            <button role="button" class="container__slider-btn"><i class="bi bi-play-circle-fill"></i>Reproducir</button>
+                            <button role="button" class="container__slider-btn"><i class="bi bi-info-circle-fill"></i>Más información</button>
+                        </div>
                     </div> 
                 </div>
             </div>
@@ -196,6 +211,16 @@
             <div id="my-list" class="main__container">
                 <ul class="main__container-movies container__fav-list">
                     <!--Template My fav list-->
+                </ul>
+            </div>
+        </div>
+        <div class="main d-none">
+            <div class="main__title">
+                <h3 class="section__title my-list__title" data-title="My favorite list">Search</h3>
+            </div>
+            <div id="my-list" class="main__container">
+                <ul class="main__container-movies container__fav-list">
+                    <!--Template search-->
                 </ul>
             </div>
         </div>
