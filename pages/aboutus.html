@@ -82,11 +82,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="d-none d-md-flex  justify-content-around">
-					<a class="nav-link text-light me-3" href="./aboutus.html">About Us</a>
-					<a class="nav-link text-light" href="./contact.html">Contact Us</a>
-				<form  role="search">
-					<a href="./signin.html" class="btn btn-navbar ms-4 me-3">Sing in</a>
+			<div class="d-none d-md-flex justify-content-around align-items-center">
+                <a class="nav-links text-light me-3" href="./aboutus.html">About Us</a>
+                <a class="nav-links text-light" href="./contact.html">Contact Us</a>
+				<form role="search">
+					<a href="./signin.html" type="button" class="btn btn-navbar ms-4 me-3">Sing in
+                        <span></span>
+                        <span></span>
+                    </a> 
 				</form>
 			</div>
 		</nav>
@@ -115,51 +118,41 @@
                 <p>💻 This internship helped us to reinforce the technical knowledge learned during the course.</p> 
             </div>
         </div>
-        
-        <div class="container__cards">
+        <div class="section__cards">
+            <h3 class="members__title">MEMBERS</h3>
+            <div class="container__cards">
+                <!--Template cards-->
+            </div> 
+        </div>
+        <template class="template-cards"> 
             <div class="container__card">
-                <!--TEMPLATE MEMBER 1-->
-            </div>
-            <div class="container__card">
-                <!--TEMPLATE MEMBER 2-->
-            </div>
-            <div class="container__card">
-                <!--TEMPLATE MEMBER 3-->
-            </div>
-            <div class="container__card">
-                <!--TEMPLATE MEMBER 4-->
-            </div>
-            <div class="container__card">
-                <!--TEMPLATE MEMBER 5-->
-            </div>
-        </div> 
-
-        <template class="template-cards">   
-            <div class="card">
-                <div class="lines"></div>
-                <div class="imgBx">
-                    <img src="../images/about-us/members/cecilia-img.JPG" alt="">
-                </div>
-                <div class="content">
-                    <div class="details">
-                        <h3>Student Name<br><span>DevSchool Academy Student</span></h3>
-                        <div class="data">
-                            <div class="container__social">
-                                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                                <p>Instagram</p>
-                            </div>
-                            <div class="container__social">
-                                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1392697184%3A1679351441567912&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AWnogHf41I2xPI1ugD1K0_TJUg4rukqGtb3h2GVks-oaQX3cg0LCujHY81bO4J9gqaGSDsOz6fYe0g&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="bi bi-envelope-fill" target="_blank"></i></a>
-                                <p>Email</p>
-                            </div>
-                            <div class="container__social">
-                                <a href="https://ar.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                <p>LinkedIn</p>
+                <div class="card">
+                    <div class="lines"></div>
+                    <div class="imgBx">
+                        <img class="member-img" src="" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <h3>Student Name</h3>
+                            <span class="student">DevSchool Academy Student</span>
+                            <div class="data">
+                                <div class="container__social">
+                                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                                    <p>Instagram</p>
+                                </div>
+                                <div class="container__social">
+                                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1392697184%3A1679351441567912&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AWnogHf41I2xPI1ugD1K0_TJUg4rukqGtb3h2GVks-oaQX3cg0LCujHY81bO4J9gqaGSDsOz6fYe0g&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="bi bi-envelope-fill" target="_blank"></i></a>
+                                    <p>Email</p>
+                                </div>
+                                <div class="container__social">
+                                    <a href="https://ar.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                    <p>LinkedIn</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </template>
     </main>
     <footer class="container__footer">
@@ -182,5 +175,6 @@
         <p class="footer__reserved">All rights reserved - 2023</p>
     </footer>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   <script src="../js/aboutUs.js" type="module"></script>
 </body>
 </html>
