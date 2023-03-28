@@ -40,7 +40,6 @@
       margin: auto;
     }
         
-
     html {
       min-height:100%;
 
@@ -51,7 +50,6 @@
 
 /*====================== RES 320 ===================== */
   /*navbar*/
-
   nav {
     background-image: linear-gradient(150deg, #58074a64, #08619c50, #4adae452); /*borrar en caso que quede el de abajo*/
     background-image: url(../images/backgrounds/stars-background-4.jpg);
@@ -380,9 +378,9 @@
     position: absolute;
     top: 0;
     display: flex;
-    flex-direction: column; /*agregué esto*/
-    align-items: center;  /*agregué esto*/
-    justify-content: space-evenly;  /*agregué esto*/
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: space-evenly; 
     flex-wrap: wrap;
     background: var(--backround-pages); 
     transition: all 500ms ease-out;

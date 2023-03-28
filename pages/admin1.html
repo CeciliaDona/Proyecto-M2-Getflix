@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AR">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@100;200;400;500;600;700;800&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@100;200;400;500;600;700;800&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/admin-1.css">
 </head>
 
@@ -25,142 +29,109 @@
     <!-- navbar -->
     <nav class="navbar navbar-dark bg-dark fixed-top nav-shadow">
         <div class="d-none d-md-block">
-            <a href="../pages/admin1.html">
+            <a href="./user-home.html">
                 <img class="navbar__img ms-3" src="../../images/icons/logo.png" alt="logo">
             </a>
         </div>
-    <div class="container-fluid d-md-none">
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="./signin.html"><i class="bi bi-person-circle fs-3"></i></a>
-        <div
-            class="offcanvas offcanvas-start text-bg-dark"
-            tabindex="-1"
-            id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-        >
-            <div class="offcanvas-header justify-content-end">
-                <button
-                    type="button"
-                    class="btn-close btn-close-white"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                ></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-                    <li class="nav-item ps-3 d-flex">
-                        <img
-                            class="nav-item-img me-3"
-                            src="/images/icons/logo.png"
-                            alt="logo">
-                            <a class="nav-link active" aria-current="page" href="./admin1.html">Home</a>
-                    </li>
-                    <li class="nav-item ps-3">
-                        <a class="nav-link active" aria-current="page" href="./aboutus.html"
-                            ><i class="bi bi-info-circle me-4"></i> About Us</a
-                        >
-                    </li>
-                    <li class="nav-item ps-3">
-                        <a class="nav-link active" aria-current="page" href="./contact.html"
-                            ><i class="bi bi-envelope-fill me-4"></i> Contact Us</a
-                        >
-                    </li>
-                    <li class="nav-item ps-3">
-                        <a class="nav-link active" aria-current="page" href="../index.html"
-                            ><i class="bi bi-person-circle me-4"> </i>Sign Out</a
-                        >
-                    </li>
-                </ul>
+        <div class="container-fluid d-md-none">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html"><i class="bi bi-person-circle fs-3"></i></a>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header justify-content-end">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item ps-3 d-flex">
+                            <img class="nav-item-img me-3" src="/images/icons/logo.png" alt="logo">
+                            <a class="nav-link active" aria-current="page" href="../pages/user-home.html">Home</a>
+                        </li>
+                        <li class="nav-item ps-3">
+                            <a class="nav-link active" aria-current="page" href="./error404.html"><i
+                                    class="bi bi-search me-4"></i></i> Search</a>
+                        </li>
+                        <li class="nav-item ps-3">
+                            <a class="nav-link active" aria-current="page" href="../index.html"><i
+                                    class="bi bi-person-circle me-4"> </i>Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-        <div class="d-none d-md-flex"">
-            <a class="nav-link text-light  pt-1 me-3 text-decoration-underline" href="./admin1.html">ADMIN</a>
-            <form class=" d-none d-md-flex" role="search">
-                <input class="form__position form-control me-2 text-light" type="search"  aria-label="Search">
-                <i class="form__position-search fs-5 text-light mt-1 ps-2 bi bi-search"></i>
-                <button id="sign-out-btn" class="btn btn-navbar me-4" type="submit">Sign Out</button>
-            </form>
-        </div>
-    </nav>
+        <form class="d-none d-md-flex" role="search" id="form-search">
+            <input class="form__position form-control me-2 text-light" type="search" aria-label="Search" id="search"
+                name="search">
+            <i class="form__position-search fs-5 text-light mt-1 ps-2 bi bi-search"></i>
 
-    
+            <a id="sign-out-btn" href="./signin.html" type="submit" class="btn btn-navbar ms-4 me-3">Sing out
+                <span></span>
+                <span></span>
+            </a>
+        </form>
+    </nav>
     <div class="main main-1">
         <div class="main__title">
             <h3 class="section__title just-added__title" data-title="Just added">JUST ADDED</h3>
             <h3 class="main__container-btn just-added-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
         </div>
-
-
         <div class="main__container">
             <ul class="main__container-movies container__just-added">
                 <!--Template movies-->
             </ul>
-        </div>			
+        </div>
     </div>
     <div class="main">
         <div class="main__title">
             <h3 class="section__title trends__title" data-title="Trends">TRENDS</h3>
             <h3 class="main__container-btn trends-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
         </div>
-
         <div class="main__container">
             <ul class="main__container-movies container__trends">
                 <!--Template movies-->
             </ul>
-        </div>			
+        </div>
     </div>
     <div class="main">
         <div class="main__title">
             <h3 class="section__title just-added__title" data-title="Continue watching">CONTINUE WATCHING</h3>
-            
         </div>
-
         <div class="main__container">
             <ul class="main__container-movies container__continue">
                 <!--Template movies-->
             </ul>
-        </div>			
+        </div>
     </div>
     <div class="main">
         <div class="main__title">
             <h3 class="section__title just-added__title" data-title="Top 10">TOP 10</h3>
             <h3 class="main__container-btn top-10-edit" id="open">EDIT <i class="bi bi-pencil-square"></i></h3>
         </div>
-
         <div class="main__container">
             <div class="main__container-movies container__top-10">
                 <!--Template movies-->
             </div>
-        </div>			
+        </div>
     </div>
-
     <template id="template-categories">
         <li class="main__container-movie">
-            <h2 class="movie-title">title</h2> 
+            <h2 class="movie-title">title</h2>
             <img class="img-films" data-img="" src="" alt="">
         </li>
     </template>
-
     <template id="template-top-ten">
         <li class="main__container-movie">
-            <h2 class="movie-title">title</h2> 
+            <h2 class="movie-title">title</h2>
             <div class="container__movie-number" href="#">
                 <img class="img-films" src="" alt="" data-img="">
                 <p class="movie-number">N</p>
             </div>
         </li>
     </template>
-
-
     <div class="modal__container w3-animate-opacity">
         <div class="modal__close  w3-animate-opacity">
             <strong><i class="bi bi-x-lg" id="btn-close"></i></strong>
@@ -177,9 +148,8 @@
             </thead>
             <tbody></tbody>
         </table>
-            
         <template class="modal__template" id="modal-template">
-            <tr class="modal__table-titles" data-id=""> 
+            <tr class="modal__table-titles" data-id="">
                 <th class="modal__table-title-1"></th>
                 <th class="modal__table-title-2"></th>
                 <th class="modal__table-title-3"></th>
@@ -200,22 +170,24 @@
             <h5 class="modal__add-movie-title">Year</h5>
             <input class="modal__add-movie-input" id="movie-year" type="number" placeholder="2023" required>
             <h5 class="modal__add-movie-title">Genres</h5>
-            <input class="modal__add-movie-input" id="movie-genres" type="text" placeholder="Science-Fiction, Action, Love" required>
+            <input class="modal__add-movie-input" id="movie-genres" type="text"
+                placeholder="Science-Fiction, Action, Love" required>
             <h5 class="modal__add-movie-title">Image url</h5>
             <input class="modal__add-movie-input" id="movie-img-url" type="text" placeholder="www.image.com" required>
             <h5 class="modal__add-movie-title">Alt</h5>
             <input class="modal__add-movie-input" id="movie-alt" type="text" placeholder="example" required>
             <h5 class="modal__add-movie-title">Trailer url</h5>
-            <input class="modal__add-movie-input" id="movie-trailer-url" type="text" placeholder="www.youtube.com/trailer" required>
+            <input class="modal__add-movie-input" id="movie-trailer-url" type="text"
+                placeholder="www.youtube.com/trailer" required>
             <h5 class="modal__add-movie-title">Description(Synopsis)</h5>
-            <input class="modal__add-movie-input" id="movie-synopsis" type="text" placeholder="Example is a movie about..." required >
+            <input class="modal__add-movie-input" id="movie-synopsis" type="text"
+                placeholder="Example is a movie about..." required>
             <h5 class="modal__add-movie-title">Category</h5>
             <input class="modal__add-movie-input" id="movie-category" type="text" placeholder="Trends, Top 10" required>
             <button class="modal__add-movie-btn" role="button" type="submit" id="add-btn">Add movie</button>
             <button class="modal__add-movie-btn" role="button" type="button" id="add-cancel">Cancel</button>
         </form>
     </div>
-
     <footer class="container__footer">
         <h2 class="footer__title">GETFLIX</h2>
         <div class="footer__container-contact">
@@ -235,8 +207,9 @@
         </div>
         <p class="footer__reserved">All rights reserved - 2023</p>
     </footer>
-    
-   <script src="../js/admin1.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/admin1.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
 </body>
 </html>
