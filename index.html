@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="body">
+    <div class="container__getflix-title">
+        <video class="video-getflix" autoplay muted preload loop src="https://vod-bgc-sa-east-1.media.dssott.com/bgui/ps01/disney/bgui/2020/12/17/1608229455-star-wars.mp4"></video>
+        <h1 class="getflix-title">GETFLIX</h1>
+        <a class="container__arrow-img" href="#getflix">
+            <img class="arrow" src="images/icons/arrow.png" alt="arrow">
+        </a>
+    </div>
      <!-- navbar -->
     <nav class="navbar navbar-dark bg-dark fixed-top nav-shadow">
         <div class="d-none d-md-block">
@@ -93,9 +100,9 @@
         </div>
     </nav>
     <!-- Slider mobile-->
-    <div class="slider d-md-none">
+    <span id="getflix"></span>
+    <div class="slider d-md-none slider-mobile">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="container__img-slider">
@@ -132,22 +139,28 @@
         <div class="main__container-text">
             <div class="container__title-paragraph">
                 <div class="container__main-title">
-                    <h1 class="main__title regular">WATCH MOVIES</h1>
-                    <h2 class="main__title italic">AND TV SHOW</h2>
+                    <h2 class="main__title regular">WATCH MOVIES </h2>
+                    <h2 class="main__title italic">AND TV SHOW </h2>
                 </div>
-                <P class="main__paragraph">Enjoy exclusive<span class="getflix"> GETFLIX</span>as well as popular movies and TV shows. Watch now, cancel anytime.</P>
+                <P class="main__paragraph">Enjoy exclusive<span class="getflix"> GETFLIX</span> as well as popular movies and TV shows. Watch now, cancel anytime.</P>
             </div>      
-            <div class="container__buttons">
-                <a href="./pages/signin.html" class="main-button member">Member? Sign In</a>
+            <div class="container__buttons">   
+                <a href="./pages/signin.html" class="main-button member">Member? Sign In
+                    <span></span>
+                    <span></span>
+                </a>
                 <p class="main__or">or</p>
-                <a href="./pages/signin.html" class="main-button trial">Start your free trial</a>
+                <a href="./pages/signin.html" class="main-button trial">Start your free trial
+                    <span></span>
+                    <span></span>
+                </a>  
             </div>
         </div>
         <!-- Slider tablet/ descktop-->
         <div id="carouselExampleFade" class="carousel slide carousel-fade d-none d-md-block" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active container__img-slider">
-                    <img src="./images/start-page/slider/descktop/slider-descktop-1.jpg" class="d-block w-100 img-slider-descktop" alt="Slider one mix movies">
+                    <img src="./images/start-page/slider/descktop/goku-le-gana-2.jpg" class="d-block w-100 img-slider-descktop" alt="Slider one mix movies">
                 </div>
                 <div class="carousel-item container__img-slider">
                     <img src="./images/start-page/slider/descktop/slider-descktop-2.jpg" class="d-block w-100 img-slider-descktop" alt="Slider two mix movies">
@@ -165,16 +178,25 @@
                 <span class="visually-hidden">Next</span>
             </button>
           </div>
-    </main>   
-    <div class="container__section-one sections">
+    </main>    
+    <h3 class="title-section-one-tablet">Watch the way you want</h3>
+    <div class="section-titles container__section-one sections">
         <img class="section-one__img" src="images/start-page/photo-main-scroll.png" alt="photo-enjoy">
         <div class="section-one__contain-title--parag">
-            <h3 class="section-titles">Watch the way you want</h3>
+            <h3 data-text-1="Watch the way you want" class="section-titles title-section-one-mob">Watch the way you want</h3>
             <p class="section-paragraphs">Enjoy the big screem experience on your TV, or watch on your tablet, laptop, phone and more. You can watch an ever-growing selection of titles in 4K. Plus, you can stream on 4 screens at once, so everyone’s happy.</p>
         </div>
     </div>
+    <div class="container__section-gallery sections">
+        <img src="./images/start-page/gallery-animation/movie-1-ga.jpg" alt="movie-gallerie-1">
+        <img src="./images/start-page/gallery-animation/movie-2-ga.jpg" alt="movie-gallerie-2">
+        <img src="./images/start-page/gallery-animation/movie-3-ga.jpg" alt="movie-gallerie-3">
+        <img src="./images/start-page/gallery-animation/movie-4-ga.jpg" alt="movie-gallerie-4">
+        <img src="./images/start-page/gallery-animation/movie-5-ga.jpg" alt="movie-gallerie-5">
+        <img src="./images/start-page/gallery-animation/movie-6-ga.jpg" alt="movie-gallerie-6">
+    </div>
     <div class="container__section-two sections">
-        <h3 class="section-titles">Available on your favorite devices<h3>
+        <h3 data-text-2="Available on your favorite devices" class="section-titles title-section-2">Available on your favorite devices<h3>
         <div class="section-two__container-devices">
             <div class="devices__contain">
                 <img class="devices-images computer-img" src="images/start-page/device-computer.png" alt="Computer">

@@ -71,9 +71,13 @@ nav {
   height: 30px;
 }
 
+.navbar-toggler {
+  width: 30px;
+  height: 30px;
+}
+
 .navbar__img {
   width: 50px;
-  height: 50px;
 }
 
 .nav-links {
@@ -189,7 +193,7 @@ nav {
 }
 
 .header__arrow-img {
-  width: 90px;
+  width: 40px;
   animation-name: arrow-grow;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -242,6 +246,7 @@ nav {
   font-weight: 200;
   border: solid 5px var(--btn-color);
   border-image: linear-gradient(to right, #8a01ce, #9232ff, #9180ff, #00c6ff, #4cdbfb) 1;
+  border-radius: 20px;
   padding: 60px 30px;
   margin-bottom: 100px;
   box-shadow: 0 0 50px #8b6dee;
@@ -294,7 +299,7 @@ nav {
   justify-content: center;
   align-items: center;
   margin-bottom: 130px;
-  background-color: rgba(255, 255, 255, 0.185);
+  background-color: rgba(255, 255, 255, 0.162);
   width: 290px;
   height: 320px;
   border-radius: 50%;
@@ -315,7 +320,7 @@ nav {
 .card .lines {
   position: absolute;
   inset: 0;
-  background-color: rgb(23, 22, 22);
+  background-color: rgb(25, 26, 27);
   overflow: hidden;
 }
 
@@ -343,7 +348,8 @@ nav {
   content: "";
   position: absolute;
   inset: 3px;
-  background: #292929;
+  background: #1d56ad;
+
 }
 
 .card .imgBx {
@@ -689,7 +695,7 @@ a {
 @media (min-width: 1024px) {
   .item-contacto {
     padding-right: 20px;
-  }xz
+  }
 
 /*------------ MAIN DESCKTOP --------------*/
   .container__about-us {
