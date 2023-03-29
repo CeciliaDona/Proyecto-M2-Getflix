@@ -226,7 +226,7 @@ const addToFavList = (e) => {
 const showFilm = () => {
   const favMovies = JSON.parse(localStorage.getItem("favorites")); // obtengo la lista de favoritos desde el localstorage (getitem)
 
-  if (favMovies) {
+  if (favMovies.length > 0) {
     const elemento = document.querySelector(".no-added-movies-msg");
     elemento.style.display = "none";
   }
@@ -255,12 +255,10 @@ document.addEventListener("click", (e) => {
     myListSection.splice(index, 1); // Borro el elemento de la lista
     localStorage.setItem("favorites", JSON.stringify(myListSection)); // actualizo la lista.
 
-    showFilm(); // actualizo la vista show.
+    showFilm(); 
   }
 });
 
-
-// Buscar pelicula
 const searchMovie = (evento) => {
   evento.preventDefault(); // Prevenir que se recargue la página
   const search = document.getElementById('search').value; // Obtener la búsqueda del usuario y convertirla a minúsculas
@@ -272,32 +270,6 @@ const formSearch = document.querySelector('#form-search');
 formSearch.addEventListener('submit', searchMovie);
 
 
-////////////////////////////////////////////////////////
-
-// const templateCategories = document.querySelector("#template-categories");
-// const fragment = document.createDocumentFragment();
-
-//   // JUST ADDED
-//   const justAddedContainer = document.querySelector(".container__just-added");
-
-//   const justAddedSection = films.filter((item) => item.section === "Just added" || item.sectionTwo === "Just added" || item.sectionThree === "Just added");
-
-//   const showJustAdded = () => {
-//     justAddedSection.forEach((item) => {
-//       const clone = templateCategories.content.cloneNode(true);
-
-      // clone.querySelector(".img-films").src = item.img;
-      // clone.querySelector(".img-films").alt = item.alt;
-      // clone.querySelector(".movie-title").textContent = item.title;
-      // clone.querySelector(".btn-add-list").dataset.film= item.title;
-      // clone.querySelector(".video").src = item.trailer;
-
-//       fragment.appendChild(clone);
-//     });
-
-//     justAddedContainer.appendChild(fragment);
-//   };
-//   showJustAdded();
 
 
 
